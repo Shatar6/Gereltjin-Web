@@ -1,0 +1,164 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% trans 'Gereltjin LLC - Professional Glass Production and Manufacturing Services' %}">
+    <title>{% block title %}{% trans 'Gereltjin LLC - Glass Production' %}{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+
+    <!-- Other Platform Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Language Switcher (Fixed Position) -->
+    <div class="language-switcher">
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            <select name="language" onchange="this.form.submit()" class="language-select">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% for lang_code, lang_name in LANGUAGES %}
+                    <option value="{{ lang_code }}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                        {% if lang_code == 'mn' %}🇲🇳 Монгол{% else %}🇺🇸 English{% endif %}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="{% url 'core:home' %}" class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Gereltjin LLC Logo">
+                    <span class="logo-text">{% trans 'GERELTJIN LLC'%}</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li><a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans 'Home' %}</a></li>
+                    <li><a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans 'About Us' %}</a></li>
+
+                    <!-- Dropdown Menu for Services -->
+                    <li class="dropdown">
+                        <a href="{% url 'core:services' %}" class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+                            {% trans 'Services' %} <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'core:construction' %}">{% trans 'Construction & Assembly' %}</a></li>
+                            <li><a href="{% url 'core:glass_structure' %}">{% trans 'Glass Fabrication' %}</a></li>
+                            <li><a href="{% url 'core:windows_doors' %}">{% trans 'Windows & Doors' %}</a></li>
+                            <li><a href="{% url 'core:rental' %}">{% trans 'Rental Services' %}</a></li>
+                            <li><a href="{% url 'core:sports_hall' %}">{% trans 'Sports Hall' %}</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="{% url 'portfolio:portfolio_list' %}" class="nav-link {% if 'portfolio' in request.path %}active{% endif %}">{% trans 'Portfolio' %}</a></li>
+                    <li><a href="{% url 'core:contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% trans 'Contact' %}</a></li>
+                    <li><a href="{% url 'orders:create_order' %}" class="nav-link nav-cta {% if 'orders' in request.path %}active{% endif %}">{% trans 'Order Now' %}</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>{% trans 'GERELTJIN LLC' %}</h3>
+                    <p>{% trans 'Professional glass products, vacuum windows and doors, facade installation, construction, and rental services in Mongolia.' %}</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>{% trans 'QUICK LINKS' %}</h3>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'core:home' %}">{% trans 'Home' %}</a></li>
+                        <li><a href="{% url 'core:about' %}">{% trans 'About Us' %}</a></li>
+                        <li><a href="{% url 'services:services_list' %}">{% trans 'Services' %}</a></li>
+                        <li><a href="{% url 'portfolio:portfolio_list' %}">{% trans 'Portfolio' %}</a></li>
+                        <li><a href="{% url 'core:careers' %}">{% trans 'Careers' %}</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>{% trans 'CONTACT' %}</h3>
+                    <ul class="footer-contact">
+                        <li>📧 info@gereltjin.mn</li>
+                        <li>📱 +976 8027 8027</li>
+                        <li>📍 {% trans 'Ulaanbaatar, Mongolia' %}</li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Gereltjin.mn" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gereltjinllc/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/gereltjin/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>{% trans 'OUR LOCATIONS' %}</h3>
+                    <div id="footer-map" class="footer-map"></div>
+            </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gereltjin LLC. {% trans 'All rights reserved.' %}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

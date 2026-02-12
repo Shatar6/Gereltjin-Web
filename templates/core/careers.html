@@ -1,0 +1,321 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Careers' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Careers at Gereltjin' %}</h1>
+        <p>{% trans 'Join our team of professionals' %}</p>
+    </div>
+</section>
+
+<!-- Careers Content -->
+<section class="careers-content">
+    <div class="container">
+        <div class="careers-intro">
+            <h2>{% trans 'Why Work With Us?' %}</h2>
+            <p>{% trans 'At Gereltjin LLC, we believe in fostering talent and creating opportunities for growth. Join a company that values innovation, quality, and teamwork.' %}</p>
+        </div>
+
+        <!-- Benefits Grid -->
+        <div class="benefits-section">
+            <h3 class="section-title">{% trans 'Employee Benefits' %}</h3>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h4>{% trans 'Competitive Salary' %}</h4>
+                    <p>{% trans 'Industry-leading compensation packages' %}</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏥</div>
+                    <h4>{% trans 'Health Insurance' %}</h4>
+                    <p>{% trans 'Comprehensive health coverage for you and your family' %}</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h4>{% trans 'Training & Development' %}</h4>
+                    <p>{% trans 'Continuous learning opportunities and skill development' %}</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h4>{% trans 'Housing Support' %}</h4>
+                    <p>{% trans 'Apartment assistance for eligible employees' %}</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏰</div>
+                    <h4>{% trans 'Flexible Hours' %}</h4>
+                    <p>{% trans 'Work-life balance with flexible scheduling' %}</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎉</div>
+                    <h4>{% trans 'Team Events' %}</h4>
+                    <p>{% trans 'Regular team building activities and celebrations' %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Openings -->
+        <div class="openings-section">
+            <h3 class="section-title">{% trans 'Current Job Openings' %}</h3>
+            
+            <div class="job-listings">
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4>{% trans 'Glass Installation Technician' %}</h4>
+                        <span class="job-type">{% trans 'Full-time' %}</span>
+                    </div>
+                    <p class="job-description">
+                        {% trans 'Seeking experienced technicians for glass installation projects.' %}
+                    </p>
+                    <div class="job-footer">
+                        <span class="job-location">📍 {% trans 'Factory, Ulaanbaatar' %}</span>
+                        <a href="{% url 'core:contact' %}" class="btn btn-primary">{% trans 'Apply Now' %}</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4>{% trans 'Production Manager' %}</h4>
+                        <span class="job-type">{% trans 'Full-time' %}</span>
+                    </div>
+                    <p class="job-description">
+                        {% trans 'Lead our production team and oversee manufacturing operations.' %}
+                    </p>
+                    <div class="job-footer">
+                        <span class="job-location">📍 {% trans 'Factory, Ulaanbaatar' %}</span>
+                        <a href="{% url 'core:contact' %}" class="btn btn-primary">{% trans 'Apply Now' %}</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4>{% trans 'Sales Representative' %}</h4>
+                        <span class="job-type">{% trans 'Full-time' %}</span>
+                    </div>
+                    <p class="job-description">
+                        {% trans 'Join our sales team and help grow our customer base.' %}
+                    </p>
+                    <div class="job-footer">
+                        <span class="job-location">📍 {% trans 'Office, Ulaanbaatar' %}</span>
+                        <a href="{% url 'core:contact' %}" class="btn btn-primary">{% trans 'Apply Now' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Process -->
+        <div class="process-section">
+            <h3 class="section-title">{% trans 'Application Process' %}</h3>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>{% trans 'Submit Application' %}</h4>
+                    <p>{% trans 'Send your resume and cover letter' %}</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>{% trans 'Initial Review' %}</h4>
+                    <p>{% trans 'We review your application' %}</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>{% trans 'Interview' %}</h4>
+                    <p>{% trans 'Meet with our hiring team' %}</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>{% trans 'Job Offer' %}</h4>
+                    <p>{% trans 'Welcome to the team!' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Ready to Join Our Team?' %}</h2>
+        <p>{% trans 'Send your application today' %}</p>
+        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-large">{% trans 'Contact Us' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.careers-content {
+    padding: var(--spacing-xl) 0;
+}
+
+.careers-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.careers-intro h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2rem;
+}
+
+.benefits-section,
+.openings-section,
+.process-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.benefit-card {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-xs);
+}
+
+.job-listings {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.job-card {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    border-left: 4px solid var(--primary-blue);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.job-header h4 {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.job-type {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+}
+
+.job-description {
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-location {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.step h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-xs);
+}
+
+.step p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .job-footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+    }
+    
+    .job-footer .btn {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}

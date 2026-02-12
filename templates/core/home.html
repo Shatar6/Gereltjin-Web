@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Gereltjin LLC - Premium Glass Manufacturing' %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                {% trans 'Premium Glass Manufacturing' %}
+            </h1>
+            <p class="hero-subtitle">
+                {% trans 'We deliver excellence in every piece of glass we produce. From architectural solutions to custom designs.' %}
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Order Now' %}</a>
+                <a href="{% url 'services:services_list' %}" class="btn btn-secondary">{% trans 'Our Services' %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Why Choose Us' %}</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>{% trans 'Premium Quality' %}</h3>
+                <p>{% trans 'We use only the finest materials and cutting-edge technology to ensure exceptional quality.' %}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>{% trans 'Fast Production' %}</h3>
+                <p>{% trans 'Efficient manufacturing processes guarantee timely delivery without compromising quality.' %}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>{% trans 'Custom Design' %}</h3>
+                <p>{% trans 'From concept to completion, we bring your unique glass design visions to life.' %}</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>{% trans 'Safety First' %}</h3>
+                <p>{% trans 'All products meet international safety standards and undergo rigorous testing.' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="services-preview">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Our Services' %}</h2>
+        <p class="section-subtitle">{% trans 'Comprehensive glass solutions for every need' %}</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>{% trans 'Architectural Glass' %}</h3>
+                <p>{% trans 'Windows, facades, and structural glass for buildings' %}</p>
+                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>{% trans 'Interior Glass' %}</h3>
+                <p>{% trans 'Partitions, doors, and decorative glass elements' %}</p>
+                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>{% trans 'Custom Solutions' %}</h3>
+                <p>{% trans 'Tailored glass products for unique projects' %}</p>
+                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Ready to Start Your Project?' %}</h2>
+        <p>{% trans 'Contact us today for a free consultation and quote' %}</p>
+        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
+    </div>
+</section>
+{% endblock %}

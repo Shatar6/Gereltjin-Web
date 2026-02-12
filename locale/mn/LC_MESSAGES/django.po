@@ -1,0 +1,290 @@
+# MONGOLIAN TRANSLATIONS FOR GERELTJIN LLC
+# Copyright (C) 2025 Gereltjin LLC
+# This file is distributed under the same license as the Gereltjin package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gereltjin 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-07 12:00+0800\n"
+"PO-Revision-Date: 2025-02-07 12:00+0800\n"
+"Last-Translator: Gereltjin Team\n"
+"Language-Team: Mongolian\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Base Template - Navigation
+msgid "Gereltjin LLC - Glass Production"
+msgstr "Гэрэлтжин ХХК - Шилэн Бүтээгдэхүүн"
+
+msgid "GERELTJIN LLC"
+msgstr "ГЭРЭЛТЖИН ХХК"
+
+msgid "Home"
+msgstr "Нүүр"
+
+msgid "About Us"
+msgstr "Бидний тухай"
+
+msgid "Services"
+msgstr "Үйлчилгээ"
+
+msgid "Portfolio"
+msgstr "Төслүүд"
+
+msgid "Human Resource"
+msgstr "Хүний нөөц"
+
+msgid "Order Now"
+msgstr "Захиалга өгөх"
+
+msgid "Contact"
+msgstr "Холбоо барих"
+
+msgid "CONTACT"
+msgstr "ХОЛБОО БАРИХ"
+
+msgid "Careers"
+msgstr "Ажлын байр"
+
+msgid "OUR LOCATIONS"
+msgstr "БИДНИЙ ХАЯГ"
+
+# Footer
+msgid "Professional glass products, vacuum windows and doors, facade installation, construction, and rental services in Mongolia."
+msgstr "Мэргэжлийн шилэн бүтээгдэхүүн, вакуум цонх хаалга, фасад угсралт, барилга угсралт, ба түрээсийн үйлчилгээ."
+
+msgid "Quick Links"
+msgstr "Холбоосууд"
+
+msgid "QUICK LINKS"
+msgstr "ХОЛБООСУУД"
+
+msgid "Ulaanbaatar, Mongolia"
+msgstr "Улаанбаатар, Монгол Улс"
+
+msgid "All rights reserved."
+msgstr "Бүх эрх хуулиар хамгаалагдсан."
+
+# Homepage
+msgid "Gereltjin LLC - Premium Glass Manufacturing"
+msgstr "Гэрэлтжин ХХК - Чанартай Шилэн Бүтээгдэхүүн"
+
+msgid "Premium Glass Manufacturing"
+msgstr "Чанартай Шилэн Үйлдвэрлэл"
+
+msgid "We deliver excellence in every piece of glass we produce. From architectural solutions to custom designs."
+msgstr "Бид үйлдвэрлэсэн шилэн бүтээгдэхүүн бүрт өндөр чанарыг баталгаажуулдаг. Архитектурын шийдлээс эхлээд захиалгат дизайн хүртэл."
+
+msgid "Our Services"
+msgstr "Манай үйлчилгээ"
+
+msgid "Why Choose Us"
+msgstr "Яагаад биднийг сонгох вэ"
+
+msgid "Premium Quality"
+msgstr "Өндөр чанар"
+
+msgid "We use only the finest materials and cutting-edge technology to ensure exceptional quality."
+msgstr "Бид зөвхөн шилдэг материал, хамгийн сүүлийн үеийн технологи ашиглан онцгой чанарыг баталгаажуулдаг."
+
+msgid "Fast Production"
+msgstr "Хурдан үйлдвэрлэл"
+
+msgid "Efficient manufacturing processes guarantee timely delivery without compromising quality."
+msgstr "Үр ашигтай үйлдвэрлэлийн процесс нь чанарыг алдагдуулахгүйгээр цаг хугацаандаа хүргэлтийг баталгаажуулна."
+
+msgid "Custom Design"
+msgstr "Захиалгат дизайн"
+
+msgid "From concept to completion, we bring your unique glass design visions to life."
+msgstr "Санаанаас эхлээд бүрэн дуусах хүртэл, бид таны өвөрмөц шилэн дизайны төсөөллийг бодит болгоно."
+
+msgid "Safety First"
+msgstr "Аюулгүй байдал эн тэргүүнд"
+
+msgid "All products meet international safety standards and undergo rigorous testing."
+msgstr "Бүх бүтээгдэхүүн нь олон улсын аюулгүй байдлын стандартад нийцэж, нарийн шалгалтад хамрагддаг."
+
+msgid "Comprehensive glass solutions for every need"
+msgstr "Бүх хэрэгцээнд зориулсан иж бүрэн шилэн шийдэл"
+
+msgid "Architectural Glass"
+msgstr "Архитектурын шил"
+
+msgid "Windows, facades, and structural glass for buildings"
+msgstr "Барилгын цонх, фасад, бүтцийн шил"
+
+msgid "Learn More"
+msgstr "Дэлгэрэнгүй"
+
+msgid "Interior Glass"
+msgstr "Дотоод засал шил"
+
+msgid "Partitions, doors, and decorative glass elements"
+msgstr "Хаалт, хаалга, гоёл чимэглэлийн шилэн элементүүд"
+
+msgid "Custom Solutions"
+msgstr "Захиалгат шийдлүүд"
+
+msgid "Tailored glass products for unique projects"
+msgstr "Өвөрмөц төслүүдэд зориулсан тусгай шилэн бүтээгдэхүүн"
+
+msgid "Ready to Start Your Project?"
+msgstr "Төслөө эхлүүлэхэд бэлэн үү?"
+
+msgid "Contact us today for a free consultation and quote"
+msgstr "Үнэгүй зөвлөгөө, үнийн санал авахын тулд бидэнтэй холбогдоорой"
+
+msgid "Get a Quote"
+msgstr "Үнийн санал авах"
+
+# About Page
+msgid "About Us - Gereltjin LLC"
+msgstr "Бидний тухай - Гэрэлтжин ХХК"
+
+msgid "About Gereltjin LLC"
+msgstr "Гэрэлтжин ХХК-ийн тухай"
+
+msgid "Leading Glass Manufacturing Excellence in Mongolia"
+msgstr "Монгол дахь шилэн үйлдвэрлэлийн тэргүүлэгч"
+
+msgid "Our Story"
+msgstr "Бидний түүх"
+
+msgid "Gereltjin LLC was founded with a vision to bring world-class glass manufacturing capabilities to Mongolia. With years of expertise and cutting-edge technology, we have become a trusted partner for architects, builders, and designers throughout the region."
+msgstr "Гэрэлтжин ХХК нь дэлхийн түвшний шилэн үйлдвэрлэлийн чадавхыг Монголд нэвтрүүлэх зорилготойгоор байгуулагдсан. Олон жилийн туршлага, хамгийн сүүлийн үеийн технологиор бид бүс нутгийн архитекторууд, барилгачид, дизайнеруудын итгэлтэй түнш болсон."
+
+msgid "Our commitment to quality, innovation, and customer satisfaction has made us the preferred choice for glass solutions ranging from residential projects to large-scale commercial developments."
+msgstr "Чанар, шинэ санаа, хэрэглэгчийн сэтгэл ханамжид тууштай хандах нь биднийг орон сууцны төслөөс эхлээд томоохон арилжааны барилга хүртэл шилэн шийдлийн сонголт болгосон."
+
+msgid "Our Values"
+msgstr "Бидний үнэт зүйлс"
+
+msgid "Quality"
+msgstr "Чанар"
+
+msgid "We never compromise on quality. Every product meets the highest international standards."
+msgstr "Бид чанарын талаар хэзээ ч буулт хийдэггүй. Бүтээгдэхүүн бүр олон улсын хамгийн өндөр стандартыг хангадаг."
+
+msgid "Integrity"
+msgstr "Шударга байдал"
+
+msgid "Honest business practices and transparent communication with all our partners."
+msgstr "Шударга бизнесийн зарчим, бүх түншүүдтэйгээ ил тод харилцаа."
+
+msgid "Innovation"
+msgstr "Шинэ санаа"
+
+msgid "Continuously investing in new technologies and manufacturing processes."
+msgstr "Шинэ технологи, үйлдвэрлэлийн процесст тасралтгүй хөрөнгө оруулалт хийдэг."
+
+msgid "Sustainability"
+msgstr "Тогтвортой байдал"
+
+msgid "Committed to environmentally responsible production methods."
+msgstr "Байгаль орчинд ээлтэй үйлдвэрлэлийн аргад тууштай."
+
+msgid "Our Expertise"
+msgstr "Бидний туршлага"
+
+msgid "Years Experience"
+msgstr "Жилийн туршлага"
+
+msgid "Projects Completed"
+msgstr "Дууссан төслүүд"
+
+msgid "Skilled Professionals"
+msgstr "Мэргэжлийн боловсон хүчин"
+
+msgid "Quality Guarantee"
+msgstr "Чанарын баталгаа"
+
+msgid "Ready to Work With Us?"
+msgstr "Бидэнтэй хамтран ажиллахад бэлэн үү?"
+
+msgid "Let's discuss how we can help with your glass needs"
+msgstr "Таны шилэн бүтээгдэхүүний хэрэгцээнд хэрхэн туслах талаар ярилцъя"
+
+msgid "Contact Us"
+msgstr "Холбоо барих"
+
+# Contact Page
+msgid "Contact Us - Gereltjin LLC"
+msgstr "Холбоо барих - Гэрэлтжин ХХК"
+
+msgid "Get in touch with our team"
+msgstr "Манай багтай холбогдох"
+
+msgid "Send Us a Message"
+msgstr "Бидэнд мессеж илгээх"
+
+msgid "Your Name"
+msgstr "Таны нэр"
+
+msgid "Email Address"
+msgstr "Имэйл хаяг"
+
+msgid "Phone Number"
+msgstr "Утасны дугаар"
+
+msgid "Subject"
+msgstr "Сэдэв"
+
+msgid "Message"
+msgstr "Мессеж"
+
+msgid "Send Message"
+msgstr "Мессеж илгээх"
+
+msgid "Contact Information"
+msgstr "Холбоо барих мэдээлэл"
+
+msgid "Address"
+msgstr "Хаяг"
+
+msgid "Full address to be added"
+msgstr "Бүтэн хаягийг нэмнэ"
+
+msgid "Email"
+msgstr "Имэйл"
+
+msgid "Phone"
+msgstr "Утас"
+
+msgid "Business Hours"
+msgstr "Ажлын цаг"
+
+msgid "Monday - Friday: 9:00 AM - 6:00 PM"
+msgstr "Даваа - Баасан: 09:00 - 18:00"
+
+msgid "Saturday: 9:00 AM - 2:00 PM"
+msgstr "Бямба: 09:00 - 14:00"
+
+msgid "Sunday: Closed"
+msgstr "Ням: Амарна"
+
+msgid "Map will be added here"
+msgstr "Газрын зургийг энд нэмнэ"
+
+msgid "Manufacturing Facility"
+msgstr "Үйлдвэрлэлийн байгууламж"
+
+# Dropdown Menu Items
+msgid "Construction & Assembly"
+msgstr "Барилга Угсралт"
+
+msgid "Glass Fabrication"
+msgstr "Шил боловсруулалт"
+
+msgid "Windows & Doors"
+msgstr "Цонх Хаалга"
+
+msgid "Rental Services"
+msgstr "Түрээс"
+
+msgid "Sports Hall"
+msgstr "Спорт заал"

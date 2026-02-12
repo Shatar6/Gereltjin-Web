@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Contact Us - Gereltjin LLC' %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Contact Us' %}</h1>
+        <p>{% trans 'Get in touch with our team' %}</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>{% trans 'Send Us a Message' %}</h2>
+                <form class="contact-form" method="post" id="contactForm">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label for="name">{% trans 'Your Name' %}</label>
+                        <input type="text" id="name" name="name" required class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">{% trans 'Email Address' %}</label>
+                        <input type="email" id="email" name="email" required class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">{% trans 'Phone Number' %}</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">{% trans 'Subject' %}</label>
+                        <input type="text" id="subject" name="subject" required class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">{% trans 'Message' %}</label>
+                        <textarea id="message" name="message" rows="6" required class="form-control"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        {% trans 'Send Message' %}
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-info-wrapper">
+                <h2>{% trans 'Contact Information' %}</h2>
+                
+                <div class="contact-info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h4>{% trans 'Address' %}</h4>
+                        <p>{% trans 'Ulaanbaatar, Mongolia' %}<br>
+                        {% trans 'Full address to be added' %}</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h4>{% trans 'Email' %}</h4>
+                        <p><a href="mailto:info@gereltjin.mn">info@gereltjin.mn</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-content">
+                        <h4>{% trans 'Phone' %}</h4>
+                        <p>+976 XXXX XXXX</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="info-icon">🕐</div>
+                    <div class="info-content">
+                        <h4>{% trans 'Business Hours' %}</h4>
+                        <p>{% trans 'Monday - Friday: 9:00 AM - 6:00 PM' %}<br>
+                        {% trans 'Saturday: 9:00 AM - 2:00 PM' %}<br>
+                        {% trans 'Sunday: Closed' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section (Placeholder) -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-placeholder">
+            <p>🗺️ {% trans 'Map will be added here' %}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.contact-form-wrapper h2,
+.contact-info-wrapper h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.75rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--accent-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(46, 125, 181, 0.1);
+}
+
+.form-control.error {
+    border-color: #dc3545;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 1rem;
+    margin-top: var(--spacing-sm);
+}
+
+/* Contact Info */
+.contact-info-wrapper {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.info-content p {
+    color: var(--text-gray);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.info-content a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.info-content a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map-section {
+    padding: var(--spacing-lg) 0;
+    background: var(--bg-light);
+}
+
+.map-placeholder {
+    background: var(--bg-white);
+    border: 2px dashed var(--primary-blue);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-info-wrapper {
+        order: -1;
+    }
+}
+</style>
+{% endblock %}

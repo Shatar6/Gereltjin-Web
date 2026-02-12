@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'About Us - Gereltjin LLC' %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'About Gereltjin LLC' %}</h1>
+        <p>{% trans 'Leading Glass Manufacturing Excellence in Mongolia' %}</p>
+    </div>
+</section>
+
+<!-- Company Story -->
+<section class="about-content">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>{% trans 'Our Story' %}</h2>
+                <p>
+                    {% trans 'Gereltjin LLC was founded with a vision to bring world-class glass manufacturing capabilities to Mongolia. With years of expertise and cutting-edge technology, we have become a trusted partner for architects, builders, and designers throughout the region.' %}
+                </p>
+                <p>
+                    {% trans 'Our commitment to quality, innovation, and customer satisfaction has made us the preferred choice for glass solutions ranging from residential projects to large-scale commercial developments.' %}
+                </p>
+            </div>
+            
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <span>🏭</span>
+                    <p>{% trans 'Manufacturing Facility' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="values-section">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Our Values' %}</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>{% trans 'Quality' %}</h3>
+                <p>{% trans 'We never compromise on quality. Every product meets the highest international standards.' %}</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>{% trans 'Integrity' %}</h3>
+                <p>{% trans 'Honest business practices and transparent communication with all our partners.' %}</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <h3>{% trans 'Innovation' %}</h3>
+                <p>{% trans 'Continuously investing in new technologies and manufacturing processes.' %}</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">🌍</div>
+                <h3>{% trans 'Sustainability' %}</h3>
+                <p>{% trans 'Committed to environmentally responsible production methods.' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Our Expertise' %}</h2>
+        <div class="expertise-grid">
+            <div class="expertise-item">
+                <div class="expertise-number">15+</div>
+                <p>{% trans 'Years Experience' %}</p>
+            </div>
+            
+            <div class="expertise-item">
+                <div class="expertise-number">500+</div>
+                <p>{% trans 'Projects Completed' %}</p>
+            </div>
+            
+            <div class="expertise-item">
+                <div class="expertise-number">50+</div>
+                <p>{% trans 'Skilled Professionals' %}</p>
+            </div>
+            
+            <div class="expertise-item">
+                <div class="expertise-number">100%</div>
+                <p>{% trans 'Quality Guarantee' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Ready to Work With Us?' %}</h2>
+        <p>{% trans 'Let\'s discuss how we can help with your glass needs' %}</p>
+        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-large">{% trans 'Contact Us' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    padding: var(--spacing-xl) 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-text h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+}
+
+.about-text p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.image-placeholder {
+    background: var(--accent-gray);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder span {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.values-section {
+    background: var(--bg-light);
+    padding: var(--spacing-xl) 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.value-card {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.value-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.expertise-item {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.expertise-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+{% endblock %}

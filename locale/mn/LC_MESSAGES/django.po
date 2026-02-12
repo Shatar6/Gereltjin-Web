@@ -82,32 +82,32 @@ msgstr "Бид үйлдвэрлэсэн шилэн бүтээгдэхүүн бү
 msgid "Our Services"
 msgstr "Манай үйлчилгээ"
 
-msgid "Why Choose Us"
-msgstr "Яагаад биднийг сонгох вэ"
+msgid "Our Mission"
+msgstr "Бидний Эрхэм Зорилго"
 
-msgid "Premium Quality"
-msgstr "Өндөр чанар"
+msgid "Modern Technology"
+msgstr "Орчин үеийн технологи"
 
-msgid "We use only the finest materials and cutting-edge technology to ensure exceptional quality."
-msgstr "Бид зөвхөн шилдэг материал, хамгийн сүүлийн үеийн технологи ашиглан онцгой чанарыг баталгаажуулдаг."
+msgid "We develop production based on advanced modern technologies to ensure sustainable growth."
+msgstr "Орчин үеийн дэвшилтэт технологид суурилсан үйлдвэрлэлийг хөгжүүлж, тогтвортой өсөлтийг бий болгоно."
 
-msgid "Fast Production"
-msgstr "Хурдан үйлдвэрлэл"
+msgid "Environmentally Friendly"
+msgstr "Байгальд ээлтэй"
 
-msgid "Efficient manufacturing processes guarantee timely delivery without compromising quality."
-msgstr "Үр ашигтай үйлдвэрлэлийн процесс нь чанарыг алдагдуулахгүйгээр цаг хугацаандаа хүргэлтийг баталгаажуулна."
+msgid "We prioritize environmentally responsible and sustainable manufacturing practices."
+msgstr "Байгаль орчинд ээлтэй, хариуцлагатай үйлдвэрлэлийг эрхэмлэн ажиллана."
 
-msgid "Custom Design"
-msgstr "Захиалгат дизайн"
+msgid "Quality & Safety"
+msgstr "Чанар ба Аюулгүй байдал"
 
-msgid "From concept to completion, we bring your unique glass design visions to life."
-msgstr "Санаанаас эхлээд бүрэн дуусах хүртэл, бид таны өвөрмөц шилэн дизайны төсөөллийг бодит болгоно."
+msgid "We deliver high-quality products while placing safety as our top priority."
+msgstr "Аюулгүй байдлыг нэн тэргүүнд тавьж, өндөр чанартай бүтээгдэхүүнийг зах зээлд нийлүүлнэ"
 
-msgid "Safety First"
-msgstr "Аюулгүй байдал эн тэргүүнд"
+msgid "Customer Satisfaction"
+msgstr "Итгэл ба Хэрэглэгч"
 
-msgid "All products meet international safety standards and undergo rigorous testing."
-msgstr "Бүх бүтээгдэхүүн нь олон улсын аюулгүй байдлын стандартад нийцэж, нарийн шалгалтад хамрагддаг."
+msgid "We strive to be a national manufacturer that puts stakeholder and customer satisfaction first."
+msgstr "Оролцогч талуудын сэтгэл ханамжийг эн тэргүүнд тавьсан үндэсний үйлдвэрлэгч компани байна."
 
 msgid "Comprehensive glass solutions for every need"
 msgstr "Бүх хэрэгцээнд зориулсан иж бүрэн шилэн шийдэл"

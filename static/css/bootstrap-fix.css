@@ -27,7 +27,7 @@ ul.nav-menu {
     display: flex !important;
     flex-direction: row !important;
     list-style: none !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     align-items: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -57,7 +57,7 @@ header .nav-link,
 .nav-menu .nav-link,
 a.nav-link {
     display: inline-block !important;
-    padding: 0.5rem 1rem !important;
+    padding: 0.25rem 0.5rem !important;
     text-decoration: none !important;
     color: var(--text-dark) !important;
     font-weight: 500 !important;
@@ -240,6 +240,16 @@ header .logo-text,
     background-color: rgba(46, 125, 181, 1);
 }
 
+.footer {
+    background: var(--bg-dark) !important;
+    color: var(--text-light) !important;
+    padding: var(--spacing-lg) 0 var(--spacing-md) !important;
+}
+
+.footer-links, .footer-contact {
+    padding-left: 0 !important;
+}
+
 /* ============================================
    RESPONSIVE - Mobile
    ============================================ */
@@ -279,7 +289,6 @@ header .logo-text,
     .nav-link {
         display: block !important;
         width: 100% !important;
-        padding: 1rem !important;
     }
     
     /* Carousel mobile adjustments */

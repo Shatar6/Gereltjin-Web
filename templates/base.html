@@ -43,8 +43,7 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    
-
+   
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -85,8 +84,29 @@
                     <li><a href="{% url 'portfolio:portfolio_list' %}" class="nav-link {% if 'portfolio' in request.path %}active{% endif %}">{% trans 'Portfolio' %}</a></li>
                     <li><a href="{% url 'core:contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% trans 'Contact' %}</a></li>
                     <li><a href="{% url 'orders:create_order' %}" class="nav-link nav-cta {% if 'orders' in request.path %}active{% endif %}">{% trans 'Order Now' %}</a></li>
+                    <li> <!-- Language Switcher (Fixed Position) -->
+                        <div class="language-switcher">
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.path }}">
+                                <select name="language" onchange="this.form.submit()" class="language-select">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% for lang_code, lang_name in LANGUAGES %}
+                                        <option value="{{ lang_code }}" {% if lang_code == LANGUAGE_CODE %}selected{% endif %}>
+                                            {% if lang_code == 'mn' %}🇲🇳 Монгол{% else %}🇺🇸 English{% endif %}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </form>
+                        </div>
+                    </li>
                 </ul>
+
+                 
             </nav>
+
+               
         </div>
     </header>
 

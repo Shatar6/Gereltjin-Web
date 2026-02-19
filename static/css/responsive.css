@@ -64,8 +64,9 @@
     
     /* Language Switcher */
     .language-switcher {
-        top: 80px;
+        top: 78px;
         right: 10px;
+        left: auto;
     }
     
     /* Hero */

@@ -110,7 +110,7 @@ body {
     z-index: 999;
 }
 
-.gl-navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,14 +143,14 @@ body {
 }
 
 /* Navigation Menu */
-.gl-nav-menu {
+.nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
     align-items: center;
 }
 
-.gl-nav-link {
+.nav-link {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
@@ -160,22 +160,22 @@ body {
     position: relative;
 }
 
-.gl-nav-link:hover {
+.nav-link:hover {
     color: var(--primary-blue);
     background: var(--accent-gray);
 }
 
-.gl-nav-link.active {
+.nav-link.active {
     color: var(--primary-blue);
     background: var(--accent-gray);
 }
 
-.gl-nav-link.nav-cta {
+.nav-link.nav-cta {
     background: var(--primary-blue);
     color: var(--text-light);
 }
 
-.gl-nav-link.nav-cta:hover {
+.nav-link.nav-cta:hover {
     background: var(--primary-blue-dark);
 }
 

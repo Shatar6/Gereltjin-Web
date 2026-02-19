@@ -3,7 +3,7 @@
    ============================================ */
 
 /* Dropdown Container */
-.gl-dropdown {
+.dropdown {
     position: relative;
 }
 
@@ -15,12 +15,12 @@
 }
 
 /* Dropdown Menu */
-.gl-dropdown-menu {
+.dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
     background: var(--bg-white);
-    min-width: 240px;
+    min-width: 240px !important;
     box-shadow: var(--shadow-lg);
     border-radius: var(--border-radius);
     padding: 0.5rem 0;
@@ -34,7 +34,7 @@
 }
 
 /* Show dropdown on hover */
-.gl-dropdown:hover .gl-dropdown-menu {
+.dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -46,16 +46,16 @@
 }
 
 /* Dropdown Menu Items */
-.gl-dropdown-menu li {
-    width: 100%;
+.dropdown-menu li {
+    width: 100% !important;
     border-bottom: none;
 }
 
-.gl-dropdown-menu li:last-child a {
+.dropdown-menu li:last-child a {
     border-bottom: none;
 }
 
-.gl-dropdown-menu a {
+.dropdown-menu a {
     display: block;
     padding: 0.875rem 1.5rem;
     color: var(--text-dark);
@@ -65,29 +65,29 @@
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.gl-dropdown-menu a:hover {
+.dropdown-menu a:hover {
     background: var(--accent-gray);
     color: var(--primary-blue);
     padding-left: 2rem;
 }
 
 /* Active state for dropdown items */
-.gl-dropdown-menu a.active {
+.dropdown-menu a.active {
     background: var(--primary-blue);
     color: var(--text-light);
 }
 
 /* Add subtle animation */
-.gl-dropdown-menu li {
+.dropdown-menu li {
     animation: slideIn 0.3s ease forwards;
     opacity: 0;
 }
 
-.gl-dropdown:hover .gl-dropdown-menu li:nth-child(1) { animation-delay: 0.05s; }
-.gl-dropdown:hover .gl-dropdown-menu li:nth-child(2) { animation-delay: 0.1s; }
-.gl-dropdown:hover .gl-dropdown-menu li:nth-child(3) { animation-delay: 0.15s; }
-.gl-dropdown:hover .gl-dropdown-menu li:nth-child(4) { animation-delay: 0.2s; }
-.gl-dropdown:hover .gl-dropdown-menu li:nth-child(5) { animation-delay: 0.25s; }
+.dropdown:hover .dropdown-menu li:nth-child(1) { animation-delay: 0.05s; }
+.dropdown:hover .dropdown-menu li:nth-child(2) { animation-delay: 0.1s; }
+.dropdown:hover .dropdown-menu li:nth-child(3) { animation-delay: 0.15s; }
+.dropdown:hover .dropdown-menu li:nth-child(4) { animation-delay: 0.2s; }
+.dropdown:hover .dropdown-menu li:nth-child(5) { animation-delay: 0.25s; }
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -104,7 +104,7 @@
    ============================================ */
 @media (max-width: 768px) {
     /* Mobile dropdown behavior */
-    .gl-dropdown-menu {
+    .dropdown-menu {
         position: static;
         opacity: 1;
         visibility: visible;
@@ -118,35 +118,35 @@
         transition: max-height 0.3s ease;
     }
     
-    .gl-dropdown.active .gl-dropdown-menu {
+    .dropdown.active .dropdown-menu {
         max-height: 500px;
     }
     
-    .gl-dropdown-arrow {
+    .dropdown-arrow {
         float: right;
     }
     
-    .gl-dropdown.active .gl-dropdown-arrow {
+    .dropdown.active .dropdown-arrow {
         transform: rotate(180deg);
     }
     
-    .gl-dropdown-menu a {
+    .dropdown-menu a {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
     }
     
-    .gl-dropdown-menu a:hover {
+    .dropdown-menu a:hover {
         padding-left: 1.5rem;
         background: var(--accent-gray);
     }
     
     /* Make parent link clickable for dropdown toggle on mobile */
-    .gl-dropdown > .gl-nav-link {
+    .dropdown > .nav-link {
         cursor: pointer;
     }
     
     /* Remove animation on mobile */
-    .gl-dropdown-menu li {
+    .dropdown-menu li {
         animation: none;
         opacity: 1;
     }
@@ -154,16 +154,36 @@
 
 /* Tablet adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .gl-dropdown-menu {
+    .dropdown-menu {
         min-width: 200px;
     }
     
-    .gl-dropdown-menu a {
+    .dropdown-menu a {
         padding: 0.75rem 1.25rem;
         font-size: 0.95rem;
     }
 }
 
-.header .gl-dropdown-menu {
+.header .dropdown-menu {
     display: block;
+}
+
+/* FORCE dropdown to be vertical and independent */
+.header .dropdown-menu {
+    display: block !important;
+}
+
+.header .dropdown-menu {
+    position: absolute !important;
+}
+
+.header .dropdown-menu li {
+    display: block !important;  
+    float: none !important;
+    width: 100% !important;
+}
+
+.header .dropdown-menu li a {
+    display: block !important;
+    width: 100% !important;
 }

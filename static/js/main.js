@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.gl-nav-link');
+        const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenuToggle.classList.remove('active');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (!event.target.closest('.gl-navbar')) {
+            if (!event.target.closest('.navbar')) {
                 mobileMenuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
             }
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown');
     
     dropdowns.forEach(dropdown => {
-        const dropdownLink = dropdown.querySelector('.gl-nav-link');
+        const dropdownLink = dropdown.querySelector('.nav-link');
         
         if (dropdownLink) {
             dropdownLink.addEventListener('click', function(e) {

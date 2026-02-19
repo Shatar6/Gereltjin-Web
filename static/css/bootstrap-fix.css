@@ -1,0 +1,342 @@
+/* ============================================
+   BOOTSTRAP CAROUSEL FIX - STRONGER VERSION
+   Prevents Bootstrap from affecting navbar
+   ============================================ */
+
+/* CRITICAL: Reset ALL Bootstrap effects on navigation
+   These styles MUST override Bootstrap's .nav classes */
+
+/* Force navbar to use flexbox layout (override Bootstrap) */
+.header .navbar,
+header .navbar,
+nav.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 0 !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Force nav-menu to be flex row on desktop */
+.header .nav-menu,
+header .nav-menu,
+.navbar .nav-menu,
+ul.nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    width: auto !important;
+    position: static !important;
+    box-shadow: none !important;
+}
+
+/* Force nav links to be inline */
+.header .nav-menu li,
+header .nav-menu li,
+.navbar .nav-menu li,
+ul.nav-menu li {
+    display: inline-block !important;
+    width: auto !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Reset nav-link styles (override Bootstrap) */
+.header .nav-link,
+header .nav-link,
+.navbar .nav-link,
+.nav-menu .nav-link,
+a.nav-link {
+    display: inline-block !important;
+    padding: 0.5rem 1rem !important;
+    text-decoration: none !important;
+    color: var(--text-dark) !important;
+    font-weight: 500 !important;
+    border-radius: var(--border-radius) !important;
+    transition: var(--transition) !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 1rem !important;
+}
+
+.header .nav-link:hover,
+header .nav-link:hover,
+.navbar .nav-link:hover,
+.nav-menu .nav-link:hover {
+    color: var(--primary-blue) !important;
+    background: var(--accent-gray) !important;
+}
+
+.header .nav-link.active,
+header .nav-link.active,
+.navbar .nav-link.active,
+.nav-menu .nav-link.active {
+    color: var(--primary-blue) !important;
+    background: var(--accent-gray) !important;
+}
+
+/* CTA Button */
+.header .nav-link.nav-cta,
+header .nav-link.nav-cta,
+.navbar .nav-link.nav-cta,
+.nav-menu .nav-cta {
+    background: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+}
+
+.header .nav-link.nav-cta:hover,
+header .nav-link.nav-cta:hover,
+.navbar .nav-link.nav-cta:hover {
+    background: var(--primary-blue-dark) !important;
+    color: var(--text-light) !important;
+}
+
+/* Logo - prevent Bootstrap from affecting it */
+.header .logo,
+header .logo,
+.navbar .logo,
+a.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    text-decoration: none !important;
+    color: var(--text-dark) !important;
+}
+
+.header .logo img,
+header .logo img,
+.navbar .logo img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+.header .logo-text,
+header .logo-text,
+.navbar .logo-text,
+.logo .logo-text {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-blue) !important;
+}
+
+/* Dropdown menu protection */
+.dropdown {
+    position: relative;
+    display: block;   /* ADD THIS */
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 250px;   /* force fixed width */
+}
+
+.dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.header .dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 250px;
+}
+
+.header .dropdown-menu li {
+    width: 100%;
+}
+
+/* ============================================
+   CAROUSEL STYLES - Allow Bootstrap here
+   ============================================ */
+
+/* These carousel styles work WITH Bootstrap */
+.carousel-wrapper {
+    width: 100%;
+    margin: 0;
+}
+
+#header-carousel {
+    position: relative;
+}
+
+#header-carousel,
+#header-carousel .carousel-item {
+    height: 65vh;
+}
+
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay on carousel */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 25, 55, 0.7);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Text on carousel */
+.carousel-text {
+    color: white;
+    padding-left: 10%;
+    z-index: 2;
+}
+
+.carousel-text h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.carousel-text p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Carousel controls - custom style */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(46, 125, 181, 0.8);
+    border-radius: 50%;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(46, 125, 181, 1);
+}
+
+/* ============================================
+   RESPONSIVE - Mobile
+   ============================================ */
+@media (max-width: 768px) {
+    /* Mobile navbar should work as designed */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-menu {
+        position: fixed !important;
+        top: 70px !important;
+        right: -100% !important;
+        width: 70% !important;
+        max-width: 300px !important;
+        height: calc(100vh - 70px) !important;
+        background: var(--bg-white) !important;
+        flex-direction: column !important;
+        padding: var(--spacing-md) !important;
+        box-shadow: var(--shadow-lg) !important;
+        transition: var(--transition) !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+        overflow-y: auto !important;
+    }
+    
+    .nav-menu.active {
+        right: 0 !important;
+    }
+    
+    .nav-menu li {
+        width: 100% !important;
+        border-bottom: 1px solid var(--accent-gray) !important;
+        display: block !important;
+    }
+    
+    .nav-link {
+        display: block !important;
+        width: 100% !important;
+        padding: 1rem !important;
+    }
+    
+    /* Carousel mobile adjustments */
+    #header-carousel,
+    #header-carousel .carousel-item {
+        height: 50vh;
+    }
+    
+    .carousel-text {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .carousel-text h1 {
+        font-size: 2rem !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+}
+
+/* ============================================
+   CONTAINER FLUID FIX
+   Bootstrap's container-fluid shouldn't add padding
+   ============================================ */
+.container-fluid.px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ============================================
+   BOOTSTRAP UTILITY CLASS FIXES
+   ============================================ */
+.w-100 {
+    width: 100% !important;
+}
+
+.display-2 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* Make sure Bootstrap doesn't mess with sections after carousel */
+section.features,
+section.services-preview,
+section.cta-section {
+    padding: var(--spacing-xl) 0 !important;
+}

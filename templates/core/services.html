@@ -2,56 +2,173 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}{% trans 'Construction & Assembly' %} - Gereltjin LLC{% endblock %}
+{% block title %}{% trans 'Our Services' %} - Gereltjin LLC{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
 <section class="page-header">
     <div class="container">
-        <h1>{% trans 'Construction & Assembly' %}</h1>
-        <p>{% trans 'Professional construction and assembly services' %}</p>
+        <h1>{% trans 'Our Services' %}</h1>
+        <p>{% trans 'Comprehensive glass solutions for every need' %}</p>
     </div>
 </section>
 
-<!-- Content Section -->
-<section class="content-section">
+<!-- Services Overview -->
+<section class="services-overview">
     <div class="container">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2>{% trans 'Construction & Assembly' %}</h2>
-                <p>
-                    {% trans 'We provide comprehensive construction and assembly services for glass structures and installations. Our experienced team ensures precise installation and quality workmanship.' %}
+        <div class="services-grid">
+            <!-- Service 1: Architectural Glass -->
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>{% trans 'Architectural Glass' %}</h3>
+                <p class="service-description">
+                    {% trans 'Custom glass solutions for modern architecture, including curtain walls, facades, and structural glazing systems.' %}
                 </p>
-                <p>
-                    {% trans 'From planning to completion, we handle all aspects of construction and assembly with attention to detail and safety.' %}
+                <ul class="service-features">
+                    <li>{% trans 'Glass curtain walls' %}</li>
+                    <li>{% trans 'Building facades' %}</li>
+                    <li>{% trans 'Structural glazing' %}</li>
+                    <li>{% trans 'Glass canopies' %}</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="{% url 'core:glass_structure' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Windows & Doors -->
+            <div class="service-card">
+                <div class="service-icon">🪟</div>
+                <h3>{% trans 'Windows & Doors' %}</h3>
+                <p class="service-description">
+                    {% trans 'Premium windows and door systems with superior energy efficiency and security features.' %}
                 </p>
-                
-                <h3>{% trans 'Our Services Include:' %}</h3>
-                <ul class="service-list">
-                    <li>{% trans 'Site preparation and planning' %}</li>
-                    <li>{% trans 'Structural assembly' %}</li>
-                    <li>{% trans 'Glass installation' %}</li>
-                    <li>{% trans 'Quality control and inspection' %}</li>
+                <ul class="service-features">
+                    <li>{% trans 'Sliding windows' %}</li>
+                    <li>{% trans 'Glass doors' %}</li>
+                    <li>{% trans 'French doors' %}</li>
+                    <li>{% trans 'Automatic doors' %}</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="{% url 'core:windows_doors' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                </div>
+            </div>
+
+            <!-- Service 3: Interior Glass -->
+            <div class="service-card">
+                <div class="service-icon">🚪</div>
+                <h3>{% trans 'Interior Glass Solutions' %}</h3>
+                <p class="service-description">
+                    {% trans 'Modern interior glass partitions, doors, and decorative elements for offices and homes.' %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans 'Glass partitions' %}</li>
+                    <li>{% trans 'Office dividers' %}</li>
+                    <li>{% trans 'Shower enclosures' %}</li>
+                    <li>{% trans 'Glass railings' %}</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Construction & Assembly -->
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>{% trans 'Construction & Assembly' %}</h3>
+                <p class="service-description">
+                    {% trans 'Professional installation services with experienced technicians and quality workmanship.' %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans 'Site preparation' %}</li>
+                    <li>{% trans 'Professional installation' %}</li>
+                    <li>{% trans 'Quality inspection' %}</li>
                     <li>{% trans 'Post-installation support' %}</li>
                 </ul>
+                <div class="service-actions">
+                    <a href="{% url 'core:construction' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                </div>
             </div>
-            
-            <div class="content-image">
-                <div class="image-placeholder">
-                    <span>🏗️</span>
-                    <p>{% trans 'Construction & Assembly' %}</p>
+
+            <!-- Service 5: Equipment Rental -->
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>{% trans 'Equipment Rental' %}</h3>
+                <p class="service-description">
+                    {% trans 'Rent professional glass installation equipment and workspace for your projects.' %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans 'Glass lifters' %}</li>
+                    <li>{% trans 'Cutting equipment' %}</li>
+                    <li>{% trans 'Installation tools' %}</li>
+                    <li>{% trans 'Workshop space' %}</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="{% url 'core:rental' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Request Rental' %}</a>
+                </div>
+            </div>
+
+            <!-- Service 6: Custom Design -->
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>{% trans 'Custom Design Services' %}</h3>
+                <p class="service-description">
+                    {% trans 'Tailored glass solutions designed specifically for your unique project requirements.' %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans 'Design consultation' %}</li>
+                    <li>{% trans '3D modeling' %}</li>
+                    <li>{% trans 'Custom fabrication' %}</li>
+                    <li>{% trans 'Project management' %}</li>
+                </ul>
+                <div class="service-actions">
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
+<!-- Why Choose Us -->
+<section class="why-choose-section">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Why Choose Gereltjin?' %}</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">✅</div>
+                <h4>{% trans 'Quality Guaranteed' %}</h4>
+                <p>{% trans 'All products meet international standards' %}</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <h4>{% trans 'Fast Delivery' %}</h4>
+                <p>{% trans 'Efficient production and installation' %}</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">💰</div>
+                <h4>{% trans 'Competitive Pricing' %}</h4>
+                <p>{% trans 'Best value for your investment' %}</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🛡️</div>
+                <h4>{% trans 'Warranty Coverage' %}</h4>
+                <p>{% trans 'Comprehensive warranty on all work' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
-        <h2>{% trans 'Need Construction Services?' %}</h2>
-        <p>{% trans 'Contact us for a consultation' %}</p>
-        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
+        <h2>{% trans 'Ready to Start Your Project?' %}</h2>
+        <p>{% trans 'Get a free consultation and detailed quote' %}</p>
+        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Request Quote' %}</a>
     </div>
 </section>
 {% endblock %}
@@ -70,102 +187,131 @@
     margin-bottom: 1rem;
 }
 
-.content-section {
+.services-overview {
     padding: var(--spacing-xl) 0;
 }
 
-.content-grid {
+.services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    align-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
 }
 
-.content-text h2 {
-    color: var(--primary-blue);
-    margin-bottom: var(--spacing-md);
-    font-size: 2rem;
+.service-card {
+    background: var(--bg-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border-top: 4px solid var(--primary-blue);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
-.content-text h3 {
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-card h3 {
     color: var(--primary-blue);
-    margin-top: var(--spacing-md);
+    text-align: center;
     margin-bottom: var(--spacing-sm);
     font-size: 1.5rem;
 }
 
-.content-text p {
-    margin-bottom: var(--spacing-sm);
+.service-description {
     color: var(--text-gray);
-    line-height: 1.8;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
 }
 
-.service-list {
+.service-features {
     list-style: none;
     padding: 0;
-    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
 }
 
-.service-list li {
-    padding: 0.75rem 0;
-    padding-left: 2rem;
+.service-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
     position: relative;
     color: var(--text-gray);
-    border-bottom: 1px solid var(--accent-gray);
 }
 
-.service-list li:before {
-    content: '✓';
+.service-features li:before {
+    content: '▸';
     position: absolute;
     left: 0;
     color: var(--primary-blue);
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
-.content-image {
-    position: sticky;
-    top: 100px;
-}
-
-.image-placeholder {
-    background: var(--accent-gray);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
-    text-align: center;
-    min-height: 400px;
+.service-actions {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
 }
 
-.image-placeholder span {
-    font-size: 6rem;
+.service-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.why-choose-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.benefit-item {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 3rem;
     margin-bottom: var(--spacing-sm);
 }
 
-.image-placeholder p {
-    font-size: 1.25rem;
+.benefit-item h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
     color: var(--text-gray);
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
     .page-header h1 {
         font-size: 2rem;
     }
     
-    .content-image {
-        position: relative;
-        top: 0;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
     
-    .image-placeholder {
-        min-height: 300px;
+    .service-actions {
+        flex-direction: column;
     }
 }
 </style>

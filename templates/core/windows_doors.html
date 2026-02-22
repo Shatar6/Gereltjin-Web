@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Windows & Doors' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Windows & Doors' %}</h1>
+        <p>{% trans 'Premium glass windows and doors for your space' %}</p>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="content-intro">
+            <h2>{% trans 'High-Quality Windows & Doors' %}</h2>
+            <p>
+                {% trans 'We manufacture and install premium glass windows and doors that combine functionality, energy efficiency, and aesthetic appeal.' %}
+            </p>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="product-categories">
+            <div class="category-card">
+                <div class="category-icon">🪟</div>
+                <h3>{% trans 'Windows' %}</h3>
+                <ul>
+                    <li>{% trans 'Sliding windows' %}</li>
+                    <li>{% trans 'Casement windows' %}</li>
+                    <li>{% trans 'Fixed windows' %}</li>
+                    <li>{% trans 'Tilt & turn windows' %}</li>
+                    <li>{% trans 'Bay windows' %}</li>
+                </ul>
+                <div class="placeholder-img">
+                    <span>🪟</span>
+                    <p>{% trans 'Window images coming soon' %}</p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🚪</div>
+                <h3>{% trans 'Glass Doors' %}</h3>
+                <ul>
+                    <li>{% trans 'Sliding glass doors' %}</li>
+                    <li>{% trans 'French doors' %}</li>
+                    <li>{% trans 'Pivot doors' %}</li>
+                    <li>{% trans 'Frameless glass doors' %}</li>
+                    <li>{% trans 'Automatic sliding doors' %}</li>
+                </ul>
+                <div class="placeholder-img">
+                    <span>🚪</span>
+                    <p>{% trans 'Door images coming soon' %}</p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🏢</div>
+                <h3>{% trans 'Commercial Solutions' %}</h3>
+                <ul>
+                    <li>{% trans 'Storefront systems' %}</li>
+                    <li>{% trans 'Office partitions' %}</li>
+                    <li>{% trans 'Entrance systems' %}</li>
+                    <li>{% trans 'Fire-rated glass doors' %}</li>
+                    <li>{% trans 'Soundproof solutions' %}</li>
+                </ul>
+                <div class="placeholder-img">
+                    <span>🏢</span>
+                    <p>{% trans 'Commercial images coming soon' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Why Choose Our Windows & Doors?' %}</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">❄️</div>
+                <h4>{% trans 'Energy Efficient' %}</h4>
+                <p>{% trans 'Double/triple glazing for superior insulation and energy savings' %}</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔒</div>
+                <h4>{% trans 'Secure & Safe' %}</h4>
+                <p>{% trans 'Multi-point locking systems and tempered safety glass' %}</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔇</div>
+                <h4>{% trans 'Sound Insulation' %}</h4>
+                <p>{% trans 'Reduce noise pollution with acoustic glass options' %}</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🎨</div>
+                <h4>{% trans 'Custom Design' %}</h4>
+                <p>{% trans 'Wide range of colors, finishes, and configurations' %}</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">⚙️</div>
+                <h4>{% trans 'Easy Maintenance' %}</h4>
+                <p>{% trans 'Durable materials designed for long-lasting performance' %}</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">✅</div>
+                <h4>{% trans 'Quality Guaranteed' %}</h4>
+                <p>{% trans 'All products come with warranty and professional installation' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Installation Process -->
+<section class="process-section">
+    <div class="container">
+        <h2 class="section-title">{% trans 'Our Installation Process' %}</h2>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>{% trans 'Consultation' %}</h4>
+                <p>{% trans 'We discuss your needs and take measurements' %}</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>{% trans 'Design & Quote' %}</h4>
+                <p>{% trans 'Custom design and detailed pricing proposal' %}</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>{% trans 'Manufacturing' %}</h4>
+                <p>{% trans 'Precision manufacturing in our factory' %}</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>{% trans 'Installation' %}</h4>
+                <p>{% trans 'Professional installation by our expert team' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Ready to Upgrade Your Windows & Doors?' %}</h2>
+        <p>{% trans 'Get a free consultation and quote today' %}</p>
+        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Request Quote' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.content-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.content-intro h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2.5rem;
+}
+
+.product-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.category-card {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    border-top: 4px solid var(--primary-blue);
+}
+
+.category-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.category-card h3 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.category-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.category-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.category-card ul li:before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+}
+
+.placeholder-img {
+    background: var(--bg-white);
+    border: 2px dashed var(--primary-blue);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.placeholder-img span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-img p {
+    color: var(--text-gray);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.features-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.feature-box {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-box .feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-box h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-box p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.process-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.process-step {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.process-step h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-xs);
+}
+
+.process-step p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .content-intro h2 {
+        font-size: 1.75rem;
+    }
+}
+</style>
+{% endblock %}

@@ -25,6 +25,15 @@ def careers(request):
     """Careers page view"""
     return render(request, 'core/careers.html')
 
+
+def portfolio(request):
+    """Portfolio page"""
+    return render(request, 'portfolio/portfolio_list.html')
+
+def create_order(request):
+    """Create Order page view"""
+    return render(request, 'core/create_order.html')
+
 # Dropdown submenu pages
 def construction(request):
     """Construction & Assembly page"""

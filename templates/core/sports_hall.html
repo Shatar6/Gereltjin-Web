@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Sports Hall' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Sports Hall' %}</h1>
+        <p>{% trans 'Modern sports facility with glass features' %}</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="placeholder-hero">
+                <span>⚽</span>
+                <h2>{% trans 'Modern Sports Complex' %}</h2>
+                <p>{% trans 'Main facility image will be added here' %}</p>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="card-icon">🏐</div>
+                <h3>{% trans 'Multi-Purpose Hall' %}</h3>
+                <p>{% trans 'Suitable for basketball, volleyball, badminton, and other indoor sports' %}</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon">🪟</div>
+                <h3>{% trans 'Glass Features' %}</h3>
+                <p>{% trans 'Large glass walls providing natural light and visibility' %}</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon">👥</div>
+                <h3>{% trans 'Rental Available' %}</h3>
+                <p>{% trans 'Book the facility for training, matches, or events' %}</p>
+            </div>
+            <div class="info-card">
+                <div class="card-icon">🎯</div>
+                <h3>{% trans 'Professional Equipment' %}</h3>
+                <p>{% trans 'Fully equipped with modern sports facilities' %}</p>
+            </div>
+        </div>
+
+        <div class="facilities-section">
+            <h2>{% trans 'Facilities & Amenities' %}</h2>
+            <div class="facilities-list">
+                <div class="facility-item">✅ {% trans 'Regulation-size courts' %}</div>
+                <div class="facility-item">✅ {% trans 'Changing rooms & showers' %}</div>
+                <div class="facility-item">✅ {% trans 'Spectator seating' %}</div>
+                <div class="facility-item">✅ {% trans 'Air conditioning' %}</div>
+                <div class="facility-item">✅ {% trans 'Parking available' %}</div>
+                <div class="facility-item">✅ {% trans 'Equipment storage' %}</div>
+            </div>
+        </div>
+
+        <div class="gallery-placeholder">
+            <h2>{% trans 'Facility Gallery' %}</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><span>🏀</span><p>{% trans 'Court View' %}</p></div>
+                <div class="gallery-item"><span>🪟</span><p>{% trans 'Glass Walls' %}</p></div>
+                <div class="gallery-item"><span>💡</span><p>{% trans 'Interior' %}</p></div>
+                <div class="gallery-item"><span>🏢</span><p>{% trans 'Exterior' %}</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Book Our Sports Hall' %}</h2>
+        <p>{% trans 'Contact us for availability and pricing' %}</p>
+        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-large">{% trans 'Contact Us' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); color: var(--text-light); padding: 4rem 0 3rem; text-align: center; }
+.page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+.content-section { padding: var(--spacing-xl) 0; }
+.placeholder-hero { background: var(--bg-light); border: 3px dashed var(--primary-blue); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); text-align: center; margin-bottom: var(--spacing-xl); }
+.placeholder-hero span { font-size: 6rem; display: block; margin-bottom: var(--spacing-sm); }
+.placeholder-hero h2 { color: var(--primary-blue); margin-bottom: var(--spacing-sm); }
+.placeholder-hero p { color: var(--text-gray); font-style: italic; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl); }
+.info-card { background: var(--bg-light); padding: var(--spacing-md); border-radius: var(--border-radius); text-align: center; }
+.card-icon { font-size: 3rem; margin-bottom: var(--spacing-sm); }
+.info-card h3 { color: var(--primary-blue); margin-bottom: var(--spacing-sm); }
+.info-card p { color: var(--text-gray); font-size: 0.95rem; }
+.facilities-section { background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); }
+.facilities-section h2 { color: var(--primary-blue); text-align: center; margin-bottom: var(--spacing-md); }
+.facilities-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-sm); }
+.facility-item { padding: 0.75rem; background: var(--bg-white); border-radius: var(--border-radius); }
+.gallery-placeholder h2 { color: var(--primary-blue); text-align: center; margin-bottom: var(--spacing-md); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
+.gallery-item { background: var(--bg-light); border: 2px dashed var(--primary-blue); border-radius: var(--border-radius); padding: var(--spacing-lg); text-align: center; }
+.gallery-item span { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+.gallery-item p { color: var(--text-gray); font-style: italic; margin: 0; }
+@media (max-width: 768px) { .page-header h1 { font-size: 2rem; } }
+</style>
+{% endblock %}

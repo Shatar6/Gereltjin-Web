@@ -1,0 +1,750 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Request a Quote' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Request a Quote' %}</h1>
+        <p>{% trans 'Fill out the form and we will contact you within 24 hours' %}</p>
+    </div>
+</section>
+
+<!-- Order Form Section -->
+<section class="order-form-section">
+    <div class="container">
+        <div class="form-layout">
+            <!-- Main Form -->
+            <div class="form-container">
+                <form method="post" enctype="multipart/form-data" class="order-form" id="orderForm">
+                    {% csrf_token %}
+
+                    <!-- Progress Steps -->
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span>{% trans 'Product' %}</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span>{% trans 'Details' %}</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span>{% trans 'Contact' %}</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Product Selection -->
+                    <div class="form-step active" data-step="1">
+                        <h3>{% trans 'Select Product Type' %}</h3>
+                        
+                        <div class="product-selection">
+                            <label class="product-option">
+                                <input type="radio" name="product_type" value="windows" required>
+                                <div class="option-card">
+                                    <span class="option-icon">🪟</span>
+                                    <span class="option-label">{% trans 'Windows' %}</span>
+                                </div>
+                            </label>
+
+                            <label class="product-option">
+                                <input type="radio" name="product_type" value="doors">
+                                <div class="option-card">
+                                    <span class="option-icon">🚪</span>
+                                    <span class="option-label">{% trans 'Doors' %}</span>
+                                </div>
+                            </label>
+
+                            <label class="product-option">
+                                <input type="radio" name="product_type" value="facade">
+                                <div class="option-card">
+                                    <span class="option-icon">🏢</span>
+                                    <span class="option-label">{% trans 'Facade Glass' %}</span>
+                                </div>
+                            </label>
+
+                            <label class="product-option">
+                                <input type="radio" name="product_type" value="interior">
+                                <div class="option-card">
+                                    <span class="option-icon">🚪</span>
+                                    <span class="option-label">{% trans 'Interior Glass' %}</span>
+                                </div>
+                            </label>
+
+                            <label class="product-option">
+                                <input type="radio" name="product_type" value="custom">
+                                <div class="option-card">
+                                    <span class="option-icon">🎨</span>
+                                    <span class="option-label">{% trans 'Custom' %}</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button type="button" class="btn btn-primary next-btn">{% trans 'Next' %} →</button>
+                    </div>
+
+                    <!-- Step 2: Specifications -->
+                    <div class="form-step" data-step="2">
+                        <h3>{% trans 'Project Details & Specifications' %}</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>{% trans 'Width (mm)' %}</label>
+                                <input type="number" name="width" placeholder="e.g., 1200" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>{% trans 'Height (mm)' %}</label>
+                                <input type="number" name="height" placeholder="e.g., 2000" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>{% trans 'Quantity' %} *</label>
+                                <input type="number" name="quantity" placeholder="e.g., 5" required class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Additional Specifications' %}</label>
+                            <textarea name="specifications" rows="4" class="form-control" 
+                                placeholder="{% trans 'Color, thickness, glass type, frame material, etc.' %}"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Project Description' %}</label>
+                            <textarea name="project_details" rows="4" class="form-control"
+                                placeholder="{% trans 'Tell us about your project, building type, usage, etc.' %}"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Delivery/Installation Location' %} *</label>
+                            <input type="text" name="delivery_location" required class="form-control"
+                                placeholder="{% trans 'District, City, Full address if available' %}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Upload Reference Images/Drawings' %} ({% trans 'Optional' %})</label>
+                            <div class="file-upload-zone" id="fileUploadZone">
+                                <input type="file" name="attachments" multiple accept="image/*,.pdf" id="fileInput" hidden>
+                                <div class="upload-placeholder">
+                                    <span class="upload-icon">📎</span>
+                                    <p>{% trans 'Click or drag files here' %}</p>
+                                    <small>{% trans 'Supported: Images, PDF (Max 10MB each)' %}</small>
+                                </div>
+                                <div class="file-list" id="fileList"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-btn">← {% trans 'Back' %}</button>
+                            <button type="button" class="btn btn-primary next-btn">{% trans 'Next' %} →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Information -->
+                    <div class="form-step" data-step="3">
+                        <h3>{% trans 'Your Contact Information' %}</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>{% trans 'Full Name' %} *</label>
+                                <input type="text" name="contact_name" required class="form-control"
+                                    placeholder="{% trans 'Your name' %}">
+                            </div>
+                            <div class="form-group">
+                                <label>{% trans 'Company Name' %} ({% trans 'Optional' %})</label>
+                                <input type="text" name="company_name" class="form-control"
+                                    placeholder="{% trans 'Company or organization' %}">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>{% trans 'Email Address' %} *</label>
+                                <input type="email" name="email" required class="form-control"
+                                    placeholder="example@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>{% trans 'Phone Number' %} *</label>
+                                <input type="tel" name="phone" required class="form-control"
+                                    placeholder="+976 XXXX XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Preferred Contact Method' %}</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="contact_method" value="email" checked>
+                                    <span>📧 {% trans 'Email' %}</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contact_method" value="phone">
+                                    <span>📱 {% trans 'Phone' %}</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="contact_method" value="both">
+                                    <span>💬 {% trans 'Both' %}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>{% trans 'Additional Notes' %}</label>
+                            <textarea name="notes" rows="3" class="form-control"
+                                placeholder="{% trans 'Any other information you would like to share' %}"></textarea>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-btn">← {% trans 'Back' %}</button>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                {% trans 'Submit Request' %} ✓
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="sidebar-info">
+                <div class="info-box">
+                    <h4>{% trans 'What Happens Next?' %}</h4>
+                    <ol class="process-list">
+                        <li>
+                            <span class="step-icon">1️⃣</span>
+                            <div>
+                                <strong>{% trans 'Review' %}</strong>
+                                <p>{% trans 'We review your request within 24 hours' %}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-icon">2️⃣</span>
+                            <div>
+                                <strong>{% trans 'Quote Preparation' %}</strong>
+                                <p>{% trans 'Our team prepares a detailed quotation' %}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-icon">3️⃣</span>
+                            <div>
+                                <strong>{% trans 'Contact' %}</strong>
+                                <p>{% trans 'We contact you with the proposal' %}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-icon">4️⃣</span>
+                            <div>
+                                <strong>{% trans 'Finalize' %}</strong>
+                                <p>{% trans 'Discuss details and start your project' %}</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="info-box">
+                    <h4>{% trans 'Need Help?' %}</h4>
+                    <div class="contact-info">
+                        <p><strong>{% trans 'Call us:' %}</strong><br>+976 XXXX XXXX</p>
+                        <p><strong>{% trans 'Email:' %}</strong><br>info@gereltjin.mn</p>
+                        <p><strong>{% trans 'Working Hours:' %}</strong><br>{% trans 'Mon-Fri: 9AM-6PM' %}</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>{% trans 'Why Choose Us?' %}</h4>
+                    <ul class="benefits-list">
+                        <li>✅ {% trans 'Free consultation' %}</li>
+                        <li>✅ {% trans 'Competitive pricing' %}</li>
+                        <li>✅ {% trans 'Quality guaranteed' %}</li>
+                        <li>✅ {% trans 'Fast response time' %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.order-form-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-container {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-gray);
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-gray);
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.step.active .step-number,
+.step.completed .step-number {
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.step span {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.step.active span {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-step h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.75rem;
+}
+
+/* Product Selection */
+.product-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.product-option input[type="radio"] {
+    display: none;
+}
+
+.option-card {
+    padding: var(--spacing-md);
+    border: 2px solid var(--accent-gray);
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.product-option input:checked + .option-card {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.option-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.option-label {
+    font-weight: 600;
+}
+
+/* Form Fields */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--accent-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(46, 125, 181, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* File Upload */
+.file-upload-zone {
+    border: 2px dashed var(--primary-blue);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.file-upload-zone:hover {
+    background: var(--accent-gray);
+}
+
+.upload-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.upload-placeholder p {
+    margin: 0.5rem 0;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.upload-placeholder small {
+    color: var(--text-gray);
+}
+
+.file-list {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    flex: 1;
+    min-width: 150px;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.radio-option span {
+    display: block;
+    padding: 0.75rem;
+    border: 2px solid var(--accent-gray);
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.radio-option input:checked + span {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+/* Form Navigation */
+.form-navigation {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--spacing-md);
+}
+
+.form-navigation .btn {
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-box {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-box h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.process-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-gray);
+}
+
+.process-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.process-list strong {
+    display: block;
+    color: var(--primary-blue);
+    margin-bottom: 0.25rem;
+}
+
+.process-list p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 0.5rem 0;
+    color: var(--text-gray);
+}
+
+@media (max-width: 1024px) {
+    .form-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-info {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .progress-steps {
+        font-size: 0.85rem;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .product-selection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-navigation {
+        flex-direction: column;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('orderForm');
+    const steps = document.querySelectorAll('.form-step');
+    const progressSteps = document.querySelectorAll('.progress-steps .step');
+    const nextBtns = document.querySelectorAll('.next-btn');
+    const prevBtns = document.querySelectorAll('.prev-btn');
+    let currentStep = 1;
+
+    // Next button
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+    });
+
+    // Previous button
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            currentStep--;
+            showStep(currentStep);
+        });
+    });
+
+    function showStep(step) {
+        steps.forEach(s => s.classList.remove('active'));
+        progressSteps.forEach(s => s.classList.remove('active'));
+        
+        steps[step - 1].classList.add('active');
+        progressSteps[step - 1].classList.add('active');
+        
+        // Mark previous steps as completed
+        progressSteps.forEach((s, index) => {
+            if (index < step - 1) {
+                s.classList.add('completed');
+            }
+        });
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function validateStep(step) {
+        const currentStepEl = steps[step - 1];
+        const requiredFields = currentStepEl.querySelectorAll('[required]');
+        let valid = true;
+
+        requiredFields.forEach(field => {
+            if (!field.value && field.type !== 'radio') {
+                field.classList.add('error');
+                valid = false;
+            } else if (field.type === 'radio') {
+                const radioGroup = currentStepEl.querySelectorAll(`[name="${field.name}"]`);
+                const isChecked = Array.from(radioGroup).some(r => r.checked);
+                if (!isChecked) {
+                    valid = false;
+                }
+            } else {
+                field.classList.remove('error');
+            }
+        });
+
+        if (!valid) {
+            alert('Please fill in all required fields');
+        }
+
+        return valid;
+    }
+
+    // File upload
+    const fileUploadZone = document.getElementById('fileUploadZone');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+
+    fileUploadZone.addEventListener('click', function() {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', function() {
+        fileList.innerHTML = '';
+        Array.from(this.files).forEach(file => {
+            const fileItem = document.createElement('div');
+            fileItem.textContent = `📎 ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+            fileItem.style.padding = '0.5rem';
+            fileItem.style.background = 'var(--accent-gray)';
+            fileItem.style.borderRadius = 'var(--border-radius)';
+            fileItem.style.marginBottom = '0.5rem';
+            fileList.appendChild(fileItem);
+        });
+    });
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        if (!validateStep(currentStep)) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+{% endblock %}

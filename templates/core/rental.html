@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Rental Services' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>{% trans 'Rental Services' %}</h1>
+        <p>{% trans 'Equipment and space rental solutions' %}</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="content-intro">
+            <h2>{% trans 'Our Rental Services' %}</h2>
+            <p>{% trans 'We offer flexible rental options for glass installation equipment and workspace.' %}</p>
+        </div>
+
+        <div class="rental-categories">
+            <div class="rental-card">
+                <div class="rental-icon">🏗️</div>
+                <h3>{% trans 'Equipment Rental' %}</h3>
+                <ul>
+                    <li>{% trans 'Glass lifters and suction devices' %}</li>
+                    <li>{% trans 'Cutting and processing equipment' %}</li>
+                    <li>{% trans 'Installation tools' %}</li>
+                    <li>{% trans 'Safety equipment' %}</li>
+                </ul>
+                <div class="placeholder-box">
+                    <span>🏗️</span>
+                    <p>{% trans 'Equipment images coming soon' %}</p>
+                </div>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-icon">🏢</div>
+                <h3>{% trans 'Workspace Rental' %}</h3>
+                <ul>
+                    <li>{% trans 'Workshop space' %}</li>
+                    <li>{% trans 'Storage facilities' %}</li>
+                    <li>{% trans 'Office space' %}</li>
+                    <li>{% trans 'Meeting rooms' %}</li>
+                </ul>
+                <div class="placeholder-box">
+                    <span>🏢</span>
+                    <p>{% trans 'Space images coming soon' %}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rental-info">
+            <h3>{% trans 'Rental Terms' %}</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>{% trans 'Daily Rental' %}</strong>
+                    <p>{% trans 'Flexible daily rates for short-term needs' %}</p>
+                </div>
+                <div class="info-item">
+                    <strong>{% trans 'Weekly Rental' %}</strong>
+                    <p>{% trans 'Discounted rates for weekly rental' %}</p>
+                </div>
+                <div class="info-item">
+                    <strong>{% trans 'Monthly Rental' %}</strong>
+                    <p>{% trans 'Best value for long-term projects' %}</p>
+                </div>
+                <div class="info-item">
+                    <strong>{% trans 'Delivery Available' %}</strong>
+                    <p>{% trans 'We can deliver equipment to your site' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>{% trans 'Need Equipment or Space?' %}</h2>
+        <p>{% trans 'Contact us for rental rates and availability' %}</p>
+        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Request Rental' %}</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+.page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+.content-section { padding: var(--spacing-xl) 0; }
+.content-intro { text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl); }
+.content-intro h2 { color: var(--primary-blue); margin-bottom: var(--spacing-sm); font-size: 2.5rem; }
+.rental-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl); }
+.rental-card { background: var(--bg-light); padding: var(--spacing-md); border-radius: var(--border-radius-lg); }
+.rental-icon { font-size: 3rem; text-align: center; margin-bottom: var(--spacing-sm); }
+.rental-card h3 { color: var(--primary-blue); text-align: center; margin-bottom: var(--spacing-md); }
+.rental-card ul { list-style: none; padding: 0; margin-bottom: var(--spacing-md); }
+.rental-card ul li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: var(--text-gray); }
+.rental-card ul li:before { content: '✓'; position: absolute; left: 0; color: var(--primary-blue); font-weight: bold; }
+.placeholder-box { background: var(--bg-white); border: 2px dashed var(--primary-blue); border-radius: var(--border-radius); padding: var(--spacing-md); text-align: center; }
+.placeholder-box span { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+.placeholder-box p { color: var(--text-gray); font-style: italic; margin: 0; }
+.rental-info { background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); }
+.rental-info h3 { color: var(--primary-blue); margin-bottom: var(--spacing-md); text-align: center; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); }
+.info-item { background: var(--bg-white); padding: var(--spacing-md); border-radius: var(--border-radius); }
+.info-item strong { color: var(--primary-blue); display: block; margin-bottom: 0.5rem; }
+.info-item p { color: var(--text-gray); margin: 0; font-size: 0.95rem; }
+@media (max-width: 768px) {
+    .page-header h1 { font-size: 2rem; }
+    .rental-categories { grid-template-columns: 1fr; }
+}
+</style>
+{% endblock %}

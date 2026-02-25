@@ -1,0 +1,786 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'My Quotations' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Customer Portal Header -->
+<section class="customer-portal-header">
+    <div class="container">
+        <div class="portal-nav">
+            <h1>{% trans 'My Quotations' %}</h1>
+            <div class="user-info">
+                <span>👤 {{ user.get_full_name|default:user.username }}</span>
+                <a href="{% url 'customer:profile' %}" class="btn btn-secondary btn-sm">{% trans 'Profile' %}</a>
+                <a href="{% url 'logout' %}" class="btn btn-secondary btn-sm">{% trans 'Logout' %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Navigation -->
+<section class="customer-navigation">
+    <div class="container">
+        <nav class="customer-tabs">
+            <a href="{% url 'customer:quotes' %}" class="tab-link active">
+                📋 {% trans 'My Quotes' %}
+            </a>
+            <a href="{% url 'customer:profile' %}" class="tab-link">
+                👤 {% trans 'Profile' %}
+            </a>
+            <a href="{% url 'orders:create_order' %}" class="tab-link tab-highlight">
+                ➕ {% trans 'New Quote Request' %}
+            </a>
+        </nav>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="customer-content">
+    <div class="container">
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="summary-icon">📊</div>
+                <div class="summary-info">
+                    <h3>5</h3>
+                    <p>{% trans 'Total Requests' %}</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⏳</div>
+                <div class="summary-info">
+                    <h3>2</h3>
+                    <p>{% trans 'Pending' %}</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">✅</div>
+                <div class="summary-info">
+                    <h3>3</h3>
+                    <p>{% trans 'Responded' %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">{% trans 'All' %} (5)</button>
+                <button class="filter-btn" data-filter="pending">⏳ {% trans 'Pending' %} (2)</button>
+                <button class="filter-btn" data-filter="quoted">💬 {% trans 'Quoted' %} (2)</button>
+                <button class="filter-btn" data-filter="approved">✅ {% trans 'Approved' %} (1)</button>
+                <button class="filter-btn" data-filter="rejected">❌ {% trans 'Rejected' %} (0)</button>
+            </div>
+        </div>
+
+        <!-- Quotes List -->
+        <div class="quotes-list">
+            <!-- Quote Item 1 - Quoted -->
+            <div class="quote-item" data-status="quoted">
+                <div class="quote-header">
+                    <div class="quote-number">
+                        <span class="label">{% trans 'Quote #' %}</span>
+                        <span class="number">Q-2024-001</span>
+                    </div>
+                    <span class="status-badge status-quoted">💬 {% trans 'Quote Received' %}</span>
+                </div>
+
+                <div class="quote-body">
+                    <div class="quote-details">
+                        <h3>{% trans 'Windows Installation - Residential' %}</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Product Type' %}:</span>
+                                <span class="detail-value">{% trans 'Windows' %}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Quantity' %}:</span>
+                                <span class="detail-value">8 {% trans 'units' %}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Requested' %}:</span>
+                                <span class="detail-value">2024-02-10</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Responded' %}:</span>
+                                <span class="detail-value">2024-02-12</span>
+                            </div>
+                        </div>
+
+                        <div class="quote-price">
+                            <span class="price-label">{% trans 'Quoted Price' %}:</span>
+                            <span class="price-value">₮12,500,000</span>
+                        </div>
+
+                        <div class="quote-description">
+                            <p><strong>{% trans 'Your Request' %}:</strong> 
+                            {% trans 'Need 8 double-glazed windows for apartment renovation. Size approximately 1200x1500mm each.' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="btn btn-primary" onclick="showQuoteDetails('Q-2024-001')">
+                            👁️ {% trans 'View Full Quote' %}
+                        </button>
+                        <button class="btn btn-success">
+                            ✅ {% trans 'Accept Quote' %}
+                        </button>
+                        <button class="btn btn-secondary">
+                            💬 {% trans 'Message' %}
+                        </button>
+                        <button class="btn btn-secondary">
+                            📥 {% trans 'Download PDF' %}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quote-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">✓</div>
+                        <div class="timeline-content">
+                            <strong>{% trans 'Request Submitted' %}</strong>
+                            <span>2024-02-10 14:30</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">✓</div>
+                        <div class="timeline-content">
+                            <strong>{% trans 'Quote Prepared' %}</strong>
+                            <span>2024-02-12 09:15</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item current">
+                        <div class="timeline-icon">◉</div>
+                        <div class="timeline-content">
+                            <strong>{% trans 'Awaiting Your Response' %}</strong>
+                            <span>{% trans 'Valid until 2024-03-12' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Item 2 - Pending -->
+            <div class="quote-item" data-status="pending">
+                <div class="quote-header">
+                    <div class="quote-number">
+                        <span class="label">{% trans 'Quote #' %}</span>
+                        <span class="number">Q-2024-002</span>
+                    </div>
+                    <span class="status-badge status-pending">⏳ {% trans 'Under Review' %}</span>
+                </div>
+
+                <div class="quote-body">
+                    <div class="quote-details">
+                        <h3>{% trans 'Glass Door Installation - Office' %}</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Product Type' %}:</span>
+                                <span class="detail-value">{% trans 'Glass Doors' %}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Quantity' %}:</span>
+                                <span class="detail-value">3 {% trans 'units' %}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Requested' %}:</span>
+                                <span class="detail-value">2024-02-20</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Status' %}:</span>
+                                <span class="detail-value text-warning">{% trans 'Pending Review' %}</span>
+                            </div>
+                        </div>
+
+                        <div class="quote-description">
+                            <p><strong>{% trans 'Your Request' %}:</strong> 
+                            {% trans 'Office entrance doors with automatic sliding mechanism. Frameless design preferred.' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="btn btn-primary" onclick="showQuoteDetails('Q-2024-002')">
+                            👁️ {% trans 'View Details' %}
+                        </button>
+                        <button class="btn btn-secondary" disabled>
+                            ⏳ {% trans 'Awaiting Response' %}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quote-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">✓</div>
+                        <div class="timeline-content">
+                            <strong>{% trans 'Request Submitted' %}</strong>
+                            <span>2024-02-20 11:45</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item current">
+                        <div class="timeline-icon">◉</div>
+                        <div class="timeline-content">
+                            <strong>{% trans 'Under Review' %}</strong>
+                            <span>{% trans 'Our team is preparing your quote' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Item 3 - Approved -->
+            <div class="quote-item" data-status="approved">
+                <div class="quote-header">
+                    <div class="quote-number">
+                        <span class="label">{% trans 'Quote #' %}</span>
+                        <span class="number">Q-2024-003</span>
+                    </div>
+                    <span class="status-badge status-approved">✅ {% trans 'Approved' %}</span>
+                </div>
+
+                <div class="quote-body">
+                    <div class="quote-details">
+                        <h3>{% trans 'Facade Glass - Commercial Building' %}</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Product Type' %}:</span>
+                                <span class="detail-value">{% trans 'Facade Glass' %}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Final Price' %}:</span>
+                                <span class="detail-value">₮45,000,000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Approved' %}:</span>
+                                <span class="detail-value">2024-01-15</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">{% trans 'Project Status' %}:</span>
+                                <span class="detail-value text-success">{% trans 'In Production' %}</span>
+                            </div>
+                        </div>
+
+                        <div class="project-progress">
+                            <p><strong>{% trans 'Project Progress' %}:</strong></p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;">65%</div>
+                            </div>
+                            <p class="progress-text">{% trans 'Estimated completion: 2024-03-30' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="btn btn-primary">
+                            👁️ {% trans 'View Contract' %}
+                        </button>
+                        <button class="btn btn-secondary">
+                            📥 {% trans 'Download Invoice' %}
+                        </button>
+                        <button class="btn btn-secondary">
+                            💬 {% trans 'Contact Team' %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (show when no quotes) -->
+        <div class="empty-state" style="display: none;">
+            <div class="empty-icon">📋</div>
+            <h3>{% trans 'No Quotations Yet' %}</h3>
+            <p>{% trans 'You haven\'t requested any quotes yet. Start by submitting a quote request.' %}</p>
+            <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">
+                ➕ {% trans 'Request Your First Quote' %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.customer-portal-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 1.5rem 0;
+}
+
+.portal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portal-nav h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer-navigation {
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--accent-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.customer-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.tab-link {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-gray);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.tab-link:hover {
+    color: var(--primary-blue);
+}
+
+.tab-link.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.tab-highlight {
+    background: var(--primary-blue);
+    color: var(--text-light) !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.tab-highlight:hover {
+    background: var(--primary-blue-dark);
+}
+
+.customer-content {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.summary-card {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+}
+
+.summary-info h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.summary-info p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Filters */
+.filter-section {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-blue);
+    background: transparent;
+    color: var(--primary-blue);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+/* Quotes List */
+.quotes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.quote-item {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.quote-item:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.quote-header {
+    background: var(--bg-light);
+    padding: 1rem var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-gray);
+}
+
+.quote-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quote-number .label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.quote-number .number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-quoted {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.quote-body {
+    padding: var(--spacing-md);
+}
+
+.quote-details h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-sm);
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.text-warning {
+    color: #856404 !important;
+}
+
+.text-success {
+    color: #155724 !important;
+}
+
+.quote-price {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin: var(--spacing-sm) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-label {
+    font-size: 1rem;
+}
+
+.price-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.quote-description {
+    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-sm);
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+}
+
+.quote-description p {
+    margin: 0;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.project-progress {
+    margin: var(--spacing-sm) 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: var(--accent-gray);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.quote-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.quote-actions .btn {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Timeline */
+.quote-timeline {
+    padding: var(--spacing-md);
+    background: var(--bg-light);
+    border-top: 2px solid var(--accent-gray);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 40px;
+    width: 2px;
+    height: calc(100% - 10px);
+    background: var(--accent-gray);
+}
+
+.timeline-item.completed::after {
+    background: var(--primary-blue);
+}
+
+.timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.timeline-item.completed .timeline-icon {
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.timeline-item.current .timeline-icon {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.timeline-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content strong {
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content span {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+}
+
+.empty-icon {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.empty-state h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.empty-state p {
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .portal-nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .user-info {
+        flex-direction: column;
+    }
+    
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quote-actions {
+        flex-direction: column;
+    }
+    
+    .quote-actions .btn {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const quoteItems = document.querySelectorAll('.quote-item');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            quoteItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-status') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+function showQuoteDetails(quoteNumber) {
+    alert('Viewing details for ' + quoteNumber);
+    // In real implementation, this would open a modal or navigate to detail page
+}
+</script>
+{% endblock %}

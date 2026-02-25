@@ -1,0 +1,452 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Employee Dashboard' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Portal Header -->
+<section class="portal-header">
+    <div class="container">
+        <div class="portal-nav">
+            <h1>{% trans 'Employee Portal' %}</h1>
+            <div class="user-info">
+                <span>👤 {{ user.get_full_name }}</span>
+                <a href="{% url 'logout' %}" class="btn btn-secondary btn-sm">{% trans 'Logout' %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portal Navigation -->
+<section class="portal-navigation">
+    <div class="container">
+        <nav class="portal-tabs">
+            <a href="{% url 'orders:portal_dashboard' %}" class="tab-link active">{% trans 'Dashboard' %}</a>
+            <a href="{% url 'orders:portal_apartments' %}" class="tab-link">{% trans 'Apartments' %}</a>
+            <a href="{% url 'orders:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
+            <a href="{% url 'orders:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
+            <a href="{% url 'orders:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
+        </nav>
+    </div>
+</section>
+
+<!-- Dashboard Content -->
+<section class="portal-content">
+    <div class="container">
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🏢</div>
+                <div class="stat-info">
+                    <h3>15</h3>
+                    <p>{% trans 'Total Apartments' %}</p>
+                    <small class="stat-meta">3 {% trans 'available' %}</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⚙️</div>
+                <div class="stat-info">
+                    <h3>8</h3>
+                    <p>{% trans 'Factory Machines' %}</p>
+                    <small class="stat-meta">2 {% trans 'maintenance due' %}</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🚗</div>
+                <div class="stat-info">
+                    <h3>12</h3>
+                    <p>{% trans 'Company Vehicles' %}</p>
+                    <small class="stat-meta">1 {% trans 'service due' %}</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-info">
+                    <h3>24</h3>
+                    <p>{% trans 'Pending Quotations' %}</p>
+                    <small class="stat-meta">5 {% trans 'urgent' %}</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions-section">
+            <h2>{% trans 'Quick Actions' %}</h2>
+            <div class="quick-actions-grid">
+                <a href="{% url 'orders:apartments_add' %}" class="action-card">
+                    <span class="action-icon">➕</span>
+                    <span class="action-label">{% trans 'Add Apartment' %}</span>
+                </a>
+                <a href="{% url 'orders:machines_add_maintenance' %}" class="action-card">
+                    <span class="action-icon">🔧</span>
+                    <span class="action-label">{% trans 'Log Maintenance' %}</span>
+                </a>
+                <a href="{% url 'orders:vehicles_add_service' %}" class="action-card">
+                    <span class="action-icon">🛠️</span>
+                    <span class="action-label">{% trans 'Add Vehicle Service' %}</span>
+                </a>
+                <a href="{% url 'orders:portal_quotations' %}" class="action-card">
+                    <span class="action-icon">💬</span>
+                    <span class="action-label">{% trans 'Review Quotations' %}</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity-section">
+            <h2>{% trans 'Recent Activity' %}</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">🏢</div>
+                    <div class="activity-content">
+                        <p><strong>{% trans 'Apartment A-301 sold' %}</strong></p>
+                        <p class="activity-meta">{% trans 'By' %}: Bataa • 2 {% trans 'hours ago' %}</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">⚙️</div>
+                    <div class="activity-content">
+                        <p><strong>{% trans 'Machine M-05 maintenance completed' %}</strong></p>
+                        <p class="activity-meta">{% trans 'By' %}: Dorj • 5 {% trans 'hours ago' %}</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">📋</div>
+                    <div class="activity-content">
+                        <p><strong>{% trans 'New quotation request received' %}</strong></p>
+                        <p class="activity-meta">{% trans 'Customer' %}: Bold • 1 {% trans 'day ago' %}</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">🚗</div>
+                    <div class="activity-content">
+                        <p><strong>{% trans 'Vehicle V-03 oil change' %}</strong></p>
+                        <p class="activity-meta">{% trans 'By' %}: Erdene • 2 {% trans 'days ago' %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="activity-actions">
+                <button class="btn btn-secondary">{% trans 'View All Activity' %}</button>
+            </div>
+        </div>
+
+        <!-- Alerts & Reminders -->
+        <div class="alerts-section">
+            <h2>{% trans 'Alerts & Reminders' %}</h2>
+            <div class="alerts-list">
+                <div class="alert-item alert-warning">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-content">
+                        <p><strong>{% trans 'Machine M-02 maintenance due' %}</strong></p>
+                        <p>{% trans 'Scheduled maintenance needed within 3 days' %}</p>
+                    </div>
+                    <button class="btn btn-sm btn-primary">{% trans 'Schedule' %}</button>
+                </div>
+
+                <div class="alert-item alert-info">
+                    <div class="alert-icon">ℹ️</div>
+                    <div class="alert-content">
+                        <p><strong>{% trans 'Vehicle V-08 insurance expiring' %}</strong></p>
+                        <p>{% trans 'Insurance expires in 15 days' %}</p>
+                    </div>
+                    <button class="btn btn-sm btn-primary">{% trans 'View Details' %}</button>
+                </div>
+
+                <div class="alert-item alert-urgent">
+                    <div class="alert-icon">🔴</div>
+                    <div class="alert-content">
+                        <p><strong>{% trans '5 urgent quotations awaiting response' %}</strong></p>
+                        <p>{% trans 'Pending for more than 48 hours' %}</p>
+                    </div>
+                    <button class="btn btn-sm btn-primary">{% trans 'Review Now' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.portal-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 1.5rem 0;
+}
+
+.portal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portal-nav h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portal-navigation {
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--accent-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.portal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.tab-link {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-gray);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.tab-link:hover {
+    color: var(--primary-blue);
+}
+
+.tab-link.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.portal-content {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    font-size: 3rem;
+}
+
+.stat-info h3 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.stat-info p {
+    margin: 0.25rem 0;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.stat-meta {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Quick Actions */
+.quick-actions-section {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.quick-actions-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.action-card {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.action-card:hover {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.action-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.action-label {
+    font-weight: 600;
+}
+
+/* Recent Activity */
+.recent-activity-section {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.recent-activity-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.activity-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.activity-content p {
+    margin: 0;
+}
+
+.activity-meta {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.activity-actions {
+    margin-top: var(--spacing-md);
+    text-align: center;
+}
+
+/* Alerts */
+.alerts-section {
+    background: var(--bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+}
+
+.alerts-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.alert-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid;
+    align-items: center;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    border-color: #17a2b8;
+}
+
+.alert-urgent {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.alert-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content p {
+    margin: 0;
+}
+
+.alert-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .portal-nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+{% endblock %}

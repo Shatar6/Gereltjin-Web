@@ -1,0 +1,436 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Apartments Management' %} - Gereltjin LLC{% endblock %}
+
+{% block content %}
+<!-- Portal Header -->
+<section class="portal-header">
+    <div class="container">
+        <div class="portal-nav">
+            <h1>{% trans 'Apartments Management' %}</h1>
+            <div class="header-actions">
+                <a href="{% url 'orders:apartments_add' %}" class="btn btn-primary">
+                    ➕ {% trans 'Add New Apartment' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portal Navigation -->
+<section class="portal-navigation">
+    <div class="container">
+        <nav class="portal-tabs">
+            <a href="{% url 'orders:portal_dashboard' %}" class="tab-link">{% trans 'Dashboard' %}</a>
+            <a href="{% url 'orders:portal_apartments' %}" class="tab-link active">{% trans 'Apartments' %}</a>
+            <a href="{% url 'orders:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
+            <a href="{% url 'orders:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
+            <a href="{% url 'orders:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
+        </nav>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="portal-content">
+    <div class="container">
+        <!-- Filter & Search -->
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" placeholder="{% trans 'Search apartments...' %}" class="search-input">
+                <button class="btn btn-secondary">🔍 {% trans 'Search' %}</button>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">{% trans 'All' %} (15)</button>
+                <button class="filter-btn" data-filter="available">{% trans 'Available' %} (3)</button>
+                <button class="filter-btn" data-filter="sold">{% trans 'Sold' %} (8)</button>
+                <button class="filter-btn" data-filter="rented">{% trans 'Rented' %} (4)</button>
+            </div>
+        </div>
+
+        <!-- Apartments Grid -->
+        <div class="apartments-grid">
+            <!-- Apartment Card 1 -->
+            <div class="apartment-card" data-status="available">
+                <div class="card-header">
+                    <span class="status-badge status-available">{% trans 'Available' %}</span>
+                    <div class="card-actions">
+                        <button class="btn-icon" title="{% trans 'Edit' %}">✏️</button>
+                        <button class="btn-icon" title="{% trans 'Delete' %}">🗑️</button>
+                    </div>
+                </div>
+                
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span>🏢</span>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <h3>{% trans 'Apartment' %} A-301</h3>
+                    <div class="apartment-details">
+                        <p><strong>📍</strong> Khan-Uul District, Bldg 12</p>
+                        <p><strong>📏</strong> 85 m² • 2 bedrooms • 1 bathroom</p>
+                        <p><strong>💰</strong> {% trans 'Purchase Price' %}: ₮350,000,000</p>
+                        <p><strong>📅</strong> {% trans 'Acquired' %}: 2023-05-15</p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary btn-sm">{% trans 'View Details' %}</a>
+                        <a href="#" class="btn btn-secondary btn-sm">{% trans 'Record Sale' %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartment Card 2 -->
+            <div class="apartment-card" data-status="sold">
+                <div class="card-header">
+                    <span class="status-badge status-sold">{% trans 'Sold' %}</span>
+                    <div class="card-actions">
+                        <button class="btn-icon" title="{% trans 'View' %}">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span>🏢</span>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <h3>{% trans 'Apartment' %} B-205</h3>
+                    <div class="apartment-details">
+                        <p><strong>📍</strong> Sukhbaatar District, Bldg 8</p>
+                        <p><strong>📏</strong> 72 m² • 2 bedrooms • 1 bathroom</p>
+                        <p><strong>💰</strong> {% trans 'Sold For' %}: ₮380,000,000</p>
+                        <p><strong>👤</strong> {% trans 'Buyer' %}: Батаа Доржийн</p>
+                        <p><strong>📅</strong> {% trans 'Sold' %}: 2024-01-10</p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary btn-sm">{% trans 'View History' %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartment Card 3 -->
+            <div class="apartment-card" data-status="rented">
+                <div class="card-header">
+                    <span class="status-badge status-rented">{% trans 'Rented' %}</span>
+                    <div class="card-actions">
+                        <button class="btn-icon" title="{% trans 'Edit' %}">✏️</button>
+                    </div>
+                </div>
+                
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span>🏢</span>
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <h3>{% trans 'Apartment' %} C-102</h3>
+                    <div class="apartment-details">
+                        <p><strong>📍</strong> Bayangol District, Bldg 5</p>
+                        <p><strong>📏</strong> 95 m² • 3 bedrooms • 2 bathrooms</p>
+                        <p><strong>💰</strong> {% trans 'Monthly Rent' %}: ₮2,500,000</p>
+                        <p><strong>👤</strong> {% trans 'Tenant' %}: Болд Эрдэнэ</p>
+                        <p><strong>📅</strong> {% trans 'Lease Until' %}: 2024-12-31</p>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary btn-sm">{% trans 'View Details' %}</a>
+                        <a href="#" class="btn btn-secondary btn-sm">{% trans 'Renew Lease' %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more apartment cards as needed -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="btn btn-secondary">← {% trans 'Previous' %}</button>
+            <span class="pagination-info">{% trans 'Page 1 of 2' %}</span>
+            <button class="btn btn-secondary">{% trans 'Next' %} →</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.portal-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--text-light);
+    padding: 1.5rem 0;
+}
+
+.portal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portal-nav h1 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.portal-navigation {
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--accent-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.portal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.tab-link {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-gray);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.tab-link:hover {
+    color: var(--primary-blue);
+}
+
+.tab-link.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.portal-content {
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-light);
+}
+
+/* Filter Section */
+.filter-section {
+    background: var(--bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--accent-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-blue);
+    background: transparent;
+    color: var(--primary-blue);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+/* Apartments Grid */
+.apartments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.apartment-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.apartment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-light);
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-sold {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-rented {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: var(--transition);
+}
+
+.btn-icon:hover {
+    transform: scale(1.2);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    height: 100%;
+    background: var(--accent-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder span {
+    font-size: 5rem;
+}
+
+.card-content {
+    padding: var(--spacing-md);
+}
+
+.card-content h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.apartment-details {
+    margin-bottom: var(--spacing-sm);
+}
+
+.apartment-details p {
+    margin: 0.5rem 0;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.card-footer {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--accent-gray);
+}
+
+.card-footer .btn {
+    flex: 1;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-info {
+    color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+    .portal-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .apartments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.apartment-card');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-status') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

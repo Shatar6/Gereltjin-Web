@@ -1,5 +1,5 @@
 # MONGOLIAN TRANSLATIONS FOR GERELTJIN LLC
-# Copyright (C) 2025 Gereltjin LLC
+# Copyright (C) 2026 Gereltjin LLC
 # This file is distributed under the same license as the Gereltjin package.
 #
 msgid ""
@@ -288,3 +288,25 @@ msgstr "Түрээс"
 
 msgid "Sports Hall"
 msgstr "Спорт заал"
+
+msgid "Advanced glass manufacturing and construction solutions"
+msgstr "Дэвшилтэт шил үйлдвэрлэл болон барилгын цогц шийдлүүд"
+
+msgid "Glass Manufacturing & Processing"
+msgstr "Шил үйлдвэрлэл ба боловсруулалт"
+
+msgid "Tempered glass, insulated glass units, LOW-E glass, and custom glass processing for your project."
+msgstr "Хатаалгатай шил, шилэн багц, LOW-E шил болон таны төслийн онцлогт тохирсон шил боловсруулах үйлчилгээ."
+
+msgid "Windows, Doors & Facade Systems"
+msgstr "Цонх, хаалга ба фасадын систем"
+
+msgid "Metal and PVC windows, vacuum-insulated glass systems, and full glass facade installation."
+msgstr "Металл болон PVC цонх, вакуум шилэн систем, иж бүрэн шилэн фасад угсралт."
+
+msgid "Construction & Installation"
+msgstr "Барилга угсралтын ажил"
+
+msgid "Residential buildings, schools, sports complexes, and large-scale construction projects."
+msgstr "Орон сууц, сургууль, спорт заал болон томоохон хэмжээний барилгын төслүүд."
+

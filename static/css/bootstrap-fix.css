@@ -345,7 +345,11 @@ header .logo-text,
 
 /* Make sure Bootstrap doesn't mess with sections after carousel */
 section.features,
-section.services-preview,
 section.cta-section {
     padding: var(--spacing-xl) 0 !important;
+}
+
+.services-preview {
+    padding: 100px 0 !important;;
+    background: #f8fafc !important;; 
 }

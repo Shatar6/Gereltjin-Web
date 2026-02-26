@@ -62,7 +62,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background-color: #a5acb2;
     overflow-x: hidden;
 }
 
@@ -81,10 +81,10 @@ body {
 
 .language-select {
     padding: 0.4rem 0.8rem;
-    border: 2px solid var(--primary-blue);
+    border: 2px solid #123637;
     border-radius: var(--border-radius);
     background: var(--bg-white);
-    color: var(--primary-blue);
+    color: #123637;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
@@ -92,7 +92,7 @@ body {
 }
 
 .language-select:hover {
-    background: var(--primary-blue);
+    background: #123637;
     color: var(--text-light);
 }
 
@@ -350,7 +350,8 @@ body {
 
 /* Services Section */
 .services-preview {
-    padding: var(--spacing-xl) 0;
+    padding: 100px 0 ;
+    background: #f8fafc !important;; 
 }
 
 .services-grid {
@@ -366,6 +367,9 @@ body {
     border-radius: var(--border-radius-lg);
     border-left: 4px solid var(--primary-blue);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-card:hover {
@@ -379,7 +383,7 @@ body {
     font-size: 1.5rem;
 }
 
-.service-card p {
+.service-description {
     color: var(--text-gray);
     margin-bottom: var(--spacing-sm);
 }
@@ -397,21 +401,39 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: var(--primary-blue);
-    color: var(--text-light);
-    padding: var(--spacing-xl) 0;
+    padding: 120px 0;
+    background: #123637;
     text-align: center;
 }
 
 .cta-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .cta-section p {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-md);
-    opacity: 0.9;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 40px;
+}
+
+/* Button */
+.cta-section .btn-large {
+    background: #ffffff;
+    color: #2f6f99;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+} 
+
+.cta-section .btn-large:hover {
+    background: #122b27;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
 /* ============================================

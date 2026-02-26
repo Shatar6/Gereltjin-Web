@@ -29,7 +29,7 @@
             <a href="{% url 'customer:profile' %}" class="tab-link">
                 👤 {% trans 'Profile' %}
             </a>
-            <a href="{% url 'orders:create_order' %}" class="tab-link tab-highlight">
+            <a href="{% url 'portal:create_order' %}" class="tab-link tab-highlight">
                 ➕ {% trans 'New Quote Request' %}
             </a>
         </nav>
@@ -288,7 +288,7 @@
             <div class="empty-icon">📋</div>
             <h3>{% trans 'No Quotations Yet' %}</h3>
             <p>{% trans 'You haven\'t requested any quotes yet. Start by submitting a quote request.' %}</p>
-            <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">
+            <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">
                 ➕ {% trans 'Request Your First Quote' %}
             </a>
         </div>

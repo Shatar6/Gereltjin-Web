@@ -15,7 +15,8 @@ urlpatterns = [
     path('careers/', views.careers, name='careers'),
     path('services/', views.services, name='services'),
     path('portfolio/', views.portfolio, name='portfolio'),
-    path('orders/create/', views.create_order, name='create_order'),
+    path('portal/create/', views.create_order, name='create_order'),
+    path('portal_login/', views.portal_login, name='portal_login'),
 
     # Dropdown submenu pages
     path('construction/', views.construction, name='construction'),

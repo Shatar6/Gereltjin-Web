@@ -1,10 +1,14 @@
 """
-Views for Orders app (Order Management)
+Views for Portal app (Order Management)
 """
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+
+def portal_login(request):
+    """Portal login page view"""
+    return render(request, 'portal/portal_login.html')
 
 def order_list(request):
     """Order list view"""
@@ -12,7 +16,7 @@ def order_list(request):
 
 def create_order(request):
     """Create order view"""
-    return render(request, 'orders/create_order.html')
+    return render(request, 'portal/create_order.html')
 
 def order_detail(request, pk):
     """Order detail view"""
@@ -20,62 +24,62 @@ def order_detail(request, pk):
 
 # Customer views
 def create_order(request):
-    return render(request, 'orders/create_order.html')
+    return render(request, 'portal/create_order.html')
 
 # @login_required
 def customer_quotes(request):
-    return render(request, 'orders/customer_quotes.html')
+    return render(request, 'portal/customer_quotes.html')
 
 # @login_required
 def customer_profile(request):
-    return render(request, 'orders/customer_profile.html')
+    return render(request, 'portal/customer_profile.html')
 
 # Employee views
 #@login_required
 def portal_dashboard(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_dashboard.html')
+    return render(request, 'portal/portal_dashboard.html')
 
 # @login_required
 def portal_apartments(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_apartments.html')
+    return render(request, 'portal/portal_apartments.html')
 
 # @login_required
 def portal_machines(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_machines.html')
+    return render(request, 'portal/portal_machines.html')
 
 # @login_required
 def portal_vehicles(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_vehicles.html')
+    return render(request, 'portal/portal_vehicles.html')
 
 # @login_required
 def portal_quotations(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_quotations.html')
+    return render(request, 'portal/portal_quotations.html')
 
 # Employee action views
 # @login_required
 def portal_apartment_add(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_apartment_add.html')
+    return render(request, 'portal/portal_apartment_add.html')
 
 # @login_required
 def portal_machine_add_maintenance(request):    
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_machine_add_maintenance.html')
+    return render(request, 'portal/portal_machine_add_maintenance.html')
 
 # @login_required
 def portal_vehicle_add_service(request):
     # if not request.user.is_staff:
     #     return redirect('core:home')
-    return render(request, 'orders/portal_vehicle_add_service.html')
+    return render(request, 'portal/portal_vehicle_add_service.html')

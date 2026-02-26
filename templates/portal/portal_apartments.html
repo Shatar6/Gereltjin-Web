@@ -11,7 +11,7 @@
         <div class="portal-nav">
             <h1>{% trans 'Apartments Management' %}</h1>
             <div class="header-actions">
-                <a href="{% url 'orders:apartments_add' %}" class="btn btn-primary">
+                <a href="{% url 'portal:apartments_add' %}" class="btn btn-primary">
                     ➕ {% trans 'Add New Apartment' %}
                 </a>
             </div>
@@ -23,11 +23,11 @@
 <section class="portal-navigation">
     <div class="container">
         <nav class="portal-tabs">
-            <a href="{% url 'orders:portal_dashboard' %}" class="tab-link">{% trans 'Dashboard' %}</a>
-            <a href="{% url 'orders:portal_apartments' %}" class="tab-link active">{% trans 'Apartments' %}</a>
-            <a href="{% url 'orders:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
-            <a href="{% url 'orders:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
-            <a href="{% url 'orders:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
+            <a href="{% url 'portal:portal_dashboard' %}" class="tab-link">{% trans 'Dashboard' %}</a>
+            <a href="{% url 'portal:portal_apartments' %}" class="tab-link active">{% trans 'Apartments' %}</a>
+            <a href="{% url 'portal:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
+            <a href="{% url 'portal:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
+            <a href="{% url 'portal:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
         </nav>
     </div>
 </section>

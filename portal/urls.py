@@ -1,10 +1,10 @@
 """
-URL Configuration for Orders app (Order Management)
+URL Configuration for Portal app (Order Management)
 """
 from django.urls import path
 from . import views
 
-app_name = 'orders'
+app_name = 'portal'
 
 urlpatterns = [
     path('', views.order_list, name='order_list'),
@@ -16,6 +16,7 @@ urlpatterns = [
     path('profile/', views.customer_profile, name='customer_profile'),
     
     # EMPLOYEE PORTAL URLS
+    path('portal_login/', views.portal_login, name='portal_login'),
     path('portal/dashboard/', views.portal_dashboard, name='portal_dashboard'),
     path('portal/apartments/', views.portal_apartments, name='portal_apartments'),
     path('portal/machines/', views.portal_machines, name='portal_machines'),

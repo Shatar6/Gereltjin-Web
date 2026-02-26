@@ -17,7 +17,7 @@
                 {% trans 'We deliver excellence in every piece of glass we produce. From architectural solutions to custom designs.' %}
             </p>
             <div class="hero-buttons">
-                <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Order Now' %}</a>
+                <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Order Now' %}</a>
                 <a href="{% url 'services:services_list' %}" class="btn btn-secondary">{% trans 'Our Services' %}</a>
             </div>
         </div>
@@ -113,25 +113,25 @@
 <section class="services-preview">
     <div class="container">
         <h2 class="section-title">{% trans 'Our Services' %}</h2>
-        <p class="section-subtitle">{% trans 'Comprehensive glass solutions for every need' %}</p>
+        <p class="section-subtitle">{% trans 'Advanced glass manufacturing and construction solutions' %}</p>
         
         <div class="services-grid">
             <div class="service-card">
-                <h3>{% trans 'Architectural Glass' %}</h3>
-                <p>{% trans 'Windows, facades, and structural glass for buildings' %}</p>
-                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+                <h3>{% trans 'Glass Manufacturing & Processing' %}</h3>
+                <p>{% trans 'Tempered glass, insulated glass units, LOW-E glass, and custom glass processing for your project.' %}</p>
+                <a href="{% url 'core:glass_structure' %}" class="service-link">{% trans 'Learn More' %} →</a>
             </div>
             
             <div class="service-card">
-                <h3>{% trans 'Interior Glass' %}</h3>
-                <p>{% trans 'Partitions, doors, and decorative glass elements' %}</p>
-                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+                <h3>{% trans 'Windows, Doors & Facade Systems' %}</h3>
+                <p>{% trans 'Metal and PVC windows, vacuum-insulated glass systems, and full glass facade installation.' %}</p>
+                <a href="{% url 'core:windows_doors' %}" class="service-link">{% trans 'Learn More' %} →</a>
             </div>
             
             <div class="service-card">
-                <h3>{% trans 'Custom Solutions' %}</h3>
-                <p>{% trans 'Tailored glass products for unique projects' %}</p>
-                <a href="{% url 'services:services_list' %}" class="service-link">{% trans 'Learn More' %} →</a>
+                <h3>{% trans 'Construction & Installation' %}</h3>
+                <p>{% trans 'Residential buildings, schools, sports complexes, and large-scale construction projects.' %}</p>
+                <a href="{% url 'core:construction' %}" class="service-link">{% trans 'Learn More' %} →</a>
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@
     <div class="container">
         <h2>{% trans 'Ready to Start Your Project?' %}</h2>
         <p>{% trans 'Contact us today for a free consultation and quote' %}</p>
-        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
+        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
     </div>
 </section>
 {% endblock %}

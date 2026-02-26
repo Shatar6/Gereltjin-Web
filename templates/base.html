@@ -83,7 +83,7 @@
 
                     <li><a href="{% url 'portfolio:portfolio_list' %}" class="nav-link {% if 'portfolio' in request.path %}active{% endif %}">{% trans 'Portfolio' %}</a></li>
                     <li><a href="{% url 'core:contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% trans 'Contact' %}</a></li>
-                    <li><a href="{% url 'orders:create_order' %}" class="nav-link nav-cta {% if 'orders' in request.path %}active{% endif %}">{% trans 'Order Now' %}</a></li>
+                    <li><a href="{% url 'portal:create_order' %}" class="nav-link nav-cta {% if 'orders' in request.path %}active{% endif %}">{% trans 'Order Now' %}</a></li>
                     <li> <!-- Language Switcher (Fixed Position) -->
                         <div class="language-switcher">
                             <form action="{% url 'set_language' %}" method="post">
@@ -134,6 +134,7 @@
                         <li><a href="{% url 'services:services_list' %}">{% trans 'Services' %}</a></li>
                         <li><a href="{% url 'portfolio:portfolio_list' %}">{% trans 'Portfolio' %}</a></li>
                         <li><a href="{% url 'core:careers' %}">{% trans 'Careers' %}</a></li>
+                        <li><a href="{% url 'portal:portal_login' %}">{% trans 'Portal' %}</a></li>
                     </ul>
                 </div>
 

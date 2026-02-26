@@ -5,6 +5,10 @@ UPDATED: Added dropdown submenu views
 from django.shortcuts import render
 from django.http import HttpResponse
 
+def portal_login(request):
+    """Portal login page view"""
+    return render(request, 'portal/portal_login.html')
+
 def home(request):
     """Homepage view"""
     return render(request, 'core/home.html')
@@ -25,14 +29,13 @@ def careers(request):
     """Careers page view"""
     return render(request, 'core/careers.html')
 
-
 def portfolio(request):
     """Portfolio page"""
     return render(request, 'portfolio/portfolio_list.html')
 
 def create_order(request):
     """Create Order page view"""
-    return render(request, 'core/create_order.html')
+    return render(request, 'portal/create_order.html')
 
 # Dropdown submenu pages
 def construction(request):

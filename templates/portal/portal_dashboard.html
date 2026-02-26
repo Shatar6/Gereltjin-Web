@@ -22,11 +22,11 @@
 <section class="portal-navigation">
     <div class="container">
         <nav class="portal-tabs">
-            <a href="{% url 'orders:portal_dashboard' %}" class="tab-link active">{% trans 'Dashboard' %}</a>
-            <a href="{% url 'orders:portal_apartments' %}" class="tab-link">{% trans 'Apartments' %}</a>
-            <a href="{% url 'orders:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
-            <a href="{% url 'orders:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
-            <a href="{% url 'orders:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
+            <a href="{% url 'portal:portal_dashboard' %}" class="tab-link active">{% trans 'Dashboard' %}</a>
+            <a href="{% url 'portal:portal_apartments' %}" class="tab-link">{% trans 'Apartments' %}</a>
+            <a href="{% url 'portal:portal_machines' %}" class="tab-link">{% trans 'Machines' %}</a>
+            <a href="{% url 'portal:portal_vehicles' %}" class="tab-link">{% trans 'Vehicles' %}</a>
+            <a href="{% url 'portal:portal_quotations' %}" class="tab-link">{% trans 'Quotations' %}</a>
         </nav>
     </div>
 </section>
@@ -77,19 +77,19 @@
         <div class="quick-actions-section">
             <h2>{% trans 'Quick Actions' %}</h2>
             <div class="quick-actions-grid">
-                <a href="{% url 'orders:apartments_add' %}" class="action-card">
+                <a href="{% url 'portal:apartments_add' %}" class="action-card">
                     <span class="action-icon">➕</span>
                     <span class="action-label">{% trans 'Add Apartment' %}</span>
                 </a>
-                <a href="{% url 'orders:machines_add_maintenance' %}" class="action-card">
+                <a href="{% url 'portal:machines_add_maintenance' %}" class="action-card">
                     <span class="action-icon">🔧</span>
                     <span class="action-label">{% trans 'Log Maintenance' %}</span>
                 </a>
-                <a href="{% url 'orders:vehicles_add_service' %}" class="action-card">
+                <a href="{% url 'portal:vehicles_add_service' %}" class="action-card">
                     <span class="action-icon">🛠️</span>
                     <span class="action-label">{% trans 'Add Vehicle Service' %}</span>
                 </a>
-                <a href="{% url 'orders:portal_quotations' %}" class="action-card">
+                <a href="{% url 'portal:portal_quotations' %}" class="action-card">
                     <span class="action-icon">💬</span>
                     <span class="action-label">{% trans 'Review Quotations' %}</span>
                 </a>

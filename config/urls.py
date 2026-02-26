@@ -34,7 +34,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', include('core.urls')),  # Home page and main content
     path('accounts/', include('accounts.urls')),  # User accounts
-    path('orders/', include('orders.urls')),  # Order system
+    path('portal/', include('portal.urls')),  # Portal system
     path('services/', include('services.urls')),  # Services pages
     path('portfolio/', include('portfolio.urls')),  # Portfolio/Projects
 )

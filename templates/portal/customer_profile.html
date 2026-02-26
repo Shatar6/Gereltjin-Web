@@ -28,7 +28,7 @@
             <a href="{% url 'customer:profile' %}" class="tab-link active">
                 👤 {% trans 'Profile' %}
             </a>
-            <a href="{% url 'orders:create_order' %}" class="tab-link tab-highlight">
+            <a href="{% url 'portal:create_order' %}" class="tab-link tab-highlight">
                 ➕ {% trans 'New Quote Request' %}
             </a>
         </nav>
@@ -71,7 +71,7 @@
                     <h4>{% trans 'Quick Links' %}</h4>
                     <ul class="quick-links">
                         <li><a href="{% url 'customer:quotes' %}">📋 {% trans 'My Quotations' %}</a></li>
-                        <li><a href="{% url 'orders:create_order' %}">➕ {% trans 'New Request' %}</a></li>
+                        <li><a href="{% url 'portal:create_order' %}">➕ {% trans 'New Request' %}</a></li>
                         <li><a href="{% url 'core:contact' %}">📞 {% trans 'Contact Support' %}</a></li>
                         <li><a href="#">💬 {% trans 'Messages' %}</a></li>
                     </ul>

@@ -32,7 +32,7 @@
                 </ul>
                 <div class="service-actions">
                     <a href="{% url 'core:glass_structure' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
                 </ul>
                 <div class="service-actions">
                     <a href="{% url 'core:windows_doors' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
 
@@ -69,8 +69,8 @@
                     <li>{% trans 'Glass railings' %}</li>
                 </ul>
                 <div class="service-actions">
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
                 </ul>
                 <div class="service-actions">
                     <a href="{% url 'core:construction' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@
                 </ul>
                 <div class="service-actions">
                     <a href="{% url 'core:rental' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Request Rental' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Request Rental' %}</a>
                 </div>
             </div>
 
@@ -126,8 +126,8 @@
                     <li>{% trans 'Project management' %}</li>
                 </ul>
                 <div class="service-actions">
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
-                    <a href="{% url 'orders:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-secondary">{% trans 'Learn More' %}</a>
+                    <a href="{% url 'portal:create_order' %}" class="btn btn-primary">{% trans 'Get Quote' %}</a>
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
     <div class="container">
         <h2>{% trans 'Ready to Start Your Project?' %}</h2>
         <p>{% trans 'Get a free consultation and detailed quote' %}</p>
-        <a href="{% url 'orders:create_order' %}" class="btn btn-primary btn-large">{% trans 'Request Quote' %}</a>
+        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Request Quote' %}</a>
     </div>
 </section>
 {% endblock %}

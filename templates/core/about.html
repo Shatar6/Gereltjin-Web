@@ -18,13 +18,18 @@
     <div class="container">
         <div class="about-grid">
             <div class="about-text">
-                <h2>{% trans 'Our Story' %}</h2>
-                <p>
-                    {% trans 'Gereltjin LLC was founded with a vision to bring world-class glass manufacturing capabilities to Mongolia. With years of expertise and cutting-edge technology, we have become a trusted partner for architects, builders, and designers throughout the region.' %}
-                </p>
-                <p>
-                    {% trans 'Our commitment to quality, innovation, and customer satisfaction has made us the preferred choice for glass solutions ranging from residential projects to large-scale commercial developments.' %}
-                </p>
+                <h2>{% trans 'About Us' %}</h2>
+                    <p>
+                        {% blocktrans trimmed %}
+                        Gereltjin LLC was officially established on May 15, 2002. Today, the company operates with over 50 full-time employees and more than 200 contract workers, supported by its own fully equipped manufacturing facility and vehicle fleet.
+                        {% endblocktrans %}
+                    </p>
+
+                    <p>
+                        {% blocktrans trimmed %}
+                        We are a national manufacturer committed to delivering high-quality, environmentally friendly, and safe products using advanced modern technology. Customer satisfaction is our top priority.
+                        {% endblocktrans %}
+                    </p>
             </div>
             
             <div class="about-image">
@@ -34,13 +39,217 @@
                 </div>
             </div>
         </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                                
+                            <h3>1997</h3>
+                            <p>{% trans 'Began importing and supplying window glass to the domestic market.' %}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2002</h3>
+                            <p>{% trans 'Gereltjin LLC was officially established and launched metal and PVC window and door manufacturing facility.' %}</p>
+                        </div>
+
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/logo.png' %}" alt="Company Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2008</h3>
+                            <p>{% trans 'Completed a 6-story, 36-unit residential building in Songinokhairkhan District.' %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2010</h3>
+                            <p>{% trans 'Delivered a 9-story, 63-unit apartment building in Officer Town, Bayanzurkh District.' %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2012</h3>
+                            <p>{% trans 'Constructed a 12-story, 44-unit residential building in Embassy Complex, Sukhbaatar District.' %}</p>
+                        </div>
+
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Embassy_26.png' %}" alt="Embassy 26 Building">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2013</h3>
+                            <p>{% trans 'Expanded operations with a fully automated insulated glass production line.' %}</p>
+                        </div>
+                        
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Uildver_1.png' %}" alt="Uildver Image-1">
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2016</h3>
+                            <p>{% trans 'Introduced a tempered glass processing line capable of handling 3–25mm glass.' %}</p>
+                        </div>
+
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/TemperingMachine.png' %}" alt="Tempering Machine">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2016</h3>
+                            <p>{% trans 'Completed Shine City-1, a 12-story residential project with 72 units.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Shine_City_1_a.jpg' %}" alt="Shine City 1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2017</h3>
+                            <p>{% trans 'Began producing energy-efficient tempered insulated glass units.' %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2018</h3>
+                            <p>{% trans 'Delivered Shine City-2, a 12-story mixed-use residential building with 77 units.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Shine_City_1_b.jpg' %}" alt="Shine City 1b">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2019</h3>
+                            <p>{% trans 'Reconstructed Secondary School No.19 under a state-funded development program.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/School_19.png' %}" alt="School No.19">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2022</h3>
+                            <p>{% trans 'Completed and delivered a 16-story, 77-unit residential building to the State Commission.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Shine_City_2.png' %}" alt="Shine City 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2023</h3>
+                            <p>{% trans 'Completed construction of a sports complex building in 2023.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/ShineCitySportComplex.png' %}" alt="Shine City Sport Complex">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2024</h3>
+                            <p>{% trans 'Executed construction works under the “One Million Tons – One Million Trees” project in Dornogovi Province.' %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2025</h3>
+                            <p>{% trans 'Currently implementing the 178-unit Shine City-3 residential project in Sukhbaatar District.' %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="circle"></div>
+                    <div class="timeline-content">
+                        <div class="text">
+                            <h3>2026</h3>
+                            <p>{% trans 'Reconstructed the School No.23 sport complex.' %}</p>
+                        </div>
+                           <div class="timeline-photo">
+                            <img src="{% static 'images/School_23.png' %}" alt="School No.23">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Values -->
 <section class="values-section">
     <div class="container">
-        <h2 class="section-title">{% trans 'Our Values' %}</h2>
+        <h2 class="section-title" style="color: white;">{% trans 'Our Values' %}</h2>
         <div class="values-grid">
             <div class="value-card">
                 <div class="value-icon">🎯</div>
@@ -100,9 +309,9 @@
 <!-- CTA -->
 <section class="cta-section">
     <div class="container">
-        <h2>{% trans 'Ready to Work With Us?' %}</h2>
-        <p>{% trans 'Let\'s discuss how we can help with your glass needs' %}</p>
-        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-large">{% trans 'Contact Us' %}</a>
+        <h2>{% trans 'Ready to Start Your Project?' %}</h2>
+        <p>{% trans 'Contact us today for a free consultation and quote' %}</p>
+        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
     </div>
 </section>
 {% endblock %}
@@ -110,7 +319,8 @@
 {% block extra_css %}
 <style>
 .page-header {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    /* background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); */
+    background: #123637;
     color: var(--text-light);
     padding: 4rem 0 3rem;
     text-align: center;
@@ -133,7 +343,7 @@
 }
 
 .about-text h2 {
-    color: var(--primary-blue);
+    color: #123637;;
     margin-bottom: var(--spacing-md);
     font-size: 2rem;
 }
@@ -162,9 +372,129 @@
 }
 
 .values-section {
-    background: var(--bg-light);
+    background: #123637;
     padding: var(--spacing-xl) 0;
 }
+/* Wrapper enables horizontal scroll */
+.timeline-wrapper {
+    padding: 60px 0;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+    background: #123637;
+    border-radius: 10px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #123637;
+    opacity: 0.25;
+}
+
+/* Items */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: start;
+    position: relative;
+}
+
+/* Circle */
+.circle {
+    grid-column: 2;
+    justify-self: center;
+    align-self: start;
+    width: 20px;
+    height: 20px;
+    background: #123637;
+    border: 4px solid #a5acb2;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.timeline-content .text {
+    flex: 1;
+}
+
+/* TEXT CLOSE TO LINE */
+.timeline-item:nth-child(odd) .timeline-content {
+    grid-column: 3;
+}
+
+/* PHOTO OUTSIDE RIGHT */
+.timeline-item:nth-child(odd) .timeline-photo {
+    grid-column: 3;
+}
+
+/* EVEN ITEMS */
+.timeline-item:nth-child(even) .timeline-content {
+    grid-column: 1;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-photo {
+    grid-column: 1;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.timeline-item:hover .circle {
+    box-shadow: 0 0 0 6px rgba(18,54,55,0.2);
+}
+
+/* Text */
+.timeline-item h3 {
+    font-size: 32px;
+    color: #123637;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.timeline-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* photo fixed size on right */
+.timeline-photo img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+}
+
 
 .values-grid {
     display: grid;
@@ -186,8 +516,13 @@
 }
 
 .value-card h3 {
-    color: var(--primary-blue);
+    color: #123637;;
     margin-bottom: var(--spacing-sm);
+}
+
+.value-card:hover {
+   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.356);
+    transform: translateY(-3px);
 }
 
 .team-section {
@@ -209,8 +544,13 @@
 .expertise-number {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #123637;;
     margin-bottom: var(--spacing-sm);
+}
+
+.expertise-item:hover{
+    box-shadow: 0 12px 30px rgba(18, 54, 55, 0.356);
+    transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
@@ -220,6 +560,23 @@
     
     .page-header h1 {
         font-size: 2rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .circle {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-content {
+        width: auto;
+        margin: 0 0 0 60px !important;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 </style>

@@ -310,3 +310,59 @@ msgstr "Барилга угсралтын ажил"
 msgid "Residential buildings, schools, sports complexes, and large-scale construction projects."
 msgstr "Орон сууц, сургууль, спорт заал болон томоохон хэмжээний барилгын төслүүд."
 
+msgid "Began importing and supplying window glass to the domestic market."
+msgstr "Дотоодын зах зээлд цонхны шил импортлон нийлүүлж эхэлсэн."
+
+msgid "Gereltjin LLC was officially established and launched metal and PVC window and door manufacturing facility."
+msgstr "Гэрэлтжин ХХК албан ёсоор байгуулагдаж, металл болон хуванцар цонх хаалганы үйлдвэрийг ашиглалтад оруулсан."
+
+msgid "Completed a 6-story, 36-unit residential building in Songinokhairkhan District."
+msgstr "Сонгинохайрхан дүүрэгт 6 давхар, 36 айлын орон сууцыг ашиглалтад оруулсан."
+
+msgid "Delivered a 9-story, 63-unit apartment building in Officer Town, Bayanzurkh District."
+msgstr "Баянзүрх дүүргийн Офицер хотхонд 9 давхар, 63 айлын орон сууцыг ашиглалтад оруулсан."
+
+msgid "Constructed a 12-story, 44-unit residential building in Embassy Complex, Sukhbaatar District."
+msgstr "Сүхбаатар дүүргийн EMBASSY хотхонд 12 давхар, 44 айлын орон сууц барьсан."
+
+msgid "Expanded operations with a fully automated insulated glass production line."
+msgstr "Шилэн багцын иж бүрэн автомат шугам нэвтрүүлж үйлдвэрээ өргөтгөсөн."
+
+msgid "Introduced a tempered glass processing line capable of handling 3–25mm glass."
+msgstr "3–25 мм зузаантай шил боловсруулах хатаалгатай шугамыг ашиглалтад оруулсан."
+
+msgid "Completed Shine City-1, a 12-story residential project with 72 units."
+msgstr "Shine City-1 12 давхар, 72 айлын орон сууцыг ашиглалтад оруулсан."
+
+msgid "Began producing energy-efficient tempered insulated glass units."
+msgstr "Дулааны алдагдал багатай, ганжуулсан шилэн багц үйлдвэрлэж эхэлсэн."
+
+msgid "Delivered Shine City-2, a 12-story mixed-use residential building with 77 units."
+msgstr "Shine City-2 12 давхар, 77 айлын үйлчилгээтэй орон сууцыг ашиглалтад оруулсан."
+
+msgid "Reconstructed Secondary School No.19 under a state-funded development program."
+msgstr "Улсын төсвийн хөрөнгөөр 19-р дунд сургуулийн барилгыг шинээр барьсан."
+
+msgid "Completed and delivered a 16-story, 77-unit residential building to the State Commission."
+msgstr "16 давхар, 77 айлын орон сууцыг барьж улсын комисст хүлээлгэн өгсөн."
+
+msgid "Completed construction of a sports complex building in 2023."
+msgstr "Спорт заалны барилгын ажлыг гүйцэтгэн ашиглалтад оруулсан."
+
+msgid "Executed construction works under the “One Million Tons – One Million Trees” project in Dornogovi Province."
+msgstr "Дорноговь аймагт “Сая тонн – Сая мод” төслийн барилгын ажлыг гүйцэтгэсэн."
+
+msgid "Completed major government-funded construction projects and delivered them to the State Commission."
+msgstr "Томоохон улсын төсвийн барилгын төслүүдийг гүйцэтгэж хүлээлгэн өгсөн."
+
+msgid "Currently implementing the 178-unit Shine City-3 residential project in Sukhbaatar District."
+msgstr "Сүхбаатар дүүрэгт 178 айлын Shine City-3 төслийг хэрэгжүүлж байна."
+
+msgid "Reconstructed the School No.23 sport complex."
+msgstr "23-р сургуулийн спорт цогцолборын барилгыг шинэчлэн барьсан."
+
+msgid "Gereltjin LLC was officially established on May 15, 2002. Today, the company operates with over 50 full-time employees and more than 200 contract workers, supported by its own fully equipped manufacturing facility and vehicle fleet."
+msgstr "Гэрэлтжин ХХК нь 2002 оны 5 дугаар сарын 15-ны өдөр албан ёсоор үүсгэн байгуулагдсан. Өнөөдөрийн байдлаар 50 гаруй үндсэн ажилтан, 200 гаруй гэрээт ажилтантайгаар өөрийн иж бүрэн тоног төхөөрөмж бүхий үйлдвэрлэлийн бааз болон авто парк дээрээ тулгуурлан тогтвортой үйл ажиллагаа явуулж байна."
+
+msgid "We are a national manufacturer committed to delivering high-quality, environmentally friendly, and safe products using advanced modern technology. Customer satisfaction is our top priority."
+msgstr "Бид орчин үеийн дэвшилтэт технологид суурилан өндөр чанартай, байгаль орчинд ээлтэй, аюулгүй бүтээгдэхүүнийг зах зээлд нийлүүлэх зорилготой үндэсний үйлдвэрлэгч компани юм. Хэрэглэгчийн сэтгэл ханамж нь бидний нэн тэргүүний зорилт юм."

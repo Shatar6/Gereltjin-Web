@@ -338,7 +338,7 @@ body {
 }
 
 .feature-card h3 {
-    color: var(--primary-blue);
+    color: #123637;
     margin-bottom: var(--spacing-sm);
     font-size: 1.25rem;
 }
@@ -422,7 +422,7 @@ body {
 /* Button */
 .cta-section .btn-large {
     background: #ffffff;
-    color: #2f6f99;
+    color: #123637;;
     padding: 14px 36px;
     border-radius: 8px;
     font-weight: 600;

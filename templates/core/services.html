@@ -188,7 +188,7 @@
 }
 
 .services-overview {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .services-grid {
@@ -201,15 +201,15 @@
     background: var(--bg-light);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
-    border-top: 4px solid var(--primary-blue);
+    border-top: 2px solid #123637;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
 }
 
 .service-icon {
@@ -219,7 +219,7 @@
 }
 
 .service-card h3 {
-    color: var(--primary-blue);
+    color: #123637;;
     text-align: center;
     margin-bottom: var(--spacing-sm);
     font-size: 1.5rem;
@@ -265,8 +265,14 @@
     text-align: center;
     padding: 0.75rem;
     font-size: 0.95rem;
+    
 }
 
+.service-actions .btn-primary {
+    background: #123637;
+    border-color: #123637;
+    color: var(--text-light);
+}
 .why-choose-section {
     padding: var(--spacing-xl) 0;
     background: var(--bg-light);

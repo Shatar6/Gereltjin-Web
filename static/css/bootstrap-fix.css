@@ -72,7 +72,7 @@ a.nav-link {
 header .nav-link:hover,
 .navbar .nav-link:hover,
 .nav-menu .nav-link:hover {
-    color: var(--primary-blue) !important;
+    color:  #006B5A  !important;
     background: var(--accent-gray) !important;
 }
 
@@ -80,7 +80,7 @@ header .nav-link:hover,
 header .nav-link.active,
 .navbar .nav-link.active,
 .nav-menu .nav-link.active {
-    color: var(--primary-blue) !important;
+    color: #006B5A !important;
     background: var(--accent-gray) !important;
 }
 
@@ -89,7 +89,7 @@ header .nav-link.active,
 header .nav-link.nav-cta,
 .navbar .nav-link.nav-cta,
 .nav-menu .nav-cta {
-    background: var(--primary-blue) !important;
+    background:  #006B5A  !important;
     color: var(--text-light) !important;
 }
 
@@ -97,7 +97,7 @@ header .nav-link.nav-cta,
 header .nav-link.nav-cta:hover,
 .navbar .nav-link.nav-cta:hover {
     background: var(--primary-blue-dark) !important;
-    color: var(--text-light) !important;
+    color:  #006B5A !important;
 }
 
 /* Logo - prevent Bootstrap from affecting it */

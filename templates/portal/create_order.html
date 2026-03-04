@@ -269,8 +269,24 @@
 
 {% block extra_css %}
 <style>
+
+.next-btn {
+    background-color: #123512;
+    border-color: #123512;
+}
+
+.prev-btn {
+    background-color: #123512;
+    border-color: #123512;
+}
+
+.btn-primary:hover {
+    background-color: #005B49;
+    border-color: #005B49;
+}
+
 .page-header {
-    background: #123637;
+    background: #005B49;
     color: var(--text-light);
     padding: 4rem 0 3rem;
     text-align: center;
@@ -342,7 +358,7 @@
 
 .step.active .step-number,
 .step.completed .step-number {
-    background: var(--primary-blue);
+    background: #123512;
     color: var(--text-light);
 }
 
@@ -352,7 +368,7 @@
 }
 
 .step.active span {
-    color: var(--primary-blue);
+    color: #005B49;
     font-weight: 600;
 }
 
@@ -372,7 +388,7 @@
 }
 
 .form-step h3 {
-    color: var(--primary-blue);
+    color: #123512;
     margin-bottom: var(--spacing-md);
     font-size: 1.75rem;
 }
@@ -399,13 +415,13 @@
 }
 
 .option-card:hover {
-    border-color: var(--primary-blue);
+    border-color: #123512;
     transform: translateY(-2px);
 }
 
 .product-option input:checked + .option-card {
-    border-color: var(--primary-blue);
-    background: var(--primary-blue);
+    border-color: #123512;
+    background: #123512;
     color: var(--text-light);
 }
 
@@ -448,8 +464,8 @@
 
 .form-control:focus {
     outline: none;
-    border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(46, 125, 181, 0.1);
+    border-color: #123512;
+    box-shadow: 0 0 0 3px rgba(18, 53, 18, 0.1);
 }
 
 textarea.form-control {
@@ -458,7 +474,7 @@ textarea.form-control {
 
 /* File Upload */
 .file-upload-zone {
-    border: 2px dashed var(--primary-blue);
+    border: 2px dashed #123512;
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     text-align: center;
@@ -478,7 +494,7 @@ textarea.form-control {
 
 .upload-placeholder p {
     margin: 0.5rem 0;
-    color: var(--primary-blue);
+    color: #123512;
     font-weight: 600;
 }
 
@@ -518,8 +534,8 @@ textarea.form-control {
 }
 
 .radio-option input:checked + span {
-    border-color: var(--primary-blue);
-    background: var(--primary-blue);
+    border-color: #123512;
+    background: #123512;
     color: var(--text-light);
 }
 
@@ -549,7 +565,7 @@ textarea.form-control {
 }
 
 .info-box h4 {
-    color: var(--primary-blue);
+    color: #123512;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -580,7 +596,7 @@ textarea.form-control {
 
 .process-list strong {
     display: block;
-    color: var(--primary-blue);
+    color: #123512;
     margin-bottom: 0.25rem;
 }
 

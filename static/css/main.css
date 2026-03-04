@@ -158,17 +158,17 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--primary-blue);
+    color: #006B5A !important;
     background: var(--accent-gray);
 }
 
 .nav-link.active {
-    color: var(--primary-blue);
+    color: #006B5A !important;
     background: var(--accent-gray);
 }
 
 .nav-link.nav-cta {
-    background: var(--primary-blue);
+    background: #006B5A;
     color: var(--text-light);
 }
 
@@ -396,13 +396,13 @@ body {
 }
 
 .service-link:hover {
-    color: var(--primary-blue-dark);
+    color:  #006B5A ;
 }
 
 /* CTA Section */
 .cta-section {
     padding: 120px 0;
-    background: #123637;
+    background: #005B49;
     text-align: center;
 }
 
@@ -422,7 +422,7 @@ body {
 /* Button */
 .cta-section .btn-large {
     background: #ffffff;
-    color: #123637;;
+    color: #123637;
     padding: 14px 36px;
     border-radius: 8px;
     font-weight: 600;
@@ -431,7 +431,7 @@ body {
 } 
 
 .cta-section .btn-large:hover {
-    background: #122b27;
+    background: #004d3d;
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }

@@ -149,8 +149,8 @@ msgstr "Бидний тухай - Гэрэлтжин ХХК"
 msgid "About Gereltjin LLC"
 msgstr "Гэрэлтжин ХХК-ийн тухай"
 
-msgid "Leading Glass Manufacturing Excellence in Mongolia"
-msgstr "Монгол дахь шилэн үйлдвэрлэлийн тэргүүлэгч"
+msgid "Leading Glass Manufacturing Company in Mongolia"
+msgstr "Монгол дахь шилэн үйлдвэрлэлийн тэргүүлэгч компани"
 
 msgid "Our Story"
 msgstr "Бидний түүх"
@@ -361,8 +361,26 @@ msgstr "Сүхбаатар дүүрэгт 178 айлын Shine City-3 төсли
 msgid "Reconstructed the School No.23 sport complex."
 msgstr "23-р сургуулийн спорт цогцолборын барилгыг шинэчлэн барьсан."
 
-msgid "Gereltjin LLC was officially established on May 15, 2002. Today, the company operates with over 50 full-time employees and more than 200 contract workers, supported by its own fully equipped manufacturing facility and vehicle fleet."
-msgstr "Гэрэлтжин ХХК нь 2002 оны 5 дугаар сарын 15-ны өдөр албан ёсоор үүсгэн байгуулагдсан. Өнөөдөрийн байдлаар 50 гаруй үндсэн ажилтан, 200 гаруй гэрээт ажилтантайгаар өөрийн иж бүрэн тоног төхөөрөмж бүхий үйлдвэрлэлийн бааз болон авто парк дээрээ тулгуурлан тогтвортой үйл ажиллагаа явуулж байна."
+msgid "Gereltjin LLC was officially established in 2002. Today, the company operates with over 50 full-time employees and more than 200 contract workers, supported by its own fully equipped manufacturing facility and vehicle fleet."
+msgstr "Гэрэлтжин ХХК нь 2002 онд албан ёсоор үүсгэн байгуулагдсан. Өнөөдөрийн байдлаар 50 гаруй үндсэн ажилтан, 200 гаруй гэрээт ажилтантайгаар өөрийн иж бүрэн тоног төхөөрөмж бүхий үйлдвэрлэлийн бааз болон авто парк дээрээ тулгуурлан тогтвортой үйл ажиллагаа явуулж байна."
 
 msgid "We are a national manufacturer committed to delivering high-quality, environmentally friendly, and safe products using advanced modern technology. Customer satisfaction is our top priority."
 msgstr "Бид орчин үеийн дэвшилтэт технологид суурилан өндөр чанартай, байгаль орчинд ээлтэй, аюулгүй бүтээгдэхүүнийг зах зээлд нийлүүлэх зорилготой үндэсний үйлдвэрлэгч компани юм. Хэрэглэгчийн сэтгэл ханамж нь бидний нэн тэргүүний зорилт юм."
+
+msgid "Started importing and supplying construction materials to the domestic market."
+msgstr "Дотоодын зах зээлд барилгын материал импортлон нийлүүлж эхэлсэн."
+
+msgid "Expanded operations by importing and supplying window glass to the domestic market."
+msgstr "Цонхны шил импортлон нийлүүлж үйл ажиллагаагаа өргөжүүлсэн."
+
+msgid "Constructed the main office building of Gereltjin LLC."
+msgstr "Гэрэлтжин ХХК-ийн үндсэн оффисын барилгыг барьж ашиглалтад оруулсан."
+
+msgid "Built the company warehouse and storage facility."
+msgstr "Компанийн агуулах болон хадгалалтын байгууламжийг барьсан."
+
+msgid "Completed a 6-story, 72-unit residential building in Modnii 2, Bayangol District."
+msgstr "Баянгол дүүргийн Модны 2-т 6 давхар, 72 айлын орон сууцыг барьж ашиглалтад оруулсан."
+
+
+

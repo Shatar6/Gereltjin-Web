@@ -139,7 +139,7 @@ msgstr "Төслөө эхлүүлэхэд бэлэн үү?"
 msgid "Contact us today for a free consultation and quote"
 msgstr "Үнэгүй зөвлөгөө, үнийн санал авахын тулд бидэнтэй холбогдоорой"
 
-msgid "Get a Quote"
+msgid "Get Quote"
 msgstr "Үнийн санал авах"
 
 # About Page
@@ -382,5 +382,254 @@ msgstr "Компанийн агуулах болон хадгалалтын ба
 msgid "Completed a 6-story, 72-unit residential building in Modnii 2, Bayangol District."
 msgstr "Баянгол дүүргийн Модны 2-т 6 давхар, 72 айлын орон сууцыг барьж ашиглалтад оруулсан."
 
+msgid "Professional glass manufacturing, facade installation, construction, and equipment rental services."
+msgstr "Шил боловсруулах үйлдвэрлэл, шилэн фасад угсралт, барилга угсралт болон техник тоног төхөөрөмжийн түрээсийн мэргэжлийн үйлчилгээ."
 
+msgid "Glass Processing & Manufacturing"
+msgstr "Шил боловсруулалт ба үйлдвэрлэл"
 
+msgid "High-quality glass processing and manufacturing including tempered glass, insulated glass units, and energy-efficient LOW-E glass products."
+msgstr "Ганжуулсан шил, шилэн багц болон дулаан алдагдал багатай LOW-E шил зэрэг өндөр чанартай шилэн бүтээгдэхүүний боловсруулалт, үйлдвэрлэл."
+
+msgid "Tempered safety glass production"
+msgstr "Ганжуулсан аюулгүйн шил үйлдвэрлэл"
+
+msgid "Insulated glass units"
+msgstr "Шилэн багц үйлдвэрлэл"
+
+msgid "Glass cutting and polishing"
+msgstr "Шил зүсэх, ирмэг өнгөлөх боловсруулалт"
+
+msgid "Energy-efficient LOW-E glass products"
+msgstr "Дулаан алдагдал багатай LOW-E шилэн бүтээгдэхүүн"
+
+msgid "Metal and PVC windows"
+msgstr "Металл болон PVC цонх"
+
+msgid "Vacuum insulated window systems"
+msgstr "Вакуум дулаалгатай цонхны систем"
+
+msgid "Glass entrance doors"
+msgstr "Шилэн орцны хаалга"
+
+msgid "Energy efficient window solutions"
+msgstr "Энерги хэмнэлттэй цонхны шийдлүүд"
+
+msgid "Interior Glass Solutions"
+msgstr "Дотоод заслын шилэн шийдэл"
+
+msgid "Custom interior glass solutions including partitions, railings, shower enclosures, and decorative glass elements for residential and commercial spaces."
+msgstr "Оффис болон орон сууцанд зориулсан шилэн хана, хаалт, душны шил, шатны шилэн хаалт зэрэг дотоод заслын шилэн шийдлүүд."
+
+msgid "Glass office partitions"
+msgstr "Оффисын шилэн хана"
+
+msgid "Interior glass dividers"
+msgstr "Дотоод заслын шилэн хаалт"
+
+msgid "Glass shower enclosures"
+msgstr "Шилэн душ"
+
+msgid "Glass railings and barriers"
+msgstr "Шат болон тагтны шилэн хаалт"
+
+msgid "Residential construction projects"
+msgstr "Орон сууцны барилгын төсөл"
+
+msgid "Public and commercial buildings"
+msgstr "Олон нийтийн болон үйлчилгээний барилга"
+
+msgid "Glass facade installation"
+msgstr "Шилэн фасад угсралт"
+
+msgid "Professional construction management"
+msgstr "Барилгын төслийн мэргэжлийн удирдлага"
+
+msgid "Equipment Rental"
+msgstr "Түрээсийн үйлчилгээ"
+
+msgid "Rental services for construction machinery, cranes, trucks, and specialized equipment operated by experienced professionals."
+msgstr "Барилгын машин механизм, кран, ачааны машин болон тусгай тоног төхөөрөмжийг туршлагатай оператортойгоор түрээслэх үйлчилгээ."
+
+msgid "Construction machinery rental"
+msgstr "Барилгын техник тоног төхөөрөмжийн түрээс"
+
+msgid "Cranes and heavy equipment"
+msgstr "Кран болон хүнд даацын техник"
+
+msgid "Transport and lifting vehicles"
+msgstr "Тээвэр болон өргөх машин механизм"
+
+msgid "Professional operator support"
+msgstr "Мэргэжлийн операторын үйлчилгээ"
+
+msgid "Custom glass fabrication"
+msgstr "Захиалгат шилэн бүтээгдэхүүн үйлдвэрлэл"
+
+msgid "Technical project planning"
+msgstr "Төслийн техникийн төлөвлөлт"
+
+msgid "Professional installation support"
+msgstr "Мэргэжлийн угсралтын үйлчилгээ"
+
+msgid "Why Choose Gereltjin?"
+msgstr "Яагаад биднийг сонгох вэ?"
+
+msgid "Manufactured using modern technology and international quality standards"
+msgstr "Орчин үеийн технологи болон олон улсын чанарын стандартад нийцсэн үйлдвэрлэл"
+
+msgid "Efficient production capacity and professional installation teams"
+msgstr "Өндөр хүчин чадалтай үйлдвэрлэл болон мэргэжлийн угсралтын баг"
+
+msgid "Reliable services with competitive pricing and long-term value"
+msgstr "Өрсөлдөхүйц үнэ болон найдвартай урт хугацааны үйлчилгээ"
+
+msgid "Reliable service and long-term support for every project"
+msgstr "Төсөл бүрт найдвартай үйлчилгээ болон урт хугацааны дэмжлэг"
+
+msgid "Contact our team today for consultation and a detailed project quotation."
+msgstr "Манай багтай холбогдож зөвлөгөө авч төслийн дэлгэрэнгүй үнийн санал аваарай."
+
+msgid "Manufacturing and installation of metal, PVC, and vacuum insulated windows and doors designed for durability, energy efficiency, and safety."
+msgstr "Металл, PVC болон вакуум дулаалгатай цонх хаалганы үйлдвэрлэл, угсралтын үйлчилгээ."
+
+msgid "Full construction and installation services for residential buildings, schools, sports complexes, and commercial developments."
+msgstr "Орон сууц, сургууль, спорт цогцолбор болон үйлчилгээний барилгын иж бүрэн барилга угсралтын үйлчилгээ."
+
+msgid "Custom glass manufacturing and project solutions designed to meet the technical requirements of modern architectural and construction projects."
+msgstr "Орчин үеийн барилга архитектурын шаардлагад нийцсэн захиалгат шилэн бүтээгдэхүүн болон төслийн шийдлүүд."
+
+msgid "Project consultation"
+msgstr "Төслийн зөвлөгөө"
+
+msgid "Custom Design Services"
+msgstr "Захиалгат шийдлийн үйлчилгээ"
+
+msgid "Quality Guaranteed"
+msgstr "Чанарын баталгаа"
+
+msgid "Fast Delivery"
+msgstr "Хурдан гүйцэтгэл"
+
+msgid "Competitive Pricing"
+msgstr "Өрсөлдөхүйц үнэ"
+
+msgid "Warranty Coverage"
+msgstr "Баталгаат үйлчилгээ"
+
+msgid "Request Rental"
+msgstr "Түрээсийн хүсэлт"
+
+msgid "Request Quote"
+msgstr "Үнийн санал хүсэх"
+
+msgid "Residential, public, and infrastructure construction projects"
+msgstr "Орон сууц, нийтийн барилга болон дэд бүтцийн барилгын төслүүд"
+
+msgid "Professional Construction Services"
+msgstr "Мэргэжлийн барилга угсралтын үйлчилгээ"
+
+msgid "Gereltjin LLC provides professional construction and assembly services using modern technology, environmentally friendly materials, and high safety standards."
+msgstr "Гэрэлтжин ХХК нь орчин үеийн технологи, байгальд ээлтэй материал болон аюулгүй ажиллагааны өндөр стандартыг ашиглан мэргэжлийн барилга угсралтын үйлчилгээ үзүүлдэг."
+
+msgid "Since 2003, our company has implemented residential buildings, public facilities, and infrastructure projects contributing to Mongolia’s construction development."
+msgstr "2003 оноос хойш манай компани Монгол Улсын барилгын салбарын хөгжилд хувь нэмэр оруулсан орон сууц, нийтийн барилга болон дэд бүтцийн олон төслийг хэрэгжүүлж ирсэн."
+
+msgid "Our experienced engineers and construction teams ensure reliable project execution from planning to final delivery."
+msgstr "Манай туршлагатай инженерүүд болон барилгын багууд төслийн төлөвлөлтөөс эхлээд ашиглалтад хүлээлгэн өгөх хүртэл найдвартай гүйцэтгэлийг ханган ажилладаг."
+
+msgid "Construction Projects"
+msgstr "Барилгын төслүүд"
+
+msgid "Our Construction Services"
+msgstr "Манай барилгын үйлчилгээ"
+
+msgid "Residential Buildings"
+msgstr "Орон сууцны барилга"
+
+msgid "Multi-story residential buildings and apartment complexes."
+msgstr "Олон давхар орон сууцны барилга болон орон сууцны цогцолборууд."
+
+msgid "Public Buildings"
+msgstr "Нийтийн барилга байгууламж"
+
+msgid "Schools, sports facilities, and public infrastructure construction."
+msgstr "Сургууль, спортын байгууламж болон нийтийн дэд бүтцийн барилга."
+
+msgid "Facade Installation"
+msgstr "Фасад угсралт"
+
+msgid "Glass and metal facade systems for modern buildings."
+msgstr "Орчин үеийн барилгуудад зориулсан шилэн болон металл фасадны систем."
+
+msgid "Infrastructure Projects"
+msgstr "Дэд бүтцийн төслүүд"
+
+msgid "Large scale construction and infrastructure development projects."
+msgstr "Томоохон хэмжээний барилга болон дэд бүтцийн хөгжлийн төслүүд."
+
+msgid "Recent Construction Projects"
+msgstr "Сүүлийн үеийн барилгын төслүүд"
+
+msgid "View Photo"
+msgstr "Зураг харах"
+
+msgid "Residential"
+msgstr "Орон сууц"
+
+msgid "Public"
+msgstr "Нийтийн"
+
+msgid "Shine City-1 Residential Complex"
+msgstr "Shine City-1 орон сууцны цогцолбор"
+
+msgid "12-story residential building with 72 apartments."
+msgstr "72 айлын 12 давхар орон сууцны барилга."
+
+msgid "Shine City-2 Residential Complex"
+msgstr "Shine City-2 орон сууцны цогцолбор"
+
+msgid "16-story residential building with 77 apartments."
+msgstr "77 айлын 16 давхар орон сууцны барилга."
+
+msgid "Embassy Residence Complex"
+msgstr "Embassy Residence орон сууцны цогцолбор"
+
+msgid "12-story residential building with 44 apartments."
+msgstr "44 айлын 12 давхар орон сууцны барилга."
+
+msgid "Secondary School No.19"
+msgstr "19-р дунд сургууль"
+
+msgid "Reconstruction of Secondary School No.19 building funded by the government."
+msgstr "Улсын хөрөнгөөр 19-р дунд сургуулийн барилгыг шинэчлэн барьсан."
+
+msgid "Shine City Sports Complex"
+msgstr "Shine City спорт цогцолбор"
+
+msgid "Modern indoor sports complex building constructed in 2023."
+msgstr "2023 онд баригдсан орчин үеийн дотор спортын цогцолбор."
+
+msgid "Secondary School No.23 Sports Complex"
+msgstr "23-р сургуулийн спорт цогцолбор"
+
+msgid "Reconstruction of Secondary School No.23 Sports Complex building funded by the government."
+msgstr "Улсын хөрөнгөөр 23-р сургуулийн спорт цогцолборын барилгыг шинэчлэн барьсан."
+
+msgid "Sukhbaatar District"
+msgstr "Сүхбаатар дүүрэг"
+
+msgid "Bayangol District"
+msgstr "Баянгол дүүрэг"
+
+msgid "Chingeltei District"
+msgstr "Чингэлтэй дүүрэг"
+
+msgid "Planning a Construction Project?"
+msgstr "Барилгын төсөл хэрэгжүүлэхээр төлөвлөж байна уу?"
+
+msgid "Contact our team to discuss your construction requirements."
+msgstr "Барилгын төслийн талаар манай багтай холбогдон зөвлөгөө аваарай."
+
+msgid "Request Consultation"
+msgstr "Зөвлөгөө авах"

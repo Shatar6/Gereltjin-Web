@@ -5,99 +5,285 @@
 {% block title %}{% trans 'Glass Structure' %} - Gereltjin LLC{% endblock %}
 
 {% block content %}
+
 <!-- Page Header -->
 <section class="page-header">
+    <div class="header-bg"></div>
     <div class="container">
+        <span class="header-eyebrow">{% trans 'Since 1997' %}</span>
         <h1>{% trans 'Glass Structure' %}</h1>
-        <p>{% trans 'Modern glass structural solutions' %}</p>
+        <p>{% trans 'Modern glass structural solutions — cutting, tempering, insulated units & facade systems' %}</p>
     </div>
 </section>
 
-<!-- Content Section -->
+<!-- Stats Bar -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">1,500 m²</span>
+                <span class="stat-label">{% trans 'Glass cut / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7,000 m</span>
+                <span class="stat-label">{% trans 'Edge polished / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1,000 m²</span>
+                <span class="stat-label">{% trans 'Tempered / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500 m²</span>
+                <span class="stat-label">{% trans 'Insulated units / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3–25 mm</span>
+                <span class="stat-label">{% trans 'Glass thickness range' %}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Overview -->
 <section class="content-section">
     <div class="container">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2>{% trans 'Glass Structure Solutions' %}</h2>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <span class="section-eyebrow">{% trans 'Company Overview' %}</span>
+                <h2>{% trans "Mongolia's Leading Glass Processor" %}</h2>
                 <p>
-                    {% trans 'We specialize in advanced glass structural systems for modern architecture. Our solutions combine aesthetics with structural integrity.' %}
+                    {% trans "Gereltjin LLC was officially established on May 15, 2002. Today the company operates with more than 50 full-time employees and over 200 contracted workers, supported by its own factory facilities, equipment, and transportation fleet." %}
                 </p>
                 <p>
-                    {% trans 'From glass facades to structural glass walls, we deliver projects that push the boundaries of design.' %}
+                    {% trans "Our mission is to supply high-quality products based on modern technology, environmental responsibility, and safety standards while prioritizing customer satisfaction." %}
                 </p>
-                
-                <h3>{% trans 'Our Services Include:' %}</h3>
+                <h3>{% trans "Main Business Activities" %}</h3>
                 <ul class="service-list">
-                    <li>{% trans 'Glass curtain walls' %}</li>
-                    <li>{% trans 'Structural glazing systems' %}</li>
-                    <li>{% trans 'Glass canopies and skylights' %}</li>
-                    <li>{% trans 'Glass balustrades and railings' %}</li>
-                    <li>{% trans 'Glass floor systems' %}</li>
-                    <li>{% trans 'Spider glazing systems' %}</li>
+                    <li>{% trans "Construction and building installation works" %}</li>
+                    <li>{% trans "Road construction projects" %}</li>
+                    <li>{% trans "Metal and vacuum window and door manufacturing" %}</li>
+                    <li>{% trans "Glass processing factory and glass facade installation" %}</li>
+                    <li>{% trans "Equipment and machinery rental services" %}</li>
                 </ul>
-
-                <h3>{% trans 'Why Choose Our Glass Structures?' %}</h3>
-                <div class="features-list">
-                    <div class="feature-item">
-                        <span class="feature-icon">🏢</span>
-                        <div>
-                            <h4>{% trans 'Architectural Excellence' %}</h4>
-                            <p>{% trans 'Create stunning architectural statements with transparent, modern designs' %}</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">💪</span>
-                        <div>
-                            <h4>{% trans 'Structural Integrity' %}</h4>
-                            <p>{% trans 'Engineering calculations ensure safety and durability' %}</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">☀️</span>
-                        <div>
-                            <h4>{% trans 'Energy Efficiency' %}</h4>
-                            <p>{% trans 'High-performance glazing for thermal and solar control' %}</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-            
-            <div class="content-image">
+            <div class="intro-image">
                 <div class="image-placeholder">
-                    <span>🏢</span>
-                    <p>{% trans 'Glass Structure Image' %}</p>
-                    <small>{% trans 'Image will be added here' %}</small>
-                </div>
-                <div class="image-placeholder mt-2">
-                    <span>🏗️</span>
-                    <p>{% trans 'Installation Process' %}</p>
-                    <small>{% trans 'Image will be added here' %}</small>
+                    <span>🏭</span>
+                    <p>{% trans 'Glass Processing Factory' %}</p>
+                    <small>{% trans 'Uliastai, Bayanzurkh District, Ulaanbaatar' %}</small>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Project Examples Section -->
+<!-- Factory History Timeline -->
+<section class="timeline-section">
+    <div class="container">
+        <span class="section-eyebrow center">{% trans 'Our History' %}</span>
+        <h2 class="section-title">{% trans 'Factory Milestones' %}</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1997</div>
+                <div class="timeline-content">
+                    <h4>{% trans 'Glass Import Begins' %}</h4>
+                    <p>{% trans 'Started importing glass for the domestic Mongolian market.' %}</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2002</div>
+                <div class="timeline-content">
+                    <h4>{% trans 'Company Founded' %}</h4>
+                    <p>{% trans 'Gereltjin LLC officially established. Metal and plastic window & door manufacturing plant launched.' %}</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2013</div>
+                <div class="timeline-content">
+                    <h4>{% trans 'Insulated Glass Line' %}</h4>
+                    <p>{% trans 'Factory expanded with a fully automated insulated glass production line.' %}</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2016</div>
+                <div class="timeline-content">
+                    <h4>{% trans 'Tempered Glass Line' %}</h4>
+                    <p>{% trans 'Tempered glass processing line installed, enabling processing of glass from 3mm to 25mm thickness.' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Equipment Section -->
+<section class="equipment-section">
+    <div class="container">
+        <span class="section-eyebrow center">{% trans 'Technology' %}</span>
+        <h2 class="section-title">{% trans 'Advanced Equipment & Capacity' %}</h2>
+        <p class="section-intro">
+            {% trans "Our factory uses fully automated equipment from Austria, Italy, and China including Lisec, Intermac Master, Golive, North Glass, Hangjiang, and Parker." %}
+        </p>
+        <div class="equipment-grid">
+            <div class="equipment-card">
+                <div class="eq-icon">🔪</div>
+                <h4>{% trans 'Glass Cutting' %}</h4>
+                <p class="eq-cap">1,500 m² / {% trans 'day' %}</p>
+                <p>{% trans 'Precision automated cutting line for all glass types.' %}</p>
+            </div>
+            <div class="equipment-card">
+                <div class="eq-icon">✨</div>
+                <h4>{% trans 'Edge Polishing' %}</h4>
+                <p class="eq-cap">7,000 m / {% trans 'day' %}</p>
+                <p>{% trans 'High-speed edge grinding and polishing machines.' %}</p>
+            </div>
+            <div class="equipment-card">
+                <div class="eq-icon">🔥</div>
+                <h4>{% trans 'Tempered Glass' %}</h4>
+                <p class="eq-cap">1,000 m² / {% trans 'day' %}</p>
+                <p>{% trans 'Full tempering line for 3–25mm safety glass.' %}</p>
+            </div>
+            <div class="equipment-card">
+                <div class="eq-icon">🪟</div>
+                <h4>{% trans 'Insulated Units' %}</h4>
+                <p class="eq-cap">500 m² / {% trans 'day' %}</p>
+                <p>{% trans 'Automated LOW-E insulated glass unit assembly.' %}</p>
+            </div>
+            <div class="equipment-card">
+                <div class="eq-icon">🚪</div>
+                <h4>{% trans 'Windows & Doors' %}</h4>
+                <p class="eq-cap">100 m² / {% trans 'day' %}</p>
+                <p>{% trans 'Plastic and metal frame window and door manufacturing.' %}</p>
+            </div>
+        </div>
+        <p class="products-note">
+            {% trans "Our production includes glass walls, glass doors, shower glass, stair railings, insulated energy-efficient glass units, and glass facade systems." %}
+        </p>
+    </div>
+</section>
+
+<!-- Major Clients -->
+<section class="clients-section">
+    <div class="container">
+        <span class="section-eyebrow center">{% trans 'Trusted By' %}</span>
+        <h2 class="section-title">{% trans 'Major Clients' %}</h2>
+        <p class="section-intro">
+            {% trans "Our glass products and insulated glass units are supplied to many major organizations including the U.S. Embassy in Mongolia, the Ministry of Finance, Khan Bank branches, Top Tsonkh Khaalga LLC, and Alyuko LLC." %}
+        </p>
+        <div class="clients-grid">
+            <div class="client-badge">🏛️ {% trans 'U.S. Embassy in Mongolia' %}</div>
+            <div class="client-badge">🏦 {% trans 'Ministry of Finance' %}</div>
+            <div class="client-badge">🏧 {% trans 'Khan Bank Branches' %}</div>
+            <div class="client-badge">🪟 {% trans 'Top Tsonkh Khaalga LLC' %}</div>
+            <div class="client-badge">🏗️ {% trans 'Alyuko LLC' %}</div>
+        </div>
+    </div>
+</section>
+
+<!-- Major Glass Facade Projects (card style like construction page) -->
 <section class="projects-section">
     <div class="container">
-        <h2 class="section-title">{% trans 'Recent Projects' %}</h2>
+        <span class="section-eyebrow center">{% trans 'Portfolio' %}</span>
+        <h2 class="section-title">{% trans 'Major Glass Facade Projects' %}</h2>
         <div class="projects-grid">
-            <div class="project-placeholder">
-                <div class="placeholder-icon">🏢</div>
-                <h4>{% trans 'Commercial Building Facade' %}</h4>
-                <p>{% trans 'Project details will be added' %}</p>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🎬</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Commercial' %}</span>
+                    <h3>{% trans "Urgoo Cinema – Laser Cinema Facade" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Ulaanbaatar" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Curved and flat glass facade for the Laser Cinema expansion of Urgoo Cinema." %}</p>
+                </div>
             </div>
-            <div class="project-placeholder">
-                <div class="placeholder-icon">🏗️</div>
-                <h4>{% trans 'Glass Canopy Installation' %}</h4>
-                <p>{% trans 'Project details will be added' %}</p>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🏢</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans "VIP Residence – Glass Facade" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Ulaanbaatar" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Curved and flat glass facade installation for VIP Residence housing complex." %}</p>
+                </div>
             </div>
-            <div class="project-placeholder">
-                <div class="placeholder-icon">🌆</div>
-                <h4>{% trans 'Structural Glazing Project' %}</h4>
-                <p>{% trans 'Project details will be added' %}</p>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🏘️</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans "La Colina – Glass Facade" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Khan-Uul District" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Full glass facade system for La Colina residential project by Modun LLC." %}</p>
+                </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🌻</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans "Sunshine Garden – Glass Facade" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Ulaanbaatar" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Curved and flat glass facade for Sunshine Garden residential project by Legato Construction." %}</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🏠</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans "Khurd Group – Windows & Doors" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Ulaanbaatar" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Plastic and metal windows and doors for Narny Khorolol and Rafid Harsh residential projects." %}</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">⛲</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Public' %}</span>
+                    <h3>{% trans "Central Square Fountain – Glass Enclosure" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Sukhbaatar Square" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Decorative glass barrier installation for the fountain in front of Sukhbaatar Square." %}</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image no-img">
+                    <div class="project-icon">🧣</div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Commercial' %}</span>
+                    <h3>{% trans "Gobi Cashmere Central Store" %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans "Ulaanbaatar" %}</span>
+                    </p>
+                    <p class="project-description">{% trans "Full interior glass structures — walls, partitions, display cases, and exhibition tables for Gobi Cashmere's flagship store." %}</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -107,195 +293,506 @@
     <div class="container">
         <h2>{% trans 'Ready for Your Glass Structure Project?' %}</h2>
         <p>{% trans 'Contact us for consultation and quote' %}</p>
-        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
+        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get Quote' %}</a>
     </div>
 </section>
+
 {% endblock %}
 
 {% block extra_css %}
 <style>
+
+/* ─── PAGE HEADER ─── */
+
+
 .page-header {
-    background: #005B49;
-    color: var(--text-light);
-    padding: 4rem 0 3rem;
+    position: relative;
+    background: linear-gradient(135deg, #004a3b 0%, #006b54 60%, #0c7b63 100%);
+    color: white;
+    padding: 6rem 0 5rem;
     text-align: center;
+    overflow: hidden;
+}
+
+.header-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04) 0%, transparent 60%),
+                      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+}
+
+.header-eyebrow {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.9);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    margin-bottom: 1.2rem;
 }
 
 .page-header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
     margin-bottom: 1rem;
 }
 
-.content-section {
-    padding: var(--spacing-xl) 0;
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.content-grid {
+/* ─── STATS BAR ─── */
+.stats-bar {
+    background: #123637;
+    padding: 2rem 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #4ecda4;
+    line-height: 1.1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.3rem;
+}
+
+/* ─── SECTION SHARED ─── */
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #005B49;
+    margin-bottom: 0.8rem;
+}
+
+.section-eyebrow.center {
+    display: block;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #123637;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ─── CONTENT SECTION (overview) ─── */
+.content-section {
+    padding: 5rem 0;
+}
+
+.intro-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--spacing-lg);
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
     align-items: start;
 }
 
-.content-text h2 {
-    color: #123637;
-    margin-bottom: var(--spacing-md);
+.intro-text h2 {
     font-size: 2rem;
-}
-
-.content-text h3 {
+    font-weight: 800;
     color: #123637;
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
-.content-text p {
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-gray);
-    line-height: 1.8;
+.intro-text h3 {
+    font-size: 1.3rem;
+    color: #005B49;
+    margin: 1.8rem 0 0.8rem;
+}
+
+.intro-text p {
+    color: #555;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
 }
 
 .service-list {
     list-style: none;
     padding: 0;
-    margin: var(--spacing-sm) 0;
+    margin: 1rem 0;
 }
 
 .service-list li {
-    padding: 0.75rem 0;
-    padding-left: 2rem;
+    padding: 0.8rem 0 0.8rem 2.2rem;
     position: relative;
-    color: var(--text-gray);
-    border-bottom: 1px solid var(--accent-gray);
+    color: #555;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
 }
 
 .service-list li:before {
-    content: '✓';
+    content: "✓";
     position: absolute;
     left: 0;
-    color: #123637;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.features-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
-}
-
-.feature-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding: var(--spacing-md);
-    background: var(--bg-light);
-    border-radius: var(--border-radius);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
-}
-
-.feature-item h4 {
-    color: #123637;
-    margin-bottom: 0.5rem;
-}
-
-.feature-item p {
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-.content-image {
-    position: sticky;
-    top: 100px;
+    color: #005B49;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .image-placeholder {
-    background: var(--accent-gray);
-    border: 2px dashed var(--primary-blue);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, #f0f7f5, #e0f0eb);
+    border: 2px dashed #a3cfc5;
+    border-radius: 16px;
+    padding: 3rem 2rem;
     text-align: center;
-    min-height: 300px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.image-placeholder span {
-    font-size: 5rem;
-    margin-bottom: var(--spacing-sm);
+.image-placeholder span { font-size: 5rem; }
+.image-placeholder p { color: #005B49; font-weight: 600; font-size: 1.1rem; margin: 0; }
+.image-placeholder small { color: #777; font-style: italic; font-size: 0.85rem; }
+
+/* ─── TIMELINE ─── */
+.timeline-section {
+    background: #f7faf9;
+    padding: 5rem 0;
 }
 
-.image-placeholder p {
-    font-size: 1.125rem;
-    color: var(--text-gray);
-    margin: 0.5rem 0;
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 2.5rem;
+    position: relative;
 }
 
-.image-placeholder small {
-    color: var(--text-gray);
-    font-style: italic;
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, #005B49, #4ecda4, #005B49);
+    z-index: 0;
 }
 
-.mt-2 {
-    margin-top: var(--spacing-md);
+.timeline-item {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
+.timeline-year {
+    display: inline-block;
+    background: #005B49;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content h4 {
+    color: #123637;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ─── EQUIPMENT ─── */
+.equipment-section {
+    padding: 5rem 0;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.equipment-card {
+    background: white;
+    border: 1px solid #e8f0ee;
+    border-radius: 14px;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,91,73,0.12);
+    border-color: #4ecda4;
+}
+
+.eq-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.equipment-card h4 {
+    color: #123637;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.eq-cap {
+    color: #005B49;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.equipment-card p:last-child {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.products-note {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    background: #f0f7f5;
+    border-radius: 12px;
+    border-left: 4px solid #005B49;
+    text-align: left;
+}
+
+/* ─── CLIENTS ─── */
+.clients-section {
+    background: #f7faf9;
+    padding: 5rem 0;
+}
+
+.clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.client-badge {
+    background: white;
+    border: 1.5px solid #c8e6df;
+    color: #123637;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.client-badge:hover {
+    background: #005B49;
+    color: white;
+    border-color: #005B49;
+    transform: translateY(-2px);
+}
+
+/* ─── PROJECTS (like construction page) ─── */
 .projects-section {
-    padding: var(--spacing-xl) 0;
-    background: var(--bg-light);
+    padding: 5rem 0;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
+    gap: 2rem;
+    margin-top: 2.5rem;
 }
 
-.project-placeholder {
-    background: var(--bg-white);
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-    border: 2px dashed var(--primary-blue);
+.project-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    border: 1px solid #eef4f2;
 }
 
-.placeholder-icon {
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,91,73,0.13);
+}
+
+.project-image {
+    height: 160px;
+    background: linear-gradient(135deg, #e0f0eb, #c8e6df);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon {
     font-size: 4rem;
-    margin-bottom: var(--spacing-sm);
+    opacity: 0.8;
 }
 
-.project-placeholder h4 {
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-category {
+    display: inline-block;
+    background: #005B49;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+}
+
+.project-info h3 {
     color: #123637;
+    font-size: 1.05rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
-.project-placeholder p {
-    color: var(--text-gray);
-    font-style: italic;
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0.6rem;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ─── CTA ─── */
+.cta-section {
+    background: linear-gradient(135deg, #004a3b, #006b54);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+.page-header,
+.stats-bar,
+.content-section,
+.timeline-section,
+.equipment-section,
+.clients-section,
+.projects-section,
+.cta-section {
+    font-family: inherit;
+}
+
+.page-header h1,
+.section-title,
+.intro-text h2,
+.intro-text h3,
+.project-info h3,
+.equipment-card h4,
+.timeline-content h4 {
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+p {
+    font-family: inherit;
+    font-weight: 400;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1100px) {
+    .equipment-grid { grid-template-columns: repeat(3, 1fr); }
+    .timeline { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .timeline::before { display: none; }
 }
 
 @media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .page-header h1 {
-        font-size: 2rem;
-    }
-    
-    .content-image {
-        position: relative;
-        top: 0;
-    }
+    .page-header h1 { font-size: 2.2rem; }
+    .section-title { font-size: 1.7rem; }
+    .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .equipment-grid { grid-template-columns: repeat(2, 1fr); }
+    .timeline { grid-template-columns: 1fr; }
+    .stats-grid { justify-content: center; }
+    .stat-item { min-width: 140px; }
+    .projects-grid { grid-template-columns: 1fr; }
 }
 </style>
 {% endblock %}

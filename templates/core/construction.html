@@ -9,51 +9,362 @@
 <section class="page-header">
     <div class="container">
         <h1>{% trans 'Construction & Assembly' %}</h1>
-        <p>{% trans 'Professional construction and assembly services' %}</p>
+        <p>{% trans 'Residential, public, and infrastructure construction projects' %}</p>
     </div>
 </section>
 
-<!-- Content Section -->
+<!-- Intro Section -->
 <section class="content-section">
     <div class="container">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2>{% trans 'Construction & Assembly' %}</h2>
+
+        <div class="intro-grid">
+
+            <div class="intro-text">
+
+                <h2>{% trans 'Professional Construction Services' %}</h2>
+
                 <p>
-                    {% trans 'We provide comprehensive construction and assembly services for glass structures and installations. Our experienced team ensures precise installation and quality workmanship.' %}
+                    {% trans 'Gereltjin LLC provides professional construction and assembly services using modern technology, environmentally friendly materials, and high safety standards.' %}
                 </p>
+
                 <p>
-                    {% trans 'From planning to completion, we handle all aspects of construction and assembly with attention to detail and safety.' %}
+                    {% trans 'Since 2003, our company has implemented residential buildings, public facilities, and infrastructure projects contributing to Mongolia’s construction development.' %}
                 </p>
-                
-                <h3>{% trans 'Our Services Include:' %}</h3>
-                <ul class="service-list">
-                    <li>{% trans 'Site preparation and planning' %}</li>
-                    <li>{% trans 'Structural assembly' %}</li>
-                    <li>{% trans 'Glass installation' %}</li>
-                    <li>{% trans 'Quality control and inspection' %}</li>
-                    <li>{% trans 'Post-installation support' %}</li>
-                </ul>
+
+                <p>
+                    {% trans 'Our experienced engineers and construction teams ensure reliable project execution from planning to final delivery.' %}
+                </p>
+
             </div>
-            
-            <div class="content-image">
+
+            <div class="intro-image">
+
                 <div class="image-placeholder">
                     <span>🏗️</span>
-                    <p>{% trans 'Construction & Assembly' %}</p>
+                    <p>{% trans 'Construction Projects' %}</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            {% trans 'Our Construction Services' %}
+        </h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>{% trans 'Residential Buildings' %}</h3>
+                <p>{% trans 'Multi-story residential buildings and apartment complexes.' %}</p>
+            </div>
+
+            <div class="service-card">
+                <h3>{% trans 'Public Buildings' %}</h3>
+                <p>{% trans 'Schools, sports facilities, and public infrastructure construction.' %}</p>
+            </div>
+
+            <div class="service-card">
+                <h3>{% trans 'Facade Installation' %}</h3>
+                <p>{% trans 'Glass and metal facade systems for modern buildings.' %}</p>
+            </div>
+
+            <div class="service-card">
+                <h3>{% trans 'Infrastructure Projects' %}</h3>
+                <p>{% trans 'Large scale construction and infrastructure development projects.' %}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Projects Timeline (Snake Style) -->
+<!-- Major Projects -->
+<section class="projects-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+        {% trans "Recent Construction Projects" %}
+        </h2>
+
+    <div class="projects-grid">
+
+    <!-- Shine City 1 -->
+    <div class="project-card">
+
+    <div class="project-image">
+        <img src="{% static 'images/Shine_City_1_b.jpg' %}" 
+            data-full="{% static 'images/Shine_City_1_b.jpg' %}" 
+            alt="Shine City 1">
+
+        <div class="overlay">
+            <button class="view-btn">{% trans "View Photo" %}</button>
+        </div>
+    </div>
+
+    <div class="project-info">
+
+    <span class="project-category">{% trans "Residential" %}</span>
+
+    <h3>{% trans "Shine City-1 Residential Complex" %}</h3>
+
+    <p class="project-meta">
+    <span>📍 {% trans "Sukhbaatar District" %}</span>
+    <span>📅 2016</span>
+    </p>
+
+    <p class="project-description">
+    {% trans "12-story residential building with 72 apartments." %}
+    </p>
+
+    </div>
+    </div>
+
+
+    <!-- Shine City 2 -->
+    <div class="project-card">
+
+    <div class="project-image">
+    <img src="{% static 'images/Shine_City_2_render_1.jpg' %}" 
+        data-full="{% static 'images/Shine_City_2_render_1.jpg' %}" 
+        alt="Shine City 2">
+
+    <div class="overlay">
+    <button class="view-btn">{% trans "View Photo" %}</button>
+    </div>
+    </div>
+
+    <div class="project-info">
+
+    <span class="project-category">{% trans "Residential" %}</span>
+
+    <h3>{% trans "Shine City-2 Residential Complex" %}</h3>
+
+    <p class="project-meta">
+    <span>📍 {% trans "Sukhbaatar District" %}</span>
+    <span>📅 2022</span>
+    </p>
+
+    <p class="project-description">
+    {% trans "16-story residential building with 77 apartments." %}
+    </p>
+
+    </div>
+    </div>
+
+
+    <!-- Embassy Residence -->
+    <div class="project-card">
+
+    <div class="project-image">
+    <img src="{% static 'images/Embassy_26.png' %}" 
+        data-full="{% static 'images/Embassy_26.png' %}" 
+        alt="Embassy Residence">
+
+    <div class="overlay">
+    <button class="view-btn">{% trans "View Photo" %}</button>
+    </div>
+    </div>
+
+    <div class="project-info">
+
+    <span class="project-category">{% trans "Residential" %}</span>
+
+    <h3>{% trans "Embassy Residence Complex" %}</h3>
+
+    <p class="project-meta">
+    <span>📍 {% trans "Sukhbaatar District" %}</span>
+    <span>📅 2012</span>
+    </p>
+
+    <p class="project-description">
+    {% trans "12-story residential building with 44 apartments." %}
+    </p>
+
+    </div>
+    </div>
+
+
+    <!-- School 19 -->
+    <div class="project-card">
+
+    <div class="project-image">
+    <img src="{% static 'images/School_19.png' %}" 
+        data-full="{% static 'images/School_19.png' %}" 
+        alt="School 19">
+
+    <div class="overlay">
+    <button class="view-btn">{% trans "View Photo" %}</button>
+    </div>
+    </div>
+
+    <div class="project-info">
+
+    <span class="project-category">{% trans "Public" %}</span>
+
+    <h3>{% trans "Secondary School No.19" %}</h3>
+
+    <p class="project-meta">
+    <span>📍 {% trans "Bayangol District" %}</span>
+    <span>📅 2021</span>
+    </p>
+
+    <p class="project-description">
+    {% trans "Reconstruction of Secondary School No.19 building funded by the government." %}
+    </p>
+
+    </div>
+    </div>
+
+
+                <!-- Shine City Sports Complex -->
+                <div class="project-card">
+                        <div class="project-image">
+                            <img src="{% static 'images/ShineCitySportComplex.png' %}" 
+                                data-full="{% static 'images/ShineCitySportComplex.png' %}" 
+                                alt="Sports Complex">
+
+                            <div class="overlay">
+                                <button class="view-btn">{% trans "View Photo" %}</button>
+                            </div>
+                        </div>
+
+                    <div class="project-info">
+
+                        <span class="project-category">{% trans "Public" %}</span>
+
+                        <h3>{% trans "Shine City Sports Complex" %}</h3>
+
+                        <p class="project-meta">
+                            <span>📍 {% trans "Sukhbaatar District" %}</span>
+                            <span>📅 2023</span>
+                        </p>
+
+                        <p class="project-description">
+                            {% trans "Modern indoor sports complex building constructed in 2023." %}
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- School 23 -->
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="{% static 'images/School_23.png' %}" 
+                            data-full="{% static 'images/School_23.png' %}" 
+                            alt="School 23">
+
+                        <div class="overlay">
+                            <button class="view-btn">{% trans "View Photo" %}</button>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+
+                    <span class="project-category">{% trans "Public" %}</span>
+
+                    <h3>{% trans "Secondary School No.23 Sports Complex" %}</h3>
+
+                    <p class="project-meta">
+                        <span>📍 {% trans "Chingeltei District" %}</span>
+                        <span>📅 2026</span>
+                    </p>
+
+                    <p class="project-description">
+                        {% trans "Reconstruction of Secondary School No.23 Sports Complex building funded by the government." %}
+                    </p>
+
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
+
+
 <!-- CTA -->
 <section class="cta-section">
+
     <div class="container">
-        <h2>{% trans 'Need Construction Services?' %}</h2>
-        <p>{% trans 'Contact us for a consultation' %}</p>
-        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Get a Quote' %}</a>
+
+        <h2>{% trans 'Planning a Construction Project?' %}</h2>
+
+        <p>
+            {% trans 'Contact our team to discuss your construction requirements.' %}
+        </p>
+
+        <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">
+            {% trans 'Request Consultation' %}
+        </a>
+
     </div>
+
 </section>
+
+<div id="photoModal" class="photo-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+
+    const modal = document.getElementById("photoModal")
+    const modalImg = document.getElementById("modalImage")
+    const closeBtn = document.querySelector(".close")
+
+    document.querySelectorAll(".project-image img").forEach(img => {
+
+    img.addEventListener("click", function(){
+
+    modal.style.display = "flex"
+    modalImg.src = this.dataset.full
+
+    })
+
+    })
+
+    document.querySelectorAll(".project-image").forEach(box => {
+
+    box.addEventListener("click", function(){
+
+    const img = box.querySelector("img")
+
+    modal.style.display = "flex"
+    modalImg.src = img.dataset.full
+
+    })
+
+    })
+
+    closeBtn.onclick = function(){
+    modal.style.display = "none"
+    }
+
+    window.onclick = function(e){
+    if(e.target == modal){
+    modal.style.display = "none"
+    }
+    }
+
+    })
+
+</script>
 {% endblock %}
 
 {% block extra_css %}
@@ -70,8 +381,168 @@
     margin-bottom: 1rem;
 }
 
-.content-section {
-    padding: var(--spacing-xl) 0;
+
+.content-section{
+    padding:80px 0;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.services-section{
+    background:#f7f7f7;
+    padding:80px 0;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.service-card h3{
+    color:#005B49;
+    margin-bottom:10px;
+}
+.projects-section{
+    padding:80px 0;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:40px;
+}
+
+.project-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+}
+
+.project-image{
+position:relative;
+height:230px;
+overflow:hidden;
+}
+
+.project-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+transition:0.3s;
+}
+
+.project-image:hover .overlay{
+opacity:1;
+}
+
+.view-btn{
+background:#005B49;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:10px;
+cursor:pointer;
+font-weight:500;
+}
+
+.project-info{
+padding:20px;
+}
+
+.project-category{
+    background:#005B49;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.project-meta{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+    color:#666;
+    margin:10px 0;
+}
+
+/* modal */
+
+.photo-modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-content{
+    max-width:90vw;
+    max-height:90vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+
+}
+
+.year{
+    font-weight:bold;
+    color:#005B49;
+    font-size:20px;
 }
 
 .content-grid {
@@ -150,23 +621,83 @@
     color: var(--text-gray);
 }
 
-@media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
+.page-header{
+    background:#005B49;
+    color:white;
+    padding:4rem 0;
+    text-align:center;
+}
+
+.page-header h1{
+    font-size:3rem;
+}
+
+.content-section{
+    padding:80px 0;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.section-title{
+    font-size:36px;
+    font-weight:700;
+    color:#123637;
+    text-align:center;
+    margin-bottom:50px;
+    position:relative;
+}
+
+/* services */
+
+.services-section{
+    background:#f7f7f7;
+    padding:80px 0;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.service-card h3{
+    color:#123637;
+    margin-bottom:10px;
+}
+
+/* projects */
+
+.projects-section{
+    padding:80px 0;
+}
+
+.year{
+    font-weight:bold;
+    color:#123637;
+    font-size:20px;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
     }
-    
-    .page-header h1 {
-        font-size: 2rem;
+
+    .projects-grid{
+        grid-template-columns:1fr;
     }
-    
-    .content-image {
-        position: relative;
-        top: 0;
+
+    .intro-grid{
+        grid-template-columns:1fr;
     }
-    
-    .image-placeholder {
-        min-height: 300px;
-    }
+
 }
 </style>
 {% endblock %}

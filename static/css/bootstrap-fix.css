@@ -74,6 +74,7 @@ header .nav-link:hover,
 .nav-menu .nav-link:hover {
     color:  #006B5A  !important;
     background: var(--accent-gray) !important;
+    
 }
 
 .header .nav-link.active,
@@ -97,7 +98,7 @@ header .nav-link.nav-cta,
 header .nav-link.nav-cta:hover,
 .navbar .nav-link.nav-cta:hover {
     background: var(--primary-blue-dark) !important;
-    color:  #006B5A !important;
+    color: #f8fafc !important;
 }
 
 /* Logo - prevent Bootstrap from affecting it */
@@ -178,7 +179,6 @@ header .logo-text,
 
 .carousel-img {
     height: 100%;
-    width: 100%;
     object-fit: cover;
 }
 

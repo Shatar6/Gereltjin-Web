@@ -34,8 +34,7 @@
             
             <div class="about-image">
                 <div class="image-placeholder">
-                    <span>🏭</span>
-                    <p>{% trans 'Manufacturing Facility' %}</p>
+                    <img src="{% static 'images/Uildver/line_1.jpg' %}" alt="Uildver Image-1" style="width: 100%; height: auto; border-radius: 4px;">
                 </div>
             </div>
         </div>
@@ -144,6 +143,9 @@
                         <div class="text">
                             <h3>2013</h3>
                             <p>{% trans 'Expanded operations with a fully automated insulated glass production line.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/Uildver/line_2.jpg' %}" alt="Insulated Glass Production Line">
                         </div>
                         
                     </div>
@@ -260,6 +262,9 @@
                             <h3>2024</h3>
                             <p>{% trans 'Executed construction works under the “One Million Tons – One Million Trees” project in Dornogovi Province.' %}</p>
                         </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/construction_project/one_million_tons_one_million_trees.png' %}" alt="One Million Tons – One Million Trees Project">
+                        </div>
                     </div>
                 </div>
 
@@ -269,6 +274,9 @@
                         <div class="text">
                             <h3>2025</h3>
                             <p>{% trans 'Currently implementing the 178-unit Shine City-3 residential project in Sukhbaatar District.' %}</p>
+                        </div>
+                        <div class="timeline-photo">
+                            <img src="{% static 'images/carousel-3.jpg' %}" alt="Shine City 3">
                         </div>
                     </div>
                 </div>
@@ -403,7 +411,7 @@
 .image-placeholder {
     background: var(--accent-gray);
     border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm);
     text-align: center;
     min-height: 300px;
     display: flex;

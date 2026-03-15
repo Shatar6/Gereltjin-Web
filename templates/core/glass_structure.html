@@ -82,7 +82,7 @@
             </div>
             <div class="intro-image">
                 <div class="image-placeholder">
-                    <span>🏭</span>
+                    <img src="{% static 'images/Uildver/line_1.jpg' %}" alt="Uildver 1" style="width:100%; height:auto; border-radius:12px; object-fit:cover;">
                     <p>{% trans 'Glass Processing Factory' %}</p>
                     <small>{% trans 'Uliastai, Bayanzurkh District, Ulaanbaatar' %}</small>
                 </div>
@@ -375,6 +375,12 @@
     padding: 80px 0;
 }
 
+.intro-image {
+    position: sticky;
+    top: 100px;  
+    height: fit-content;
+}
+
 .intro-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -423,7 +429,7 @@
 .image-placeholder {
     background: var(--accent-gray);
     border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm);
     text-align: center;
     min-height: 300px;
     display: flex;

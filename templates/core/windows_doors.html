@@ -12,66 +12,99 @@
         <p>{% trans 'Premium glass windows and doors for your space' %}</p>
     </div>
 </section>
+<!-- Stats Bar -->
+<section class="stats-bar">
+    
+
+    <div class="container">
+        <div class="stats-grid">
+            
+            <div class="stat-item">
+                <span class="stat-number">1,500 м²</span>
+                <span class="stat-label">{% trans 'Glass cut / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7,000 м</span>
+                <span class="stat-label">{% trans 'Edge polished / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1,000 м²</span>
+                <span class="stat-label">{% trans 'Tempered / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500 м²</span>
+                <span class="stat-label">{% trans 'Insulated units / day' %}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3–25 мм</span>
+                <span class="stat-label">{% trans 'Glass thickness range' %}</span>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Content Section -->
 <section class="content-section">
     <div class="container">
-        <div class="content-intro">
-            <h2>{% trans 'High-Quality Windows & Doors' %}</h2>
-            <p>
-                {% trans 'We manufacture and install premium glass windows and doors that combine functionality, energy efficiency, and aesthetic appeal.' %}
-            </p>
-        </div>
-
         <!-- Product Categories -->
         <div class="product-categories">
-            <div class="category-card">
-                <div class="category-icon">🪟</div>
-                <h3>{% trans 'Windows' %}</h3>
-                <ul>
-                    <li>{% trans 'Sliding windows' %}</li>
-                    <li>{% trans 'Casement windows' %}</li>
-                    <li>{% trans 'Fixed windows' %}</li>
-                    <li>{% trans 'Tilt & turn windows' %}</li>
-                    <li>{% trans 'Bay windows' %}</li>
-                </ul>
-                <div class="placeholder-img">
-                    <span>🪟</span>
-                    <p>{% trans 'Window images coming soon' %}</p>
+           <div class="product-categories modern-cards">
+
+            <!-- Windows -->
+            <div class="modern-card">
+                <div class="card-image">
+                    <img src="{% static 'images/projects/Sunshine_Garden.png' %}" alt="Windows">
+                </div>
+
+                <div class="card-content">
+                    <h3>{% trans 'Windows' %}</h3>
+                    <ul>
+                        <li>{% trans 'Sliding windows' %}</li>
+                        <li>{% trans 'Casement windows' %}</li>
+                        <li>{% trans 'Fixed windows' %}</li>
+                        <li>{% trans 'Tilt & turn windows' %}</li>
+                        <li>{% trans 'Bay windows' %}</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="category-card">
-                <div class="category-icon">🚪</div>
-                <h3>{% trans 'Glass Doors' %}</h3>
-                <ul>
-                    <li>{% trans 'Sliding glass doors' %}</li>
-                    <li>{% trans 'French doors' %}</li>
-                    <li>{% trans 'Pivot doors' %}</li>
-                    <li>{% trans 'Frameless glass doors' %}</li>
-                    <li>{% trans 'Automatic sliding doors' %}</li>
-                </ul>
-                <div class="placeholder-img">
-                    <span>🚪</span>
-                    <p>{% trans 'Door images coming soon' %}</p>
+            <!-- Glass Doors -->
+            <div class="modern-card">
+                <div class="card-image">
+                    <img src="{% static 'images/projects/haalga.png' %}" alt="Doors">
+                </div>
+
+                <div class="card-content">
+                    <h3>{% trans 'Glass Doors' %}</h3>
+                    <ul>
+                        <li>{% trans 'Sliding glass doors' %}</li>
+                        <li>{% trans 'French doors' %}</li>
+                        <li>{% trans 'Pivot doors' %}</li>
+                        <li>{% trans 'Frameless glass doors' %}</li>
+                        <li>{% trans 'Automatic sliding doors' %}</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="category-card">
-                <div class="category-icon">🏢</div>
-                <h3>{% trans 'Commercial Solutions' %}</h3>
-                <ul>
-                    <li>{% trans 'Storefront systems' %}</li>
-                    <li>{% trans 'Office partitions' %}</li>
-                    <li>{% trans 'Entrance systems' %}</li>
-                    <li>{% trans 'Fire-rated glass doors' %}</li>
-                    <li>{% trans 'Soundproof solutions' %}</li>
-                </ul>
-                <div class="placeholder-img">
-                    <span>🏢</span>
-                    <p>{% trans 'Commercial images coming soon' %}</p>
+            <!-- Commercial -->
+            <div class="modern-card">
+                <div class="card-image">
+                    <img src="{% static 'images/projects/Shilen_hana.png' %}" alt="Commercial">
+                </div>
+
+                <div class="card-content">
+                    <h3>{% trans 'Commercial Solutions' %}</h3>
+                    <ul>
+                        <li>{% trans 'Storefront systems' %}</li>
+                        <li>{% trans 'Office partitions' %}</li>
+                        <li>{% trans 'Entrance systems' %}</li>
+                        <li>{% trans 'Fire-rated glass doors' %}</li>
+                        <li>{% trans 'Soundproof solutions' %}</li>
+                    </ul>
                 </div>
             </div>
+
+        </div>
         </div>
     </div>
 </section>
@@ -168,6 +201,38 @@
     margin-bottom: 1rem;
 }
 
+/* ── STATS BAR ── */
+.stats-bar {
+    background: #123637;
+    padding: 2rem 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.6rem;
+    color: #4ecda4;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 0.3rem;
+}
+
 .content-section {
     padding: var(--spacing-xl) 0;
 }
@@ -197,6 +262,67 @@
     border-top: 4px solid #123512;
 }
 
+.modern-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.modern-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.modern-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #0f6b5b;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.6rem;
+}
+
+.card-content h3 {
+    margin: 0.5rem 0;
+    color: #123512;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
 .category-icon {
     font-size: 3rem;
     text-align: center;
@@ -210,20 +336,19 @@
     font-size: 1.5rem;
 }
 
-.category-card ul {
+.card-content ul {
     list-style: none;
     padding: 0;
     margin-bottom: var(--spacing-md);
 }
 
-.category-card ul li {
-    padding: 0.5rem 0;
+.card-content ul li {
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-gray);
 }
 
-.category-card ul li:before {
+.card-content ul li:before {
     content: '▸';
     position: absolute;
     left: 0;
@@ -258,9 +383,10 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+    justify-content: center;
 }
 
 .feature-box {
@@ -269,6 +395,7 @@
     border-radius: var(--border-radius);
     text-align: center;
     transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .feature-box:hover {
@@ -331,6 +458,17 @@
     font-size: 0.95rem;
 }
 
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 768px) {
     .page-header h1 {
         font-size: 2rem;

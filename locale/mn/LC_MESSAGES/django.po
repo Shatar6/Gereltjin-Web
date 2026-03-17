@@ -780,3 +780,134 @@ msgstr "Сүхбаатарын талбайн усан оргилуурын ха
 
 msgid "Glass walls, partitions, display cases, and exhibition tables for Gobi Cashmere's flagship store."
 msgstr "Gobi Cashmere төв дэлгүүрт зориулсан шилэн хана, хаалт, үзэсгэлэнгийн шилэн витрин болон ширээнүүд."
+
+# Windows & Doors Page
+
+msgid "Premium glass windows and doors for your space"
+msgstr "Таны орон зайд зориулсан чанартай шилэн цонх, хаалга"
+
+msgid "Why Choose Our Windows & Doors?"
+msgstr "Яагаад манай цонх, хаалгыг сонгох вэ?"
+
+msgid "Energy Efficient"
+msgstr "Эрчим хүчний хэмнэлттэй"
+
+msgid "Double/triple glazing for superior insulation and energy savings"
+msgstr "Давхар/гурвалсан шиллэгээ нь дулаан тусгаарлалт сайжруулж, эрчим хүч хэмнэнэ"
+
+msgid "Secure & Safe"
+msgstr "Аюулгүй, найдвартай"
+
+msgid "Multi-point locking systems and tempered safety glass"
+msgstr "Олон цэгийн түгжээ болон ганжуулсан аюулгүйн шил"
+
+msgid "Sound Insulation"
+msgstr "Дуу тусгаарлалт"
+
+msgid "Reduce noise pollution with acoustic glass options"
+msgstr "Дуу тусгаарлагч шил ашиглан дуу чимээг бууруулна"
+
+msgid "Custom Design"
+msgstr "Захиалгат дизайн"
+
+msgid "Wide range of colors, finishes, and configurations"
+msgstr "Өнгө, өнгөлгөө болон хийцийн өргөн сонголт"
+
+msgid "Easy Maintenance"
+msgstr "Арчилгаа хялбар"
+
+msgid "Durable materials designed for long-lasting performance"
+msgstr "Удаан эдэлгээтэй, бат бөх материал ашигласан"
+
+msgid "All products come with warranty and professional installation"
+msgstr "Бүх бүтээгдэхүүн баталгаат хугацаатай бөгөөд мэргэжлийн суурилуулалт хийж өгнө"
+
+msgid "Our Installation Process"
+msgstr "Манай угсралтын процесс"
+
+msgid "Consultation"
+msgstr "Зөвлөгөө"
+
+msgid "We discuss your needs and take measurements"
+msgstr "Таны хэрэгцээг тодорхойлж, хэмжилт авна"
+
+msgid "Design & Quote"
+msgstr "Дизайн ба үнийн санал"
+
+msgid "Custom design and detailed pricing proposal"
+msgstr "Захиалгат дизайн болон дэлгэрэнгүй үнийн санал"
+
+msgid "Manufacturing"
+msgstr "Үйлдвэрлэл"
+
+msgid "Precision manufacturing in our factory"
+msgstr "Манай үйлдвэрт нарийвчлалтай үйлдвэрлэл хийгдэнэ"
+
+msgid "Installation"
+msgstr "Угсралт"
+
+msgid "Professional installation by our expert team"
+msgstr "Мэргэжлийн баг угсралтыг гүйцэтгэнэ"
+
+msgid "Ready to Upgrade Your Windows & Doors?"
+msgstr "Цонх, хаалгаа шинэчлэхэд бэлэн үү?"
+
+msgid "Get a free consultation and quote today"
+msgstr "Өнөөдөр үнэгүй зөвлөгөө болон үнийн санал аваарай"
+
+# Windows items
+msgid "Windows"
+msgstr "Цонх"
+
+msgid "Sliding windows"
+msgstr "Гулсдаг цонх"
+
+msgid "Casement windows"
+msgstr "Нугастай цонх"
+
+msgid "Fixed windows"
+msgstr "Суурин цонх"
+
+msgid "Tilt & turn windows"
+msgstr "Уналттай цонх"
+
+msgid "Bay windows"
+msgstr "Булангийн цонх"
+
+# Doors
+msgid "Glass Doors"
+msgstr "Шилэн Хаалга"
+
+msgid "Sliding glass doors"
+msgstr "Гулсдаг шилэн хаалга"
+
+msgid "French doors"
+msgstr "Франц хаалга"
+
+msgid "Pivot doors"
+msgstr "Эргэдэг хаалга"
+
+msgid "Frameless glass doors"
+msgstr "Хүрээгүй шилэн хаалга"
+
+msgid "Automatic sliding doors"
+msgstr "Автомат гулсдаг хаалга"
+
+# Commercial
+msgid "Commercial Solutions"
+msgstr "Таны Хүсэлтээр"
+
+msgid "Storefront systems"
+msgstr "Лангууны хорго"
+
+msgid "Office partitions"
+msgstr "Оффисын шилэн хана"
+
+msgid "Entrance systems"
+msgstr "Орцны систем"
+
+msgid "Fire-rated glass doors"
+msgstr "Галд тэсвэртэй шилэн хаалга"
+
+msgid "Soundproof solutions"
+msgstr "Дуу тусгаарлах шийдэл"

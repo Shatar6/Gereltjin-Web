@@ -149,12 +149,19 @@
 
 .form-control {
     width: 100%;
-    padding: 0.875rem;
-    border: 2px solid var(--accent-gray);
-    border-radius: var(--border-radius);
+    padding: 0.9rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
-    transition: var(--transition);
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+}
+
+/* Hover */
+.form-control:hover {
+    border-color: #bbb;
+    background-color: #fff;
 }
 
 .form-control:focus {
@@ -183,7 +190,6 @@ textarea.form-control {
 /* Contact Info */
 .contact-info-wrapper {
     background: var(--bg-light);
-    padding: var(--spacing-md);
     border-radius: var(--border-radius-lg);
 }
 
@@ -236,6 +242,11 @@ textarea.form-control {
     height: 500px; /* bigger */
     border-radius: var(--border-radius-lg);
     overflow: hidden;
+}
+
+.btn-block:hover {
+    background: var(--primary-blue-dark) ;
+    color: #f8fafc;
 }
 
 @media (max-width: 768px) {

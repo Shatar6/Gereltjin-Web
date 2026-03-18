@@ -11,96 +11,276 @@
         <p>{% trans 'Modern sports facility with glass features' %}</p>
     </div>
 </section>
-
 <section class="content-section">
     <div class="container">
-        <div class="hero-content">
-            <div class="placeholder-hero">
-                <span>⚽</span>
-                <h2>{% trans 'Modern Sports Complex' %}</h2>
-                <p>{% trans 'Main facility image will be added here' %}</p>
+
+        <!-- Hero Section -->
+        <div class="hero-split">
+            <div class="hero-text">
+                <h2>{% trans "Shine Sports Center" %}</h2>
+
+                <p>
+                    {% trans "Shine Sports Center is a modern, multi-purpose sports complex. It is designed for training, competitions, and recreational activities, offering a comfortable and professional environment for all visitors." %}
+                </p>
+
+                <ul class="feature-list">
+                    <li>{% trans "Basement (B1): Billiards club with 16 tables, table tennis, darts, and a restaurant" %}</li>
+                    <li>{% trans "1st Floor: CrossFit Nomads fitness and training area" %}</li>
+                    <li>{% trans "2nd–3rd Floors: Full-size sports hall with spectator seating" %}</li>
+                </ul>
+
+                <p>
+                    {% trans "Our sport hall is equipped with international-standard flooring, professional sports equipment, and modern infrastructure, making it suitable for both daily use and organized events." %}
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="{% static 'images/ShineCitySportComplex.png' %}" alt="Sports Hall">
             </div>
         </div>
 
-        <div class="info-grid">
-            <div class="info-card">
-                <div class="card-icon">🏐</div>
-                <h3>{% trans 'Multi-Purpose Hall' %}</h3>
-                <p>{% trans 'Suitable for basketball, volleyball, badminton, and other indoor sports' %}</p>
-            </div>
-            <div class="info-card">
-                <div class="card-icon">🪟</div>
-                <h3>{% trans 'Glass Features' %}</h3>
-                <p>{% trans 'Large glass walls providing natural light and visibility' %}</p>
-            </div>
-            <div class="info-card">
-                <div class="card-icon">👥</div>
-                <h3>{% trans 'Rental Available' %}</h3>
-                <p>{% trans 'Book the facility for training, matches, or events' %}</p>
-            </div>
-            <div class="info-card">
-                <div class="card-icon">🎯</div>
-                <h3>{% trans 'Professional Equipment' %}</h3>
-                <p>{% trans 'Fully equipped with modern sports facilities' %}</p>
+        <!-- Advantages -->
+        <div class="advantages-section">
+            <h2>{% trans "Key Advantages" %}</h2>
+
+            <div class="advantages-grid">
+                <div class="adv-card">
+                    <span>🏀</span>
+                    <h4>{% trans "FIBA Standard Flooring" %}</h4>
+                    <p>{% trans "Premium maple wood flooring meeting international basketball standards." %}</p>
+                </div>
+
+                <div class="adv-card">
+                    <span>🔇</span>
+                    <h4>{% trans "Acoustic Design" %}</h4>
+                    <p>{% trans "Walls and ceilings designed to reduce echo and noise." %}</p>
+                </div>
+
+                <div class="adv-card">
+                    <span>🏐</span>
+                    <h4>{% trans "Professional Equipment" %}</h4>
+                    <p>{% trans "Spalding basketball systems and full volleyball equipment." %}</p>
+                </div>
+
+                <div class="adv-card">
+                    <span>🚗</span>
+                    <h4>{% trans "Parking" %}</h4>
+                    <p>{% trans "Spacious parking area for visitors." %}</p>
+                </div>
+
+                <div class="adv-card">
+                    <span>♿</span>
+                    <h4>{% trans "Accessible Facility" %}</h4>
+                    <p>{% trans "Wheelchair-friendly entrances and restrooms." %}</p>
+                </div>
+
+                <div class="adv-card">
+                    <span>🛗</span>
+                    <h4>{% trans "Elevator Access" %}</h4>
+                    <p>{% trans "Easy access to all floors with elevator." %}</p>
+                </div>
             </div>
         </div>
 
-        <div class="facilities-section">
-            <h2>{% trans 'Facilities & Amenities' %}</h2>
-            <div class="facilities-list">
-                <div class="facility-item">✅ {% trans 'Regulation-size courts' %}</div>
-                <div class="facility-item">✅ {% trans 'Changing rooms & showers' %}</div>
-                <div class="facility-item">✅ {% trans 'Spectator seating' %}</div>
-                <div class="facility-item">✅ {% trans 'Air conditioning' %}</div>
-                <div class="facility-item">✅ {% trans 'Parking available' %}</div>
-                <div class="facility-item">✅ {% trans 'Equipment storage' %}</div>
+        <!-- Gallery -->
+        <div class="gallery-section">
+            <h2>{% trans "Gallery" %}</h2>
+
+            <div class="gallery-grid real-gallery">
+                <div class="gallery-item">  
+                    <img src="{% static 'images/ShineSportComplex/ShineSportCenter.jpg' %}" alt="Sports Complex">
+                </div>
+                <div class="gallery-item"> 
+                    <img src="{% static 'images/ShineSportComplex/United.jpg' %}" alt="Pool Billards">
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/ShineSportComplex/Nomads.jpg' %}" alt="CrossFit Nomads">
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/ShineSportComplex/Zaal2.jpg' %}" alt="Sports Hall">
+                </div>
             </div>
         </div>
 
-        <div class="gallery-placeholder">
-            <h2>{% trans 'Facility Gallery' %}</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><span>🏀</span><p>{% trans 'Court View' %}</p></div>
-                <div class="gallery-item"><span>🪟</span><p>{% trans 'Glass Walls' %}</p></div>
-                <div class="gallery-item"><span>💡</span><p>{% trans 'Interior' %}</p></div>
-                <div class="gallery-item"><span>🏢</span><p>{% trans 'Exterior' %}</p></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta-section">
-    <div class="container">
-        <h2>{% trans 'Book Our Sports Hall' %}</h2>
-        <p>{% trans 'Contact us for availability and pricing' %}</p>
-        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-large">{% trans 'Contact Us' %}</a>
     </div>
 </section>
 {% endblock %}
 
 {% block extra_css %}
 <style>
+
 .page-header { background: #006B5A; color: var(--text-light); padding: 4rem 0 3rem; text-align: center; }
-.page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
-.content-section { padding: var(--spacing-xl) 0; }
-.placeholder-hero { background: var(--bg-light); border: 3px dashed #123512; border-radius: var(--border-radius-lg); padding: var(--spacing-xl); text-align: center; margin-bottom: var(--spacing-xl); }
-.placeholder-hero span { font-size: 6rem; display: block; margin-bottom: var(--spacing-sm); }
-.placeholder-hero h2 { color: #123512; margin-bottom: var(--spacing-sm); }
-.placeholder-hero p { color: var(--text-gray); font-style: italic; }
-.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl); }
-.info-card { background: var(--bg-light); padding: var(--spacing-md); border-radius: var(--border-radius); text-align: center; }
-.card-icon { font-size: 3rem; margin-bottom: var(--spacing-sm); }
-.info-card h3 { color: #123512; margin-bottom: var(--spacing-sm); }
-.info-card p { color: var(--text-gray); font-size: 0.95rem; }
-.facilities-section { background: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); }
-.facilities-section h2 { color: #123512; text-align: center; margin-bottom: var(--spacing-md); }
-.facilities-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-sm); }
-.facility-item { padding: 0.75rem; background: var(--bg-white); border-radius: var(--border-radius); }
-.gallery-placeholder h2 { color: #123512; text-align: center; margin-bottom: var(--spacing-md); }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); }
-.gallery-item { background: var(--bg-light); border: 2px dashed #123512; border-radius: var(--border-radius); padding: var(--spacing-lg); text-align: center; }
-.gallery-item span { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
-.gallery-item p { color: var(--text-gray); font-style: italic; margin: 0; }
-@media (max-width: 768px) { .page-header h1 { font-size: 2rem; } }
+
+.hero-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding: 2rem 0;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: #123637;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-text p, li{
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+}
+
+.feature-list li:before {
+    content: '▸';
+    left: 0;
+    color: #123512;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Advantages */
+.advantages-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.advantages-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: #123637;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.adv-card {
+    background: var(--bg-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.adv-card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.adv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* Gallery */
+/* Gallery Section */
+.gallery-section {
+    margin-top: var(--spacing-xl);
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: #123637;
+}
+
+/* Grid */
+.real-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+/* Image container */
+.real-gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.real-gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Optional: make first image bigger (featured look) */
+.real-gallery img:first-child {
+    grid-column: span 2;
+    height: 350px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.gallery-item::after {
+    content: "View";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .real-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .real-gallery img:first-child {
+        grid-column: span 1;
+        height: 250px;
+    }
+
+    .real-gallery img {
+        height: 220px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-split {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 {% endblock %}

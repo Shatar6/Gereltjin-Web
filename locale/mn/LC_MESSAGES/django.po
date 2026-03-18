@@ -997,3 +997,68 @@ msgstr "Танд техник эсвэл байр хэрэгтэй юу?"
 
 msgid "Contact us for rental rates and availability"
 msgstr "Үнэ болон боломжит хугацааг мэдэхийн тулд холбогдоно уу"
+
+# Sports Hall Page New Strings
+
+msgid "Modern sports facility with glass features"
+msgstr "Орчин үеийн шилэн хийцтэй спортын байгууламж"
+
+msgid "Shine Sports Center"
+msgstr "Shine Спорт Төв"
+
+msgid "Shine Sports Center is a modern, multi-purpose sports complex. It is designed for training, competitions, and recreational activities, offering a comfortable and professional environment for all visitors."
+msgstr "Shine спорт төв нь орчин үеийн, олон зориулалттай спортын цогцолбор юм. Бэлтгэл, тэмцээн болон чөлөөт цагаа өнгөрүүлэхэд зориулагдсан бөгөөд зочдод тав тухтай, мэргэжлийн орчинг бүрдүүлсэн билээ."
+
+msgid "Basement (B1): Billiards club with 16 tables, table tennis, darts, and a restaurant"
+msgstr "Зоорийн давхар (B1): 16 ширээтэй биллиардын клуб, ширээний теннис, дартс болон ресторан"
+
+msgid "1st Floor: CrossFit Nomads fitness and training area"
+msgstr "1-р давхар: CrossFit Nomads фитнесс, бэлтгэлийн бүс"
+
+msgid "2nd–3rd Floors: Full-size sports hall with spectator seating"
+msgstr "2-3-р давхар: Үзэгчдийн суудалтай бүрэн хэмжээний спорт заал"
+
+msgid "Our sport hall is equipped with international-standard flooring, professional sports equipment, and modern infrastructure, making it suitable for both daily use and organized events."
+msgstr "Манай заал нь олон улсын стандартын шал, мэргэжлийн спортын тоног төхөөрөмж болон орчин үеийн дэд бүтцээр тоноглогдсон бөгөөд өдөр тутмын хэрэглээ болон зохион байгуулалттай арга хэмжээнд тохиромжтой."
+
+msgid "Key Advantages"
+msgstr "Гол давуу талууд"
+
+msgid "FIBA Standard Flooring"
+msgstr "FIBA стандарт шал"
+
+msgid "Premium maple wood flooring meeting international basketball standards."
+msgstr "Олон улсын сагсан бөмбөгийн стандартад нийцсэн өндөр чанартай агч модон шал"
+
+msgid "Acoustic Design"
+msgstr "Дуу тусгаарлалт"
+
+msgid "Walls and ceilings designed to reduce echo and noise."
+msgstr "Дуу ойлт болон чимээг багасгах зориулалттай ханын болон таазны шийдэл"
+
+msgid "Professional Equipment"
+msgstr "Мэргэжлийн тоног төхөөрөмж"
+
+msgid "Spalding basketball systems and full volleyball equipment."
+msgstr "Spalding сагсан бөмбөгийн систем болон бүрэн волейболын тоног төхөөрөмж"
+
+msgid "Parking"
+msgstr "Зогсоол"
+
+msgid "Spacious parking area for visitors."
+msgstr "Зочдод зориулсан өргөн зогсоол"
+
+msgid "Accessible Facility"
+msgstr "Хүртээмжтэй орчин"
+
+msgid "Wheelchair-friendly entrances and restrooms."
+msgstr "Тэргэнцэртэй иргэдэд зориулсан орц болон ариун цэврийн өрөө"
+
+msgid "Elevator Access"
+msgstr "Лифттэй"
+
+msgid "Easy access to all floors with elevator."
+msgstr "Лифтээр бүх давхарт хялбар хүрэх боломжтой"
+
+msgid "Gallery"
+msgstr "Зургийн цомог"

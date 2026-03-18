@@ -3,6 +3,8 @@
  * Mobile Menu & Interactive Features
  */
 
+console.log("JS FILE LOADED");
+
 document.addEventListener('DOMContentLoaded', function() {
     
     // ============================================
@@ -188,4 +190,44 @@ document.addEventListener('DOMContentLoaded', function() {
             this.form.submit();
         });
     }
+});
+
+// ============================================
+// Contact Form AJAX Submission
+// ============================================
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        console.log("Submitting...");
+
+        const formData = new FormData(form);
+
+        fetch(window.location.pathname + "send/", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+
+            if (data.success) {
+                alert("Message sent successfully!");
+                form.reset();
+            } else {
+                alert("Error sending message");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Something went wrong");
+        });
+    });
 });

@@ -2,8 +2,11 @@
 Views for Core app (Homepage, About, Contact)
 UPDATED: Added dropdown submenu views
 """
+import email
+
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.mail import EmailMessage
 
 def portal_login(request):
     """Portal login page view"""
@@ -57,3 +60,35 @@ def rental(request):
 def sports_hall(request):
     """Sports Hall page"""
     return render(request, 'core/sports_hall.html')
+
+# Contact form submission view
+from django.views.decorators.http import require_POST
+from django.http import JsonResponse
+from django.core.mail import send_mail
+from .forms import ContactForm
+
+@require_POST
+def contact_submit(request):
+    form = ContactForm(request.POST)
+
+    if form.is_valid():
+        email = EmailMessage(
+            subject=f"Contact: {form.cleaned_data['subject']}",
+            body=f"""
+        Name: {form.cleaned_data['name']}
+        Email: {form.cleaned_data['email']}
+        Phone: {form.cleaned_data['phone']}
+
+        Message:
+        {form.cleaned_data['message']}
+        """,
+            from_email='gereltjin.website.customer@gmail.com',
+            to=['info@gereltjin.mn'],
+            reply_to=[form.cleaned_data['email']],
+        )
+
+        email.send()    
+        print("FORM SUBMITTED")
+        return JsonResponse({'success': True})
+
+    return JsonResponse({'errors': form.errors}, status=400)

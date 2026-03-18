@@ -911,3 +911,89 @@ msgstr "Галд тэсвэртэй шилэн хаалга"
 
 msgid "Soundproof solutions"
 msgstr "Дуу тусгаарлах шийдэл"
+
+# Rental Services Page
+
+msgid "Heavy equipment and property rental solutions"
+msgstr "Хүнд даацын техник болон үл хөдлөх хөрөнгийн түрээсийн шийдэл"
+
+msgid "Years of rental experience"
+msgstr "Жилийн туршлага"
+
+msgid "Regular Customers"
+msgstr "Тогтмол харилцагч"
+
+msgid "Maintained & ready"
+msgstr "Бэлэн, засвар үйлчилгээтэй"
+
+msgid "Reliable Rental Solutions"
+msgstr "Найдвартай түрээсийн үйлчилгээ"
+
+msgid "Gereltjin LLC has been providing reliable rental services since 2013, offering heavy construction machinery, transport vehicles, and rental properties for businesses and individuals."
+msgstr "Гэрэлтжин ХХК нь 2013 оноос хойш найдвартай түрээсийн үйлчилгээ үзүүлж, барилгын хүнд машин механизм, тээврийн хэрэгсэл болон үл хөдлөх хөрөнгийг байгууллага болон хувь хүмүүст санал болгож байна."
+
+msgid "Our fleet includes cranes, excavators, loaders, and heavy trucks operated by experienced professionals, ensuring safety and efficiency on every project."
+msgstr "Манай парк нь туршлагатай операторуудын ажиллуулдаг кран, экскаватор, ачигч болон хүнд даацын машинуудаас бүрддэг бөгөөд төсөл бүрт аюулгүй, үр ашигтай ажиллагааг хангана."
+
+msgid "We also offer office spaces, apartments, and industrial facilities for rent, supporting both construction projects and everyday business needs."
+msgstr "Мөн оффис, орон сууц болон үйлдвэрийн зориулалттай талбайг түрээслүүлж, барилгын болон бизнесийн хэрэгцээг дэмжин ажилладаг."
+
+msgid "Our Equipment"
+msgstr "Манай техник"
+
+msgid "Cranes"
+msgstr "Кран"
+
+msgid "Excavators"
+msgstr "Экскаватор"
+
+msgid "Man Lifting Truck"
+msgstr "Хүн өргөгч машин"
+
+msgid "Wheel Loaders"
+msgstr "Дугуйт ачигч"
+
+msgid "Rental Properties"
+msgstr "Түрээсийн байр"
+
+msgid "Apartments"
+msgstr "Орон сууц"
+
+msgid "Office Spaces"
+msgstr "Оффис"
+
+msgid "Workshop Areas"
+msgstr "Үйлдвэрлэлийн талбай"
+
+msgid "Rental Terms"
+msgstr "Түрээсийн нөхцөл"
+
+msgid "Daily Rental"
+msgstr "Өдрийн түрээс"
+
+msgid "Flexible daily rates for short-term needs"
+msgstr "Богино хугацаанд тохиромжтой уян хатан тариф"
+
+msgid "Monthly Rental"
+msgstr "Сарын түрээс"
+
+msgid "Best value for long-term projects"
+msgstr "Урт хугацаанд хамгийн ашигтай нөхцөл"
+
+msgid "Delivery Available"
+msgstr "Хүргэлт боломжтой"
+
+msgid "We can deliver equipment to your site"
+msgstr "Тоног төхөөрөмжийг таны байршилд хүргэж өгнө"
+
+msgid "Operator Available"
+msgstr "Оператор"
+
+msgid "Skilled technicians and operators can be provided upon request"
+msgstr "Мэргэжлийн оператор, техникчийг хүсэлтээр хангана"
+
+msgid "Need Equipment or Space?"
+msgstr "Танд техник эсвэл байр хэрэгтэй юу?"
+
+msgid "Contact us for rental rates and availability"
+msgstr "Үнэ болон боломжит хугацааг мэдэхийн тулд холбогдоно уу"

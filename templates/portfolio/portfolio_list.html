@@ -21,156 +21,454 @@
             <button class="filter-btn active" data-filter="all">{% trans 'All Projects' %}</button>
             <button class="filter-btn" data-filter="commercial">{% trans 'Commercial' %}</button>
             <button class="filter-btn" data-filter="residential">{% trans 'Residential' %}</button>
-            <button class="filter-btn" data-filter="industrial">{% trans 'Industrial' %}</button>
+            <button class="filter-btn" data-filter="public">{% trans 'Public' %}</button>
             <button class="filter-btn" data-filter="custom">{% trans 'Custom' %}</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card" data-category="commercial">
+
+            <!-- ── RESIDENTIAL ── -->
+
+            <!-- Songinokhairkhan Residential -->
+            <div class="project-card" data-category="residential">
                 <div class="project-image">
                     <div class="image-placeholder">
                         <span>🏢</span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
-                    <span class="project-category">{% trans 'Commercial' %}</span>
-                    <h3>{% trans 'Office Building Facade' %}</h3>
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Songinokhairkhan Residential Building' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'Central District, UB' %}</span>
-                        <span>📅 {% trans '2024' %}</span>
+                        <span>📍 {% trans 'Songinokhairkhan District' %}</span>
+                        <span>📅 2008</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Modern glass curtain wall installation for 10-story commercial building.' %}
+                        {% trans '6-story residential building with 36 apartments.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Officer Town Bayanzurkh -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>🏢</span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Officer Town Residential Building' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Bayanzurkh District' %}</span>
+                        <span>📅 2010</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans '9-story residential building with 63 apartments.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Embassy Residence -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/Embassy_26.png' %}" alt="Embassy Residence Complex">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Embassy Residence Complex' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Sukhbaatar District' %}</span>
+                        <span>📅 2012</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans '12-story residential building with 44 apartments.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modnii 2 Bayangol -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>🏢</span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Modnii 2 Residential Building' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Bayangol District' %}</span>
+                        <span>📅 2013</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans '6-story residential building with 72 apartments.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Shine City-1 -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/Shine_City_1_b.jpg' %}" alt="Shine City-1 Residential Complex">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Shine City-1 Residential Complex' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Bayangol District' %}</span>
+                        <span>📅 2018</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans '12-story residential building with 72 apartments.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Shine City-2 -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/Shine_City_2.png' %}" alt="Shine City-2 Residential Complex">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Shine City-2 Residential Complex' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Sukhbaatar District' %}</span>
+                        <span>📅 2022</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans '16-story residential building with 77 apartments.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- VIP Residence -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/projects/Vip_residence.jpg' %}" alt="VIP Residence">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'VIP Residence – Glass Facade' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Curved and flat glass facade installation for VIP Residence housing complex.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- La Colina -->
             <div class="project-card" data-category="residential">
                 <div class="project-image">
                     <div class="image-placeholder">
                         <span>🏘️</span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">{% trans 'Residential' %}</span>
-                    <h3>{% trans 'Luxury Apartment Windows' %}</h3>
+                    <h3>{% trans 'La Colina – Glass Facade' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'Residential Complex' %}</span>
-                        <span>📅 {% trans '2024' %}</span>
+                        <span>📍 {% trans 'Khan-Uul District' %}</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Premium energy-efficient windows for 50+ apartments.' %}
+                        {% trans 'Full glass facade system for La Colina residential project by Modun LLC.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card" data-category="industrial">
+            <!-- Sunshine Garden -->
+            <div class="project-card" data-category="residential">
                 <div class="project-image">
                     <div class="image-placeholder">
-                        <span>🏭</span>
+                        <span>
+                            <img src="{% static 'images/projects/Sunshine_Garden.png' %}" alt="Sunshine Garden">
+                        </span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
-                    <span class="project-category">{% trans 'Industrial' %}</span>
-                    <h3>{% trans 'Factory Skylight Installation' %}</h3>
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Sunshine Garden – Glass Facade' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'Industrial Zone' %}</span>
-                        <span>📅 {% trans '2023' %}</span>
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Large-scale skylight system for manufacturing facility.' %}
+                        {% trans 'Curved and flat glass facade for Sunshine Garden residential project by Legato Construction.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Project 4 -->
+            <!-- Khurd Group / Narny Khoroolol -->
+            <div class="project-card" data-category="residential">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/projects/Narnii_khoroolol.jpg' %}" alt="Narnii Khoroolol">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Residential' %}</span>
+                    <h3>{% trans 'Khurd Group – Windows & Doors' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Plastic and metal windows and doors for Narny Khoroolol and Rafid Harsh residential projects.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- ── COMMERCIAL ── -->
+
+            <!-- Urgoo Cinema -->
             <div class="project-card" data-category="commercial">
                 <div class="project-image">
                     <div class="image-placeholder">
-                        <span>🏬</span>
+                        <span>🎬</span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">{% trans 'Commercial' %}</span>
-                    <h3>{% trans 'Shopping Mall Entrance' %}</h3>
+                    <h3>{% trans 'Urgoo Cinema – Laser Cinema Facade' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'City Center' %}</span>
-                        <span>📅 {% trans '2023' %}</span>
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Automatic sliding glass doors and entrance system.' %}
+                        {% trans 'Curved and flat glass facade for the Laser Cinema expansion of Urgoo Cinema.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Project 5 -->
+            <!-- Gobi Cashmere -->
+            <div class="project-card" data-category="commercial">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>🧣</span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Commercial' %}</span>
+                    <h3>{% trans 'Gobi Cashmere Central Store' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Glass walls, partitions, display cases, and exhibition tables for Gobi Cashmere\'s flagship store.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Shine City Sports Complex -->
+            <div class="project-card" data-category="commercial">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/ShineCitySportComplex.png' %}" alt="Shine City Sports Complex">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Commercial' %}</span>
+                    <h3>{% trans 'Shine City Sports Complex' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
+                        <span>📅 2023</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Modern indoor sports complex building constructed in 2023.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- ── PUBLIC ── -->
+
+            <!-- Secondary School No.19 -->
+            <div class="project-card" data-category="public">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/School_19.png' %}" alt="Secondary School No.19">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Public' %}</span>
+                    <h3>{% trans 'Secondary School No.19' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Ulaanbaatar' %}</span>
+                        <span>📅 2019</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Reconstruction of Secondary School No.19 building funded by the government.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Central Square Fountain -->
+            <div class="project-card" data-category="public">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/projects/central_square.png' %}" alt="Central Square Fountain">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Public' %}</span>
+                    <h3>{% trans 'Central Square Fountain – Glass Enclosure' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Sukhbaatar Square' %}</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Decorative glass barrier installation for the fountain in front of Sukhbaatar Square.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- School No.23 Sports Complex -->
+            <div class="project-card" data-category="public">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span>
+                            <img src="{% static 'images/School_23.png' %}" alt="School No.23 Sports Complex">
+                        </span>
+                        <div class="overlay">
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">{% trans 'Public' %}</span>
+                    <h3>{% trans 'Secondary School No.23 Sports Complex' %}</h3>
+                    <p class="project-meta">
+                        <span>📍 {% trans 'Chingeltei District' %}</span>
+                        <span>📅 2026</span>
+                    </p>
+                    <p class="project-description">
+                        {% trans 'Reconstruction of Secondary School No.23 Sports Complex building funded by the government.' %}
+                    </p>
+                </div>
+            </div>
+
+            <!-- ── CUSTOM ── -->
+
+            <!-- One Million Tons – One Million Trees -->
             <div class="project-card" data-category="custom">
                 <div class="project-image">
                     <div class="image-placeholder">
-                        <span>⚽</span>
+                        <span>
+                            <img src="{% static 'images/construction_project/one_million_tons_one_million_trees.png' %}" alt="One Million Tons – One Million Trees">
+                        </span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">{% trans 'Custom' %}</span>
-                    <h3>{% trans 'Sports Complex Glass Walls' %}</h3>
+                    <h3>{% trans '"One Million Tons – One Million Trees" Project' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'Sports District' %}</span>
-                        <span>📅 {% trans '2024' %}</span>
+                        <span>📍 {% trans 'Dornogovi Province' %}</span>
+                        <span>📅 2024</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Floor-to-ceiling glass walls for multi-purpose sports hall.' %}
+                        {% trans 'Construction works executed under the government\'s "One Million Tons – One Million Trees" environmental initiative.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Project 6 -->
+            
+            <!-- Shine City-3 (in progress) -->
             <div class="project-card" data-category="residential">
                 <div class="project-image">
                     <div class="image-placeholder">
-                        <span>🏠</span>
+                        <span>
+                            <img src="{% static 'images/carousel-3.jpg' %}" alt="Shine City-3">
+                        </span>
                         <div class="overlay">
-                            <button class="view-btn">{% trans 'View Details' %}</button>
+                            <button class="view-btn">{% trans 'View Photo' %}</button>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">{% trans 'Residential' %}</span>
-                    <h3>{% trans 'Private Villa Glass Extension' %}</h3>
+                    <h3>{% trans 'Shine City-3 Residential Complex' %}</h3>
                     <p class="project-meta">
-                        <span>📍 {% trans 'Suburban Area' %}</span>
-                        <span>📅 {% trans '2023' %}</span>
+                        <span>📍 {% trans 'Sukhbaatar District' %}</span>
+                        <span>📅 2025</span>
                     </p>
                     <p class="project-description">
-                        {% trans 'Custom glass room extension with panoramic views.' %}
+                        {% trans '178-unit residential project currently under construction.' %}
                     </p>
                 </div>
             </div>
 
-            <!-- Add more projects as needed -->
-        </div>
 
-        <!-- Load More Button -->
-        <div class="load-more-container">
-            <button class="btn btn-primary">{% trans 'Load More Projects' %}</button>
         </div>
     </div>
 </section>
@@ -178,8 +476,8 @@
 <!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
-        <h2>{% trans 'Want to See Your Project Here?' %}</h2>
-        <p>{% trans 'Start your glass project with us today' %}</p>
+        <h2>{% trans 'Ready to Start Your Project?' %}</h2>
+        <p>{% trans 'Start your project with us today' %}</p>
         <a href="{% url 'portal:create_order' %}" class="btn btn-primary btn-large">{% trans 'Start Your Project' %}</a>
     </div>
 </section>
@@ -261,10 +559,22 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
-.image-placeholder span {
+.image-placeholder > span {
     font-size: 5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder > span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overlay {
@@ -332,11 +642,6 @@
     margin: 0;
 }
 
-.load-more-container {
-    text-align: center;
-    margin-top: var(--spacing-lg);
-}
-
 .btn-primary {
     background: #006B5A;
     border-color: #006B5A;
@@ -365,20 +670,17 @@
 
 {% block extra_js %}
 <script>
-// Filter functionality
 document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
             const filter = this.getAttribute('data-filter');
             
-            // Filter projects
             projectCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
